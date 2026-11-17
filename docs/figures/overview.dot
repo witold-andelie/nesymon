@@ -1,0 +1,28 @@
+// Overview of the monitor, shown in the README.
+// Render: dot -Tpng -Gdpi=150 docs/figures/overview.dot -o docs/figures/overview.png
+digraph overview {
+  rankdir=LR;
+  bgcolor="#fcfcfb";
+  node [shape=box, style="rounded,filled", fillcolor="#ffffff", color="#9b9a94", fontname="Helvetica", fontsize=11,
+        fontcolor="#0b0b0b", margin="0.15,0.08"];
+  edge [color="#52514e", fontname="Helvetica", fontsize=9, fontcolor="#52514e"];
+
+  traj  [label="Agent trajectory\n(user turns, assistant messages,\ntool calls)"];
+  tools [label="Tool-call log\nstructured propositions\n(write, transfer, authenticated)"];
+  llm   [label="Local LLM labeler\nP(proposition) per turn\n(confirm, matches_listed, ...)"];
+  gate  [label="Confidence gate tau\nkeep both values open when\nmax(p, 1-p) <= tau", fillcolor="#e8f1fc", color="#2a78d6"];
+  dfa   [label="Rule automaton (LTLf)\ntrack every state consistent\nwith the judgements"];
+  out   [label="Verdict\nviolation | compliance | abstain", fillcolor="#e8f1fc", color="#2a78d6"];
+  cal   [label="Calibration tasks\nwith human labels", fillcolor="#f4f3ef"];
+  crc   [label="Conformal risk control\non the verdict-level loss", fillcolor="#e8f1fc", color="#2a78d6"];
+
+  traj -> tools;
+  traj -> llm;
+  llm -> gate [label="probabilities"];
+  gate -> dfa [label="value sets"];
+  tools -> dfa [label="exact values"];
+  dfa -> out;
+  cal -> crc;
+  crc -> gate [label="tau with\nP(wrong verdict) <= alpha", style=dashed];
+  {rank=same; cal; crc}
+}

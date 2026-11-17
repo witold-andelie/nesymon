@@ -15,8 +15,8 @@ digraph OPM {
   node [shape=box, style="dashed", color="#2E7D32", penwidth=1.6];
   Policy      [label="Policy Document\n(tau-bench wiki.md)"];
   RawTraj     [label="Historical Trajectory Set\n(data/raw)"];
-  PreLabeler  [label="Pre-labeling LLM"];
-  LabelerLLM  [label="Labeler LLM\n(1.5B / 3B / 7B, API)"];
+  PreLabeler  [label="Pre-annotating AI Agents\n(Claude, Codex, opencode)"];
+  LabelerLLM  [label="Labeler LLM\n(Qwen3.5-4B main, 2B ladder; MLX)"];
   node [shape=box, style="dashed,filled", fillcolor="#E0E0E0", color="#2E7D32", penwidth=1.6];
   Researcher  [label="Researcher"];
   Annotator   [label="Human Annotator"];
@@ -27,7 +27,8 @@ digraph OPM {
   PropDefs  [label="Proposition Definition Set\n(props/definitions.yaml)"];
   DFASet    [label="DFA Set over step-type alphabets\n(rules/dfas.py)"];
   TrajSet   [label="Trajectory Set\n(nesymon/data.py)"];
-  LabelSet  [label="Ground-Truth Label Set\n(data/labels.csv, to be released)"];
+  LabelSet  [label="Ground-Truth Label Set\n(pilot: data/labels.csv;\nevaluation: pending human check)"];
+  PreLabelSet [label="Pre-label Set\n(results/full_preannotation.csv)"];
   PilotSet  [label="Pilot Task Set\n(data/pilot_tasks.json)"];
   Counts    [label="Rule x Class Count Table"];
   ProbCache [label="Probability Cache\n(data/probs)"];
@@ -67,6 +68,8 @@ digraph OPM {
     label="Data Preparing"; style="rounded"; color="#1565C0"; fontcolor="#1565C0";
     TrajLoading [label="Trajectory Loading"];
     Injecting [label="Violation Injecting\n(nesymon/inject.py)"];
+    Preannotating [label="Pre-annotating\n(render_for_preannotation,\nassemble_preannotation)"];
+    AgreementChecking [label="Agreement Checking\n(compare_annotations,\nsecond_opinion)"];
     Annotating [label="Ground-Truth Annotating\n(make_annotation_sheet)"];
     Splitting [label="Task Splitting\n(nesymon/evaluate.py)"];
     Counting [label="Stratum Counting\n(experiments/rule_counts.py)"];
@@ -88,7 +91,7 @@ digraph OPM {
   }
   subgraph cluster_eval {
     label="Evaluating"; style="rounded"; color="#1565C0"; fontcolor="#1565C0";
-    Baselines [label="Baseline Monitoring\n(B1-B4, Ours-Prob)"];
+    Baselines [label="Baseline Monitoring\n(B1-B4, Ours-Prob raw / Platt)"];
     Scoring [label="Metric Computing\n(e0_pilot, e1_main,\nanalyses, sim_sweeps)"];
     Gating [label="Pilot Gating"];
   }
@@ -100,6 +103,7 @@ digraph OPM {
   Researcher -> Gating;
   Researcher -> Writing;
   Annotator  -> Annotating;
+  Researcher -> AgreementChecking;
   Annotator  -> Escalating;
 
   // ---------- instrument links ----------
@@ -109,7 +113,12 @@ digraph OPM {
   RuleSet -> DFAVerifying;
   PropDefs -> Annotating;
   PropDefs -> Labeling;
-  PreLabeler -> Annotating;
+  PreLabeler -> Preannotating;
+  PropDefs -> Preannotating;
+  TrajSet -> Preannotating;
+  PreLabelSet -> Annotating;
+  PreLabelSet -> AgreementChecking;
+  LabelSet -> AgreementChecking;
   LabelerLLM -> Labeling;
   TrajSet -> Labeling;
   TrajSet -> Annotating;
@@ -141,6 +150,7 @@ digraph OPM {
   RawTraj -> TrajLoading;
   TrajLoading -> TrajSet;
   Annotating -> LabelSet;
+  Preannotating -> PreLabelSet;
   Labeling -> ProbCache;
   Splitting -> CalSet;
   Splitting -> PilotSet;

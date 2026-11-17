@@ -2,7 +2,7 @@
 # site: the only kind of step on which the proposition is judged (user turn, assistant message, write call,
 #       transfer call); elsewhere it is false by construction and never queried.
 # Version 2 folds in the interpretation rules fixed by the pilot adjudication (data/label_adjudication_notes.md)
-# and the error patterns of the 7B labeler under version 1. Definitions are iterated on the pilot tasks only
+# and the error patterns of the earlier Qwen2.5-7B labeler under version 1. Definitions are iterated on the pilot tasks only
 # (data/pilot_tasks.json), which stay out of the final evaluation. Examples are paraphrased pilot patterns.
 - name: confirm
   site: user

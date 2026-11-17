@@ -404,6 +404,42 @@ Brier score. The scaled probability is right on average over all user turns but 
 the rule, the replies just before a write, where confirmations are far more common. Calibrating propositions does
 not calibrate verdicts; this is direct support for putting the loss on the verdict.
 
+### 2.14 Labeler size ladder: Qwen3.5-2B against 4B (pilot checked, evaluation provisional)
+
+The 2B labeler took 1.46 s per judgement (6,266 judgements in 2.5 h, prefix reuse saving 76 percent of tokens).
+
+Pilot, against the adjudicated labels (AUC; share of judgements wrong with confidence above 0.95):
+
+| Proposition | AUC 2B | AUC 4B | Confident errors 2B | Confident errors 4B |
+| --- | --- | --- | --- | --- |
+| asks_compensation | 0.985 | 0.998 | 0 | 0 |
+| confirm | 0.874 | 0.914 | 0 | 0.007 |
+| matches_listed | 0.595 | 0.804 | 0 | 0 |
+| offers_compensation | 0.986 | 0.998 | 0 | 0 |
+| subjective_recommendation | 0.626 | 0.826 | 0.004 | 0 |
+| transfer_justified (8 sites) | 0.750 | 0.844 | 0 | 0 |
+
+Pilot hard-label error with 2B: R1 0.275, R2 0.225, R3 0.075, R4 0.100, R9 0.500 (4B: 0.175, 0.075, 0.100, 0.050, 0).
+The 2B labeler is much worse at a 0.5 cut-off but almost never confidently wrong.
+
+Provisional evaluation (pre-labels as ground truth, alpha = 0.10, 100 repetitions), wrong verdicts / abstention:
+
+| Rule | Labeler | Hard labels | Per-step conformal | Coverage-style | Verdict-level (ours) |
+| --- | --- | --- | --- | --- | --- |
+| R1 | 4B | 0.154 / 0 | 0.066 / 0.163 | 0.001 / 0.409 | 0.079 / 0.142 |
+| R1 | 2B | 0.342 / 0 | 0.322 / 0.061 | 0.042 / 0.680 | 0.064 / 0.629 |
+| R2 | 4B | 0.084 / 0 | 0.067 / 0.038 | 0.060 / 0.061 | 0.071 / 0.031 |
+| R2 | 2B | 0.177 / 0 | 0.074 / 0.344 | 0.043 / 0.455 | 0.068 / 0.367 |
+| R9 | 4B | 0.013 / 0 | 0.013 / 0 | 0 / 0.942 | 0.013 / 0 |
+| R9 | 2B | 0.291 / 0 | 0.205 / 0.149 | 0.006 / 0.908 | 0.058 / 0.691 |
+
+- With the weaker labeler, verdict-level calibration still meets alpha on every rule; the price is abstention
+  (R1: 14 to 63 percent). This is the size ladder's main message: a weaker labeler costs coverage, not errors.
+- Per-step conformal calibrates individual judgements, not verdicts, and breaks alpha with the 2B labeler
+  (R1 0.322, R9 0.205). This is the clearest argument against the per-step baseline so far.
+- Verdict-level calibration abstains less than coverage-style calibration in every row where both meet alpha,
+  but with 2B on R1 the gap is small (0.629 vs 0.680).
+
 ## 3. Theory: what holds and what to state carefully
 
 Verified (no counterexample over 300 random traces per rule, 8 rules, 22 thresholds; see

@@ -103,7 +103,7 @@ def main():
     ap.add_argument("--out", default="results/e1_main.csv")
     args = ap.parse_args()
     if not (os.path.exists(args.labels) and os.path.exists(args.probs)):
-        raise SystemExit("E1 needs human labels and a labeler cache; neither step has been run yet.")
+        raise SystemExit("E1 needs a label file and a labeler cache; see Reproducing in README.md.")
     cache, labels = ProbCache(args.probs), load_labels(args.labels)
     os.makedirs(os.path.dirname(args.out), exist_ok=True)
     with open(args.out, "w", newline="") as fh:
