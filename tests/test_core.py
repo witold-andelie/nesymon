@@ -220,3 +220,17 @@ def test_once_per_order_and_bootstrap():
     assert flags == [0, 0, 0, 0, 0, 0, 1]
     lo, hi = bootstrap_ci([0.0, 0.5, 1.0, 0.0, 0.5] * 10)
     assert lo < 0.4 < hi
+
+
+def test_platt_scaling_corrects_a_biased_labeler():
+    from nesymon.monitor_prob import fit_platt, platt_scale
+    rng = random.Random(1)
+    probs, labels = [], []
+    for _ in range(2000):                      # true rate 2%, labeler says about 0.25 on negatives
+        y = int(rng.random() < 0.02)
+        probs.append(min(0.99, max(0.01, (0.8 if y else 0.25) + rng.gauss(0, 0.05))))
+        labels.append(y)
+    ab = fit_platt(probs, labels)
+    scaled = [platt_scale(p, ab) for p in probs]
+    assert abs(sum(scaled) / len(scaled) - sum(labels) / len(labels)) < 0.01
+    assert platt_scale(0.8, ab) > platt_scale(0.25, ab)

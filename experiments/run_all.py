@@ -101,8 +101,10 @@ def main():
             for method, res in main_table(tasks, dfa, args.alpha, reps=min(args.reps, 50)).items():
                 e1.append({"rule": rule_id, "method": method, "alpha": args.alpha,
                            **{f"{k}_{s}": round(v, 4) for k in METRICS for s, v in zip(("mean", "std"), res[k])}})
-            e1.append({"rule": rule_id, "method": "Ours_Prob", "alpha": args.alpha,
-                       "brier_mean": round(brier_of_prob_monitor(tasks, dfa), 4)})
+            raw, scaled = brier_of_prob_monitor(tasks, dfa)
+            e1.append({"rule": rule_id, "method": "Ours_Prob_raw", "alpha": args.alpha, "brier_mean": round(raw, 4)})
+            e1.append({"rule": rule_id, "method": "Ours_Prob_platt", "alpha": args.alpha,
+                       "brier_mean": round(scaled, 4)})
             e8 += [{"rule": rule_id, **{k: round(v, 4) for k, v in r.items()}}
                    for r in regime_sweep(tasks, dfa, alpha=args.alpha, reps=max(10, args.reps // 4))]
         if usable:

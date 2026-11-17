@@ -14,7 +14,7 @@ from nesymon.baselines import per_step_conformal_tau
 from nesymon.core import confidence_grid
 from nesymon.evaluate import calibrate, calibrate_two_sided, evaluate, split_tasks
 from nesymon.labeler import ProbCache
-from nesymon.monitor_prob import violation_probability
+from nesymon.monitor_prob import fit_platt, platt_scale, violation_probability
 from nesymon.pipeline import load_labels
 from rules.dfas import RULES
 
@@ -45,16 +45,41 @@ def thresholds(cal, dfa, alpha):
     return out
 
 
-def brier_of_prob_monitor(tasks, dfa):
-    """Ours-Prob: Brier score of the violation probability (role-gated props count as certainly false)."""
+def _prob_monitor_brier(tasks, dfa, scalers=None):
     errs = []
     for task in tasks:
         for tr in task:
             steps = [probs for probs, _ in tr]
+            if scalers:
+                steps = [{a: (platt_scale(p, scalers[a]) if a in scalers and p is not None else p)
+                          for a, p in probs.items()} for probs in steps]
             truth = [tuple(t[a] for a in dfa.props) for _, t in tr]
             y = float(dfa.run(truth) not in dfa.accepting)
             errs.append((violation_probability(dfa, steps) - y) ** 2)
     return st.mean(errs)
+
+
+def fit_scalers(tasks, dfa):
+    """Per linguistic proposition, Platt scaling fitted on the judged sites of the given tasks."""
+    scalers = {}
+    for a in set(dfa.props) - set(dfa.structured):
+        pairs = [(probs[a], t[a]) for task in tasks for tr in task for probs, t in tr if probs.get(a) is not None]
+        if pairs:                              # one-class sites are fine: the ridge keeps (a, b) finite
+            scalers[a] = fit_platt(*zip(*pairs))
+    return scalers
+
+
+def brier_of_prob_monitor(tasks, dfa, reps=20, frac_cal=0.4, seed=0):
+    """Ours-Prob: Brier score of the trajectory violation probability on test tasks, with raw labeler
+    probabilities and with per-proposition Platt scaling fitted on the calibration tasks. Role-gated
+    propositions count as certainly false. Returns (raw, calibrated) means over repeated splits."""
+    rng = random.Random(seed)
+    raw, cal_scaled = [], []
+    for _ in range(reps):
+        cal, test = split_tasks(tasks, frac_cal, rng)
+        raw.append(_prob_monitor_brier(test, dfa))
+        cal_scaled.append(_prob_monitor_brier(test, dfa, fit_scalers(cal, dfa)))
+    return st.mean(raw), st.mean(cal_scaled)
 
 
 def main_table(tasks, dfa, alpha, reps=20, frac_cal=0.4, seed=0):
@@ -93,7 +118,9 @@ def main():
                 continue
             for method, res in main_table(tasks, dfa, args.alpha, args.reps).items():
                 w.writerow([rule_id, method, len(tasks)] + [round(x, 4) for k in METRICS for x in res[k]])
-            w.writerow([rule_id, "Ours_Prob_brier", len(tasks), round(brier_of_prob_monitor(tasks, dfa), 4)])
+            raw, scaled = brier_of_prob_monitor(tasks, dfa)
+            w.writerow([rule_id, "Ours_Prob_brier_raw", len(tasks), round(raw, 4)])
+            w.writerow([rule_id, "Ours_Prob_brier_platt", len(tasks), round(scaled, 4)])
     print(f"wrote {args.out}")
 
 

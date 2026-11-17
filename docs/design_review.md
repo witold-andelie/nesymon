@@ -362,6 +362,48 @@ judgements; above 0.8: 7.2 percent). Confident errors were 19 percent with Qwen2
 Caveat: definitions v2.1 were tuned on these pilot tasks, so the pilot overstates performance; the evaluation
 tasks will tell.
 
+### 2.13 Provisional end-to-end run on the evaluation tasks (pre-labels as ground truth)
+
+`experiments/run_all.py` with the Qwen3.5-4B cache on the 145 evaluation tasks (290 trajectories), using the
+agent pre-labels (`results/full_preannotation.csv`) in place of the human labels, alpha = 0.10, 100 repetitions.
+This tests the pipeline end to end; every number will change once the labels are human-checked.
+
+Main table, R1 confirmation window (hard-label error 0.154, above alpha):
+
+| Method | tau | Joint error | Abstention |
+| --- | --- | --- | --- |
+| B2 hard labels | - | 0.154 | 0 |
+| B3 raw confidence 0.8 | 0.80 | 0.041 | 0.230 |
+| B4 per-step conformal | 0.73 | 0.066 | 0.163 |
+| Coverage loss | 0.92 | 0.001 | 0.409 |
+| Verdict-level loss (ours) | 0.72 | 0.079 | 0.142 |
+| Verdict-level, two-sided | 0.82 | 0.038 | 0.253 |
+
+- The guarantee held at every alpha tested for R1, R2 and R3: joint error at or below alpha.
+- On R1 the verdict-level loss uses the error budget and abstains least of the methods that meet alpha. Coverage
+  calibration abstains on 41 percent of trajectories for a joint error of 0.001. Per-step conformal is the closest
+  competitor (0.163 vs 0.142 abstention); the gap is modest and must be tested for significance on the final labels.
+- R3, R4 and R9 have hard-label error below alpha on these tasks, so calibration correctly returns tau near 0 and
+  the method adds nothing; coverage calibration still abstains on 86-94 percent of R9 trajectories.
+- Cross-domain shift (E6): calibrating R1 on airline and testing on retail gives joint error 0.176, above alpha.
+  The label-free shift statistics barely move (abstention shift 0.002, confidence shift -0.027), so the planned
+  label-free detection would have missed it. If this holds on human labels it is a negative result to report.
+- Error autocorrelation within trajectories (E7) is 0.28 for R2 and 0.27 for R9, so labeling errors are not
+  independent, as the probabilistic comparator assumes.
+
+Probabilistic comparator. With raw labeler probabilities its trajectory Brier score on R3 was 0.62, against
+0.007 for always predicting the base rate: the labeler gives about 0.22 to "subjective recommendation" on a typical
+assistant turn, and multiplying over turns predicts a 78 percent violation chance where the rate is 0.7 percent.
+The experiments now also report a version with per-proposition Platt scaling fitted on the calibration tasks
+(`fit_platt` in `nesymon/monitor_prob.py`). Trajectory Brier, raw / Platt / base-rate predictor:
+R1 0.105 / 0.200 / 0.106, R2 0.092 / 0.054 / 0.061, R3 0.620 / 0.007 / 0.007, R4 0.021 / 0.022 / 0.082,
+R9 0.049 / 0.014 / 0.069.
+
+On R1, Platt scaling halves the per-turn Brier score of confirm (0.140 to 0.066) but doubles the trajectory
+Brier score. The scaled probability is right on average over all user turns but too low on the turns that decide
+the rule, the replies just before a write, where confirmations are far more common. Calibrating propositions does
+not calibrate verdicts; this is direct support for putting the loss on the verdict.
+
 ## 3. Theory: what holds and what to state carefully
 
 Verified (no counterexample over 300 random traces per rule, 8 rules, 22 thresholds; see

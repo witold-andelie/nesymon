@@ -25,6 +25,39 @@ def fit_temperature(probs, labels, grid=None):
     return min(grid, key=nll)
 
 
+def _logit(p):
+    p = min(max(p, 1e-6), 1 - 1e-6)
+    return math.log(p / (1 - p))
+
+
+def fit_platt(probs, labels, l2=1e-2, iters=50):
+    """Platt scaling: (a, b) so that sigmoid(a * logit(p) + b) fits the labels (Newton, small ridge)."""
+    xs = [_logit(p) for p in probs]
+    a, b = 1.0, 0.0
+    for _ in range(iters):
+        ga = gb = haa = hab = hbb = 0.0
+        for x, y in zip(xs, labels):
+            q = 1 / (1 + math.exp(-(a * x + b)))
+            r, w = q - y, q * (1 - q)
+            ga += r * x; gb += r
+            haa += w * x * x; hab += w * x; hbb += w
+        ga += l2 * (a - 1); gb += l2 * b; haa += l2; hbb += l2
+        det = haa * hbb - hab * hab
+        if det <= 0:
+            break
+        da, db = (hbb * ga - hab * gb) / det, (haa * gb - hab * ga) / det
+        a, b = a - da, b - db
+        if abs(da) + abs(db) < 1e-9:
+            break
+    return a, b
+
+
+def platt_scale(p, ab):
+    a, b = ab
+    z = a * _logit(p) + b
+    return 1 / (1 + math.exp(-z)) if z > -700 else 0.0
+
+
 def forward(dfa, step_probs):
     """step_probs: one dict per step, prop -> P(true). Yields the belief over states after each step."""
     belief = {dfa.init: 1.0}

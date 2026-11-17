@@ -52,7 +52,8 @@ def test_main_table_on_simulated_tasks():
     assert table["B2_hard"]["abstain"][0] == 0.0
     assert table["Ours_Cov"]["tau"][0] >= table["Ours_SR"]["tau"][0] >= table["Ours_Ver"]["tau"][0]
     assert table["Ours_Ver_two_sided"]["tau"][0] >= table["Ours_Ver"]["tau"][0]
-    assert 0.0 <= brier_of_prob_monitor(tasks, dfa) <= 1.0
+    raw, scaled = brier_of_prob_monitor(tasks, dfa, reps=2)
+    assert 0.0 <= raw <= 1.0 and 0.0 <= scaled <= 1.0
 
 
 def test_analyses_on_simulated_tasks():
