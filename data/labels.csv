@@ -1,0 +1,836 @@
+task_id,traj_id,step,prop,value,note
+airline-6,gpt-4o-airline-6-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-6,gpt-4o-airline-6-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-6,gpt-4o-airline-6-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-6,gpt-4o-airline-6-0,1,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-6,gpt-4o-airline-6-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-6,gpt-4o-airline-6-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-6,gpt-4o-airline-6-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-6,gpt-4o-airline-6-0,5,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-6,gpt-4o-airline-6-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-6,gpt-4o-airline-6-0,6,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-6,gpt-4o-airline-6-0,9,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-6,gpt-4o-airline-6-0,9,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-6,gpt-4o-airline-6-0,10,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-6,gpt-4o-airline-6-0,10,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-6,gpt-4o-airline-6-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-6,gpt-4o-airline-6-0,17,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-6,gpt-4o-airline-6-0,18,confirm,1,A annotation; Approves the May 24 HAT110/HAT172 economy change and original-method refund listed at step 17.
+airline-6,gpt-4o-airline-6-0,18,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-6,gpt-4o-airline-6-0,19,matches_listed,1,"A annotation; HAT110/HAT172, May 24, economy and gift_card_8887175 match step 17; the reservation result identifies that gift card as the original payment."
+airline-6,gpt-4o-airline-6-0,21,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-6,gpt-4o-airline-6-0,21,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-6,gpt-4o-airline-6-0,22,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-6,gpt-4o-airline-6-0,22,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,gpt-4o-airline-8-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-8,gpt-4o-airline-8-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,gpt-4o-airline-8-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,gpt-4o-airline-8-0,1,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,gpt-4o-airline-8-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-8,gpt-4o-airline-8-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,gpt-4o-airline-8-0,3,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,gpt-4o-airline-8-0,3,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,gpt-4o-airline-8-0,4,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-8,gpt-4o-airline-8-0,4,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,gpt-4o-airline-8-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,gpt-4o-airline-8-0,5,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,gpt-4o-airline-8-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-8,gpt-4o-airline-8-0,6,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,gpt-4o-airline-8-0,7,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,gpt-4o-airline-8-0,7,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,gpt-4o-airline-8-0,8,confirm,0,A annotation; Requests cancellation/rebooking before the assistant has listed a concrete cancellation/new-booking plan.
+airline-8,gpt-4o-airline-8-0,8,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,gpt-4o-airline-8-0,9,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,gpt-4o-airline-8-0,9,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,gpt-4o-airline-8-0,10,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-8,gpt-4o-airline-8-0,10,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,gpt-4o-airline-8-0,11,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,gpt-4o-airline-8-0,11,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,gpt-4o-airline-8-0,12,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-8,gpt-4o-airline-8-0,12,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,gpt-4o-airline-8-0,13,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,gpt-4o-airline-8-0,13,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,gpt-4o-airline-8-0,14,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-8,gpt-4o-airline-8-0,14,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,gpt-4o-airline-8-0,15,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,gpt-4o-airline-8-0,15,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,gpt-4o-airline-8-0,16,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-8,gpt-4o-airline-8-0,16,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,gpt-4o-airline-13-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-13,gpt-4o-airline-13-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,gpt-4o-airline-13-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,gpt-4o-airline-13-0,1,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,gpt-4o-airline-13-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-13,gpt-4o-airline-13-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,gpt-4o-airline-13-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,gpt-4o-airline-13-0,5,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,gpt-4o-airline-13-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-13,gpt-4o-airline-13-0,6,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,gpt-4o-airline-13-0,7,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,gpt-4o-airline-13-0,7,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,gpt-4o-airline-13-0,8,confirm,0,A annotation; Only agrees to the cabin upgrade while adding a new destination/flight change; does not approve an already listed complete action.
+airline-13,gpt-4o-airline-13-0,8,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,gpt-4o-airline-13-0,11,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,gpt-4o-airline-13-0,11,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,gpt-4o-airline-13-0,12,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-13,gpt-4o-airline-13-0,12,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,gpt-4o-airline-13-0,13,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,gpt-4o-airline-13-0,13,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,gpt-4o-airline-13-0,14,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-13,gpt-4o-airline-13-0,14,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,gpt-4o-airline-13-0,21,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,gpt-4o-airline-13-0,21,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,gpt-4o-airline-13-0,22,confirm,1,A annotation; Explicitly selects and authorizes the listed HAT052 ATL-LAS change; step 22 also confirms economy.
+airline-13,gpt-4o-airline-13-0,22,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,gpt-4o-airline-13-0,23,matches_listed,1,A annotation; Replaces the upcoming ATL-DFW-LAX connection with listed HAT052 in economy while retaining the two already-flown outbound segments; execution failure does not change argument agreement.
+airline-13,gpt-4o-airline-13-0,25,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,gpt-4o-airline-13-0,25,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,gpt-4o-airline-13-0,26,confirm,0,A annotation; Corrects or repeats the requested flight change after an error/exploration message; the immediately preceding message does not list that concrete change for approval.
+airline-13,gpt-4o-airline-13-0,26,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,gpt-4o-airline-13-0,27,matches_listed,1,A annotation; Replaces the upcoming ATL-DFW-LAX connection with listed HAT052 in economy while retaining the two already-flown outbound segments; execution failure does not change argument agreement.
+airline-13,gpt-4o-airline-13-0,33,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,gpt-4o-airline-13-0,33,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,gpt-4o-airline-13-0,34,confirm,0,A annotation; Corrects or repeats the requested flight change after an error/exploration message; the immediately preceding message does not list that concrete change for approval.
+airline-13,gpt-4o-airline-13-0,34,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,gpt-4o-airline-13-0,35,matches_listed,0,"Third-party adjudication v2; disagreement #1; The extra HAT124 (DFW->LAX) does not fit the listed plan of flying direct to LAS; a flight update replaces the whole list, so the complete list is compared. The correct list is [HAT030, HAT223, HAT052]."
+airline-13,gpt-4o-airline-13-0,37,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,gpt-4o-airline-13-0,37,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,gpt-4o-airline-13-0,38,confirm,0,A annotation; Corrects or repeats the requested flight change after an error/exploration message; the immediately preceding message does not list that concrete change for approval.
+airline-13,gpt-4o-airline-13-0,38,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,gpt-4o-airline-13-0,39,matches_listed,1,A annotation; Replaces the upcoming ATL-DFW-LAX connection with listed HAT052 in economy while retaining the two already-flown outbound segments; execution failure does not change argument agreement.
+airline-13,gpt-4o-airline-13-0,41,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,gpt-4o-airline-13-0,41,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,gpt-4o-airline-13-0,42,confirm,0,A annotation; Corrects or repeats the requested flight change after an error/exploration message; the immediately preceding message does not list that concrete change for approval.
+airline-13,gpt-4o-airline-13-0,42,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,gpt-4o-airline-13-0,43,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,gpt-4o-airline-13-0,43,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,gpt-4o-airline-13-0,44,confirm,1,"Third-party adjudication v2; disagreement #2; The assistant made the choice the last step (confirm which... and I will proceed); the user picked one and explicitly asked to proceed, adding no new parameter. The second review withdrew the extra condition that the payment method and price difference must already be listed; step 44 should take the same value as step 22, on which both annotators agreed."
+airline-13,gpt-4o-airline-13-0,44,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,gpt-4o-airline-13-0,45,matches_listed,0,"Third-party adjudication v2; disagreement #3; The extra HAT124 (DFW->LAX) does not fit the listed plan of flying direct to LAS; the correct list is [HAT030, HAT223, HAT052]."
+airline-13,gpt-4o-airline-13-0,47,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,gpt-4o-airline-13-0,47,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,gpt-4o-airline-13-0,48,confirm,0,A annotation; Corrects or repeats the requested flight change after an error/exploration message; the immediately preceding message does not list that concrete change for approval.
+airline-13,gpt-4o-airline-13-0,48,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,gpt-4o-airline-13-0,49,matches_listed,0,"Third-party adjudication v2; disagreement #4; The listed plan changes only the future segments, but the call removes the already flown segment HAT030; the correct list is [HAT030, HAT223, HAT052]."
+airline-13,gpt-4o-airline-13-0,51,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,gpt-4o-airline-13-0,51,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,gpt-4o-airline-13-0,52,confirm,0,A annotation; Corrects or repeats the requested flight change after an error/exploration message; the immediately preceding message does not list that concrete change for approval.
+airline-13,gpt-4o-airline-13-0,52,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,gpt-4o-airline-13-0,53,matches_listed,0,"Third-party adjudication v2; disagreement #5; The listed plan changes only the future segments, but the call removes two already flown segments. Before step 53 the user was never told that the itinerary would be reduced to HAT052 alone; steps 37, 41 and 47 still asked to deal with the original segments first."
+airline-13,gpt-4o-airline-13-0,55,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,gpt-4o-airline-13-0,55,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,gpt-4o-airline-13-0,56,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-13,gpt-4o-airline-13-0,56,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-18,gpt-4o-airline-18-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-18,gpt-4o-airline-18-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-18,gpt-4o-airline-18-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-18,gpt-4o-airline-18-0,1,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-18,gpt-4o-airline-18-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-18,gpt-4o-airline-18-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-18,gpt-4o-airline-18-0,7,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-18,gpt-4o-airline-18-0,7,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-18,gpt-4o-airline-18-0,8,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-18,gpt-4o-airline-18-0,8,asks_compensation,1,A annotation; Explicitly asks for a travel voucher or gift card instead of the unavailable cancellation.
+airline-18,gpt-4o-airline-18-0,9,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-18,gpt-4o-airline-18-0,9,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-18,gpt-4o-airline-18-0,10,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-18,gpt-4o-airline-18-0,10,asks_compensation,1,A annotation; Explicitly asks for an exceptional partial refund (50% or 10%).
+airline-18,gpt-4o-airline-18-0,11,subjective_recommendation,0,Third-party adjudication v2; disagreement #6; Suggesting a transfer to a human is procedural guidance and expresses no evaluative preference among options open to the user; the word recommend alone is not enough.
+airline-18,gpt-4o-airline-18-0,11,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-18,gpt-4o-airline-18-0,12,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-18,gpt-4o-airline-18-0,12,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-18,gpt-4o-airline-18-0,13,transfer_justified,0,A annotation; Policy requires denying this nonrefundable basic-economy cancellation/compensation exception; escalation does not make a prohibited request justified.
+airline-19,gpt-4o-airline-19-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-19,gpt-4o-airline-19-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-19,gpt-4o-airline-19-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-19,gpt-4o-airline-19-0,1,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-19,gpt-4o-airline-19-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-19,gpt-4o-airline-19-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-19,gpt-4o-airline-19-0,3,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-19,gpt-4o-airline-19-0,3,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-19,gpt-4o-airline-19-0,4,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-19,gpt-4o-airline-19-0,4,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-19,gpt-4o-airline-19-0,7,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-19,gpt-4o-airline-19-0,7,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-19,gpt-4o-airline-19-0,8,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-19,gpt-4o-airline-19-0,8,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-19,gpt-4o-airline-19-0,9,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-19,gpt-4o-airline-19-0,9,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-19,gpt-4o-airline-19-0,10,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-19,gpt-4o-airline-19-0,10,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-19,gpt-4o-airline-19-0,11,subjective_recommendation,0,Third-party adjudication v2; disagreement #7; Suggesting a transfer to a human is procedural guidance and expresses no evaluative preference among options open to the user.
+airline-19,gpt-4o-airline-19-0,11,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-19,gpt-4o-airline-19-0,12,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-19,gpt-4o-airline-19-0,12,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-19,gpt-4o-airline-19-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-19,gpt-4o-airline-19-0,17,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-19,gpt-4o-airline-19-0,18,confirm,0,Third-party adjudication v2; disagreement #8; The user adds a checked bag that the assistant's previous message had not listed; parameters are still being supplied.
+airline-19,gpt-4o-airline-19-0,18,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-19,gpt-4o-airline-19-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-19,gpt-4o-airline-19-0,19,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-19,gpt-4o-airline-19-0,20,confirm,1,A annotation; Explicitly approves the flights/bag listed at step 19; asks about a fee waiver without making approval conditional on receiving one.
+airline-19,gpt-4o-airline-19-0,20,asks_compensation,0,"A annotation; Asks about insurance covering voluntary itinerary-change/baggage fees, not compensation for a booking problem."
+airline-19,gpt-4o-airline-19-0,21,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-19,gpt-4o-airline-19-0,21,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-19,gpt-4o-airline-19-0,22,confirm,0,"Third-party adjudication v2; disagreement #9; The user agrees to checking the cost first; the assistant said it would report back before the final change, so this is not yet a confirmation to execute."
+airline-19,gpt-4o-airline-19-0,22,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-19,gpt-4o-airline-19-0,23,matches_listed,1,"A annotation; Executes HAT169 May 17 and HAT212 May 20 in economy, as listed at step 19; policy legality is a separate question."
+airline-19,gpt-4o-airline-19-0,25,matches_listed,1,A annotation; Adds the one checked bag listed at step 19; that message did not promise a nonfree bag or a bag fee.
+airline-19,gpt-4o-airline-19-0,27,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-19,gpt-4o-airline-19-0,27,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-19,gpt-4o-airline-19-0,28,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-19,gpt-4o-airline-19-0,28,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,gpt-4o-airline-22-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-22,gpt-4o-airline-22-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,gpt-4o-airline-22-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-22,gpt-4o-airline-22-0,1,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-22,gpt-4o-airline-22-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-22,gpt-4o-airline-22-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,gpt-4o-airline-22-0,3,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-22,gpt-4o-airline-22-0,3,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-22,gpt-4o-airline-22-0,4,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-22,gpt-4o-airline-22-0,4,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,gpt-4o-airline-22-0,7,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-22,gpt-4o-airline-22-0,7,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-22,gpt-4o-airline-22-0,8,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-22,gpt-4o-airline-22-0,8,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,gpt-4o-airline-22-0,11,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-22,gpt-4o-airline-22-0,11,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-22,gpt-4o-airline-22-0,12,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-22,gpt-4o-airline-22-0,12,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,gpt-4o-airline-22-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-22,gpt-4o-airline-22-0,17,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-22,gpt-4o-airline-22-0,18,confirm,1,"A annotation; Unconditionally authorizes the listed HAT041 May 21 upgrade and flight change, despite the assistant arithmetic/budget error."
+airline-22,gpt-4o-airline-22-0,18,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,gpt-4o-airline-22-0,19,matches_listed,1,A annotation; update_reservation_flights arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+airline-22,gpt-4o-airline-22-0,21,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-22,gpt-4o-airline-22-0,21,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-22,gpt-4o-airline-22-0,22,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-22,gpt-4o-airline-22-0,22,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-30,gpt-4o-airline-30-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-30,gpt-4o-airline-30-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-30,gpt-4o-airline-30-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-30,gpt-4o-airline-30-0,1,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-30,gpt-4o-airline-30-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-30,gpt-4o-airline-30-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-30,gpt-4o-airline-30-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-30,gpt-4o-airline-30-0,19,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-30,gpt-4o-airline-30-0,20,confirm,0,A annotation; Makes the initial request to cancel one duplicate booking; the preceding summary did not specify a concrete cancellation action.
+airline-30,gpt-4o-airline-30-0,20,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-30,gpt-4o-airline-30-0,21,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-30,gpt-4o-airline-30-0,21,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-30,gpt-4o-airline-30-0,22,confirm,1,A annotation; Explicitly authorizes cancelling listed FDZ0T5 and supplies the requested change-of-plans reason.
+airline-30,gpt-4o-airline-30-0,22,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-30,gpt-4o-airline-30-0,23,transfer_justified,0,A annotation; FDZ0T5 is an entirely upcoming business-class reservation; policy and the cancellation tool allow the assistant to cancel it directly.
+airline-32,gpt-4o-airline-32-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-32,gpt-4o-airline-32-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-32,gpt-4o-airline-32-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-32,gpt-4o-airline-32-0,1,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-32,gpt-4o-airline-32-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-32,gpt-4o-airline-32-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-32,gpt-4o-airline-32-0,7,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-32,gpt-4o-airline-32-0,7,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-32,gpt-4o-airline-32-0,8,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-32,gpt-4o-airline-32-0,8,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-32,gpt-4o-airline-32-0,9,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-32,gpt-4o-airline-32-0,9,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-32,gpt-4o-airline-32-0,10,confirm,0,A annotation; Booking approval is expressly conditional on the total not exceeding $500.
+airline-32,gpt-4o-airline-32-0,10,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-32,gpt-4o-airline-32-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-32,gpt-4o-airline-32-0,17,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-32,gpt-4o-airline-32-0,18,confirm,0,"Third-party adjudication v2; disagreement #10; The request for adjacent aisle and middle seats changes the booking; the listed plan did not include it, so it is an added condition or a change."
+airline-32,gpt-4o-airline-32-0,18,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-32,gpt-4o-airline-32-0,19,matches_listed,1,"A annotation; HAT139 economy, May 26, Sophia/Kevin, no bags/insurance and gift-card payment $228 match step 17; seat selection is not a listed tool argument."
+airline-32,gpt-4o-airline-32-0,21,subjective_recommendation,0,"Third-party adjudication v2; disagreement #11; Gives a feasible flight on the objective basis of being the next one with enough seats, in neutral wording, with no evaluative preference. Not mentioning the cheaper HAT289, which also had seats, is incomplete information."
+airline-32,gpt-4o-airline-32-0,21,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-32,gpt-4o-airline-32-0,22,confirm,0,"Third-party adjudication v2; disagreement #12; Same kind as record 10; adjacent aisle and middle seats are a requirement the listed booking did not contain, and the case is not split by how strongly it was worded."
+airline-32,gpt-4o-airline-32-0,22,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-32,gpt-4o-airline-32-0,23,matches_listed,1,A annotation; HAT271 economy for two at $174 each matches the replacement booking offered at step 21.
+airline-32,gpt-4o-airline-32-0,25,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-32,gpt-4o-airline-32-0,25,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-32,gpt-4o-airline-32-0,26,confirm,0,"Third-party adjudication v2; disagreement #13; Only chooses the payment method and does not cover consent to execute the whole booking; step 25 did not restate the booking plan, the amount or the specific credit card."
+airline-32,gpt-4o-airline-32-0,26,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-32,gpt-4o-airline-32-0,29,matches_listed,1,A annotation; Uses the gift-card remainder and credit card as listed at step 25; known balance $274 plus $74 equals the listed $348 total.
+airline-32,gpt-4o-airline-32-0,31,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-32,gpt-4o-airline-32-0,31,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-32,gpt-4o-airline-32-0,32,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-32,gpt-4o-airline-32-0,32,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-37,gpt-4o-airline-37-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-37,gpt-4o-airline-37-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-37,gpt-4o-airline-37-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-37,gpt-4o-airline-37-0,1,offers_compensation,1,Third-party adjudication v2; disagreement #14; 'I may be able to offer some compensation' is a compensation offer with an eligibility condition; conditional or tentative wording does not rule it out.
+airline-37,gpt-4o-airline-37-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-37,gpt-4o-airline-37-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-37,gpt-4o-airline-37-0,3,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-37,gpt-4o-airline-37-0,3,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-37,gpt-4o-airline-37-0,4,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-37,gpt-4o-airline-37-0,4,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-37,gpt-4o-airline-37-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-37,gpt-4o-airline-37-0,17,offers_compensation,1,"Third-party adjudication v2; disagreement #15; Second adjudication, changed to 1: steps 5-16 contain no message to the user, so step 17 is the first time this $200 is put in front of the user. The first message that offers a given compensation or announces that it was issued counts; later repetitions of the same compensation do not."
+airline-37,gpt-4o-airline-37-0,18,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-37,gpt-4o-airline-37-0,18,asks_compensation,1,A annotation; Explicitly requests compensation reimbursed to the original payment method instead of a certificate.
+airline-37,gpt-4o-airline-37-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-37,gpt-4o-airline-37-0,19,offers_compensation,0,A annotation; Explains the already-issued certificate or refuses further compensation; no new offer.
+airline-37,gpt-4o-airline-37-0,20,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-37,gpt-4o-airline-37-0,20,asks_compensation,1,A annotation; Explicitly requests higher compensation or more vouchers for the delay.
+airline-37,gpt-4o-airline-37-0,21,subjective_recommendation,0,Third-party adjudication v2; disagreement #16; Suggesting to contact customer service is procedural guidance and expresses no evaluative preference among options open to the user.
+airline-37,gpt-4o-airline-37-0,21,offers_compensation,0,A annotation; Explains the already-issued certificate or refuses further compensation; no new offer.
+airline-37,gpt-4o-airline-37-0,22,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-37,gpt-4o-airline-37-0,22,asks_compensation,0,"A annotation; Requests a customer-service review note, not explicitly more compensation in this turn."
+airline-37,gpt-4o-airline-37-0,23,transfer_justified,0,"A annotation; The underlying request is an exception to the stated compensation limits, which policy says to deny; requesting escalation/review does not authorize an exception."
+airline-43,gpt-4o-airline-43-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-43,gpt-4o-airline-43-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-43,gpt-4o-airline-43-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-43,gpt-4o-airline-43-0,1,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-43,gpt-4o-airline-43-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-43,gpt-4o-airline-43-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-43,gpt-4o-airline-43-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-43,gpt-4o-airline-43-0,5,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-43,gpt-4o-airline-43-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-43,gpt-4o-airline-43-0,6,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-43,gpt-4o-airline-43-0,7,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-43,gpt-4o-airline-43-0,7,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-43,gpt-4o-airline-43-0,8,confirm,1,A annotation; Approves the listed Mei Lee to Mei Garcia correction with DOB unchanged.
+airline-43,gpt-4o-airline-43-0,8,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-43,gpt-4o-airline-43-0,9,matches_listed,1,A annotation; update_reservation_passengers arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+airline-43,gpt-4o-airline-43-0,11,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-43,gpt-4o-airline-43-0,11,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-43,gpt-4o-airline-43-0,12,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-43,gpt-4o-airline-43-0,12,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+retail-5,gpt-4o-retail-5-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-5,gpt-4o-retail-5-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-5,gpt-4o-retail-5-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-5,gpt-4o-retail-5-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-5,gpt-4o-retail-5-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-5,gpt-4o-retail-5-0,9,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-5,gpt-4o-retail-5-0,10,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-5,gpt-4o-retail-5-0,11,transfer_justified,1,A annotation; Both permitted identity lookup methods failed and the user has no corrected credentials; no remaining authenticated exchange procedure is available.
+retail-33,gpt-4o-retail-33-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-33,gpt-4o-retail-33-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-33,gpt-4o-retail-33-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-33,gpt-4o-retail-33-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-33,gpt-4o-retail-33-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-33,gpt-4o-retail-33-0,9,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-33,gpt-4o-retail-33-0,10,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-33,gpt-4o-retail-33-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-33,gpt-4o-retail-33-0,18,confirm,0,A annotation; Cancellation request is conditional on partial-item cancellation being possible and differs from cancelling the entire order.
+retail-33,gpt-4o-retail-33-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-33,gpt-4o-retail-33-0,20,confirm,0,Third-party adjudication v2; disagreement #17; The assistant asked for the cancellation reason and the user only gave the reason; this supplies a parameter and is not consent to execute.
+retail-33,gpt-4o-retail-33-0,21,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-33,gpt-4o-retail-33-0,22,confirm,0,A annotation; Declines the listed whole-order cancellation and introduces a new default-address change.
+retail-33,gpt-4o-retail-33-0,23,matches_listed,1,A annotation; No prior assistant message listed a default-address update; definition makes matches_listed true in this case.
+retail-33,gpt-4o-retail-33-0,25,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-33,gpt-4o-retail-33-0,26,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-49,gpt-4o-retail-49-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-49,gpt-4o-retail-49-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-49,gpt-4o-retail-49-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-49,gpt-4o-retail-49-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-49,gpt-4o-retail-49-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-49,gpt-4o-retail-49-0,11,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-49,gpt-4o-retail-49-0,12,confirm,0,"Third-party adjudication v2; disagreement #18; The user rejected the listed payment part, so the agreement is partial."
+retail-49,gpt-4o-retail-49-0,13,matches_listed,1,"A annotation; Order and IPX7-to-1646531091 exchange match step 11, which also mentioned the gift card; user disagreement with payment terms belongs to confirm."
+retail-49,gpt-4o-retail-49-0,15,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-49,gpt-4o-retail-49-0,16,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-51,gpt-4o-retail-51-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-51,gpt-4o-retail-51-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-51,gpt-4o-retail-51-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-51,gpt-4o-retail-51-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-51,gpt-4o-retail-51-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-51,gpt-4o-retail-51-0,9,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-51,gpt-4o-retail-51-0,10,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-51,gpt-4o-retail-51-0,13,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-51,gpt-4o-retail-51-0,14,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-51,gpt-4o-retail-51-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-51,gpt-4o-retail-51-0,20,confirm,1,A annotation; Authorizes the listed camera return and selects the listed original Mastercard refund option.
+retail-51,gpt-4o-retail-51-0,21,matches_listed,1,A annotation; return_delivered_order_items arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-51,gpt-4o-retail-51-0,23,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-51,gpt-4o-retail-51-0,24,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-53,gpt-4o-retail-53-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-53,gpt-4o-retail-53-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-53,gpt-4o-retail-53-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-53,gpt-4o-retail-53-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-53,gpt-4o-retail-53-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-53,gpt-4o-retail-53-0,13,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-53,gpt-4o-retail-53-0,14,confirm,1,A annotation; Authorizes the listed bicycle return from #W3916020 with original Mastercard refund.
+retail-53,gpt-4o-retail-53-0,15,matches_listed,1,A annotation; return_delivered_order_items arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-53,gpt-4o-retail-53-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-53,gpt-4o-retail-53-0,18,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-62,gpt-4o-retail-62-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-62,gpt-4o-retail-62-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-62,gpt-4o-retail-62-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-62,gpt-4o-retail-62-0,3,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-62,gpt-4o-retail-62-0,4,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-62,gpt-4o-retail-62-0,11,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-62,gpt-4o-retail-62-0,12,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-62,gpt-4o-retail-62-0,15,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-62,gpt-4o-retail-62-0,16,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-62,gpt-4o-retail-62-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-62,gpt-4o-retail-62-0,18,confirm,1,A annotation; Explicitly approves the listed speaker removal; the additional product-search/total-price question does not condition that approval.
+retail-62,gpt-4o-retail-62-0,23,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-62,gpt-4o-retail-62-0,24,confirm,1,A annotation; Explicitly approves the listed speaker removal; the additional product-search/total-price question does not condition that approval.
+retail-62,gpt-4o-retail-62-0,25,matches_listed,1,A annotation; An empty new_item_ids list expresses the listed speaker removal; tool failure and policy legality are separate from argument agreement.
+retail-62,gpt-4o-retail-62-0,27,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-62,gpt-4o-retail-62-0,28,confirm,0,Third-party adjudication v2; disagreement #19; 'The cheapest one' hands the choice to the assistant; the previous user-visible assistant message did not list a specific replacement model.
+retail-62,gpt-4o-retail-62-0,29,matches_listed,1,A annotation; No assistant message listed a concrete speaker-replacement action (step 23 only quoted product availability); positive by the no-listing clause.
+retail-62,gpt-4o-retail-62-0,31,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-62,gpt-4o-retail-62-0,32,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-62,gpt-4o-retail-62-0,33,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-62,gpt-4o-retail-62-0,34,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-65,gpt-4o-retail-65-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-65,gpt-4o-retail-65-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-65,gpt-4o-retail-65-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-65,gpt-4o-retail-65-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-65,gpt-4o-retail-65-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-65,gpt-4o-retail-65-0,11,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-65,gpt-4o-retail-65-0,12,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-65,gpt-4o-retail-65-0,13,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-65,gpt-4o-retail-65-0,14,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-65,gpt-4o-retail-65-0,15,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-65,gpt-4o-retail-65-0,16,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-97,gpt-4o-retail-97-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-97,gpt-4o-retail-97-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,gpt-4o-retail-97-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-97,gpt-4o-retail-97-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,gpt-4o-retail-97-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-97,gpt-4o-retail-97-0,9,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,gpt-4o-retail-97-0,10,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-97,gpt-4o-retail-97-0,11,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,gpt-4o-retail-97-0,12,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-97,gpt-4o-retail-97-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,gpt-4o-retail-97-0,18,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-97,gpt-4o-retail-97-0,21,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,gpt-4o-retail-97-0,22,confirm,1,A annotation; Approves the fully listed NYC address update for #W6750959.
+retail-97,gpt-4o-retail-97-0,23,matches_listed,1,A annotation; modify_pending_order_address arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-97,gpt-4o-retail-97-0,25,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,gpt-4o-retail-97-0,26,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-97,gpt-4o-retail-97-0,29,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,gpt-4o-retail-97-0,30,confirm,1,A annotation; Approves the listed green-speaker exchange and supplies the original refund method.
+retail-97,gpt-4o-retail-97-0,31,matches_listed,1,A annotation; Matches the listed blue-to-green speaker exchange and original PayPal; using an exchange tool on a pending order is a separate policy issue.
+retail-97,gpt-4o-retail-97-0,33,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,gpt-4o-retail-97-0,34,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-97,gpt-4o-retail-97-0,35,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,gpt-4o-retail-97-0,36,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-108,gpt-4o-retail-108-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-108,gpt-4o-retail-108-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-108,gpt-4o-retail-108-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-108,gpt-4o-retail-108-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-108,gpt-4o-retail-108-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-108,gpt-4o-retail-108-0,11,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-108,gpt-4o-retail-108-0,12,confirm,1,A annotation; Unconditionally approves exchanging the identified boots for an identical new pair with PayPal.
+retail-108,gpt-4o-retail-108-0,13,matches_listed,1,A annotation; exchange_delivered_order_items arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-108,gpt-4o-retail-108-0,15,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-108,gpt-4o-retail-108-0,16,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-108,gpt-4o-retail-108-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-108,gpt-4o-retail-108-0,18,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-108,gpt-4o-retail-108-0,21,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-108,gpt-4o-retail-108-0,22,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-108,gpt-4o-retail-108-0,25,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-108,gpt-4o-retail-108-0,26,confirm,1,A annotation; Explicitly selects the listed 1000-piece fantasy puzzle at intermediate difficulty.
+retail-108,gpt-4o-retail-108-0,27,matches_listed,1,A annotation; exchange_delivered_order_items arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-108,gpt-4o-retail-108-0,29,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-108,gpt-4o-retail-108-0,30,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-113,gpt-4o-retail-113-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-113,gpt-4o-retail-113-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-113,gpt-4o-retail-113-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-113,gpt-4o-retail-113-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-113,gpt-4o-retail-113-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-113,gpt-4o-retail-113-0,7,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-113,gpt-4o-retail-113-0,8,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-113,gpt-4o-retail-113-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-113,gpt-4o-retail-113-0,20,confirm,1,"A annotation; Explicitly approves the listed address; the laptop model change is an additional independent request, not a condition on the address approval."
+retail-113,gpt-4o-retail-113-0,21,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-113,gpt-4o-retail-113-0,22,confirm,1,A annotation; Explicitly confirms both listed laptop/address changes; the new watch request does not withdraw that approval.
+retail-113,gpt-4o-retail-113-0,23,matches_listed,1,A annotation; modify_pending_order_address arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-113,gpt-4o-retail-113-0,25,matches_listed,1,A annotation; modify_pending_order_items arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-113,gpt-4o-retail-113-0,31,matches_listed,1,"A annotation; No assistant message listed a concrete watch modification before this call; positive by the no-listing clause, regardless of missing user confirmation."
+retail-113,gpt-4o-retail-113-0,33,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-113,gpt-4o-retail-113-0,34,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-6,sonnet-35-new-airline-6-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-6,sonnet-35-new-airline-6-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-6,sonnet-35-new-airline-6-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-6,sonnet-35-new-airline-6-0,1,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-6,sonnet-35-new-airline-6-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-6,sonnet-35-new-airline-6-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-6,sonnet-35-new-airline-6-0,13,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-6,sonnet-35-new-airline-6-0,13,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-6,sonnet-35-new-airline-6-0,14,confirm,1,A annotation; Approves the listed HAT110/HAT132 itinerary and original-payment refund; differs from the reference solution but matches this dialogue.
+airline-6,sonnet-35-new-airline-6-0,14,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-6,sonnet-35-new-airline-6-0,15,matches_listed,1,A annotation; update_reservation_flights arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+airline-6,sonnet-35-new-airline-6-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-6,sonnet-35-new-airline-6-0,17,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-6,sonnet-35-new-airline-6-0,18,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-6,sonnet-35-new-airline-6-0,18,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-6,sonnet-35-new-airline-6-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-6,sonnet-35-new-airline-6-0,19,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-6,sonnet-35-new-airline-6-0,20,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-6,sonnet-35-new-airline-6-0,20,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,sonnet-35-new-airline-8-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-8,sonnet-35-new-airline-8-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,sonnet-35-new-airline-8-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,sonnet-35-new-airline-8-0,1,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,sonnet-35-new-airline-8-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-8,sonnet-35-new-airline-8-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,sonnet-35-new-airline-8-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,sonnet-35-new-airline-8-0,5,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,sonnet-35-new-airline-8-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-8,sonnet-35-new-airline-8-0,6,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,sonnet-35-new-airline-8-0,15,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,sonnet-35-new-airline-8-0,15,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,sonnet-35-new-airline-8-0,16,confirm,1,A annotation; Explicitly approves the listed business flights and supplies the requested payment preference; the charge-amount question is not an approval condition.
+airline-8,sonnet-35-new-airline-8-0,16,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,sonnet-35-new-airline-8-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,sonnet-35-new-airline-8-0,19,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,sonnet-35-new-airline-8-0,20,confirm,1,A annotation; Explicitly authorizes the concrete multi-method payment distribution listed at step 19.
+airline-8,sonnet-35-new-airline-8-0,20,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,sonnet-35-new-airline-8-0,21,matches_listed,0,"Third-party adjudication v2; disagreement #20; The listed payment plan combines a certificate, gift cards and a credit card, while the call uses a single method; even if it succeeded as written it would not produce the payment result the user was told."
+airline-8,sonnet-35-new-airline-8-0,23,matches_listed,0,"Third-party adjudication v2; disagreement #21; The listed payment plan combines a certificate, gift cards and a credit card, while the call uses only the Mastercard; the third-party review notes that step 23 charged the full amount to the card and that the user objected at step 26."
+airline-8,sonnet-35-new-airline-8-0,25,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,sonnet-35-new-airline-8-0,25,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,sonnet-35-new-airline-8-0,26,confirm,0,A annotation; Introduces cancellation plus a new booking; step 25 only reported the already completed change and asked about baggage.
+airline-8,sonnet-35-new-airline-8-0,26,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,sonnet-35-new-airline-8-0,27,matches_listed,1,A annotation; No prior assistant message listed a cancellation action; positive by the explicit no-listing clause.
+airline-8,sonnet-35-new-airline-8-0,29,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,sonnet-35-new-airline-8-0,29,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,sonnet-35-new-airline-8-0,30,confirm,1,Third-party adjudication v2; disagreement #22; The old reservation was already cancelled at steps 27-28; 'cancel first' is a reminder of something already satisfied and does not change the new booking plan.
+airline-8,sonnet-35-new-airline-8-0,30,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,sonnet-35-new-airline-8-0,31,matches_listed,1,"A annotation; New-booking arguments reproduce the flights, passengers and six-method payment distribution listed at step 29; the one-certificate policy violation is separate."
+airline-8,sonnet-35-new-airline-8-0,33,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,sonnet-35-new-airline-8-0,33,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,sonnet-35-new-airline-8-0,34,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-8,sonnet-35-new-airline-8-0,34,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-8,sonnet-35-new-airline-8-0,37,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-8,sonnet-35-new-airline-8-0,37,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-8,sonnet-35-new-airline-8-0,38,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-8,sonnet-35-new-airline-8-0,38,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,sonnet-35-new-airline-13-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-13,sonnet-35-new-airline-13-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,sonnet-35-new-airline-13-0,3,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,sonnet-35-new-airline-13-0,3,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,sonnet-35-new-airline-13-0,4,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-13,sonnet-35-new-airline-13-0,4,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,sonnet-35-new-airline-13-0,9,subjective_recommendation,1,"Third-party adjudication v2; disagreement #23; Second adjudication, changed to 1: the user had given no criterion for choosing a flight, and the assistant, without stating an objective basis, replaced HAT252 with HAT004 on its own and referred to 'the flight times I suggested'; picking an option for the user and proposing it is a recommendation."
+airline-13,sonnet-35-new-airline-13-0,9,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,sonnet-35-new-airline-13-0,10,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-13,sonnet-35-new-airline-13-0,10,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,sonnet-35-new-airline-13-0,13,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,sonnet-35-new-airline-13-0,13,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,sonnet-35-new-airline-13-0,14,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-13,sonnet-35-new-airline-13-0,14,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,sonnet-35-new-airline-13-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,sonnet-35-new-airline-13-0,17,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,sonnet-35-new-airline-13-0,18,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-13,sonnet-35-new-airline-13-0,18,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,sonnet-35-new-airline-13-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,sonnet-35-new-airline-13-0,19,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,sonnet-35-new-airline-13-0,20,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-13,sonnet-35-new-airline-13-0,20,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,sonnet-35-new-airline-13-0,43,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,sonnet-35-new-airline-13-0,43,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,sonnet-35-new-airline-13-0,44,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-13,sonnet-35-new-airline-13-0,44,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-13,sonnet-35-new-airline-13-0,45,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-13,sonnet-35-new-airline-13-0,45,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-13,sonnet-35-new-airline-13-0,46,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-13,sonnet-35-new-airline-13-0,46,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-18,sonnet-35-new-airline-18-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-18,sonnet-35-new-airline-18-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-18,sonnet-35-new-airline-18-0,3,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-18,sonnet-35-new-airline-18-0,3,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-18,sonnet-35-new-airline-18-0,4,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-18,sonnet-35-new-airline-18-0,4,asks_compensation,1,A annotation; Explicitly requests a travel voucher or gift card for the denied cancellation.
+airline-18,sonnet-35-new-airline-18-0,7,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-18,sonnet-35-new-airline-18-0,7,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-18,sonnet-35-new-airline-18-0,8,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-18,sonnet-35-new-airline-18-0,8,asks_compensation,1,A annotation; Explicitly requests a 50% or 10% exceptional partial refund.
+airline-18,sonnet-35-new-airline-18-0,9,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-18,sonnet-35-new-airline-18-0,9,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-18,sonnet-35-new-airline-18-0,10,confirm,0,A annotation; Agrees to a generic transfer; step 9 did not list concrete booking-update details or a specific transfer task beyond discussing unspecified options.
+airline-18,sonnet-35-new-airline-18-0,10,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-18,sonnet-35-new-airline-18-0,11,transfer_justified,0,"A annotation; Basic-economy cancellation/refund exception is expressly forbidden under the observed booking conditions; policy requires denial, not transfer."
+airline-19,sonnet-35-new-airline-19-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-19,sonnet-35-new-airline-19-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-19,sonnet-35-new-airline-19-0,3,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-19,sonnet-35-new-airline-19-0,3,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-19,sonnet-35-new-airline-19-0,4,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-19,sonnet-35-new-airline-19-0,4,asks_compensation,0,"A annotation; Insurance/change-fee discussion concerns a voluntary itinerary change, not explicit compensation for a booking problem."
+airline-19,sonnet-35-new-airline-19-0,9,subjective_recommendation,0,"Third-party adjudication v2; additional consistency correction; Added by the third party in the second adjudication: the assistant filters flights by the user's own conditions (direct, arriving before 7) and lists two return options, with no evaluative preference; even with the word recommend it should be 0. Both A and B had 1; corrected to 0."
+airline-19,sonnet-35-new-airline-19-0,9,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-19,sonnet-35-new-airline-19-0,10,confirm,0,Third-party adjudication v2; disagreement #24; The user adds baggage and payment information; parameters are still being collected.
+airline-19,sonnet-35-new-airline-19-0,10,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-19,sonnet-35-new-airline-19-0,13,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-19,sonnet-35-new-airline-19-0,13,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-19,sonnet-35-new-airline-19-0,14,confirm,1,A annotation; Approves all listed changes and chooses a saved card; the subsequent fee-waiver question is not an explicit condition on approval.
+airline-19,sonnet-35-new-airline-19-0,14,asks_compensation,0,"A annotation; Insurance/change-fee discussion concerns a voluntary itinerary change, not explicit compensation for a booking problem."
+airline-19,sonnet-35-new-airline-19-0,15,matches_listed,1,A annotation; update_reservation_flights arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+airline-19,sonnet-35-new-airline-19-0,17,matches_listed,1,A annotation; update_reservation_baggages arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+airline-19,sonnet-35-new-airline-19-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-19,sonnet-35-new-airline-19-0,19,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-19,sonnet-35-new-airline-19-0,20,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-19,sonnet-35-new-airline-19-0,20,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,sonnet-35-new-airline-22-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-22,sonnet-35-new-airline-22-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,sonnet-35-new-airline-22-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-22,sonnet-35-new-airline-22-0,1,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-22,sonnet-35-new-airline-22-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-22,sonnet-35-new-airline-22-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,sonnet-35-new-airline-22-0,7,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-22,sonnet-35-new-airline-22-0,7,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-22,sonnet-35-new-airline-22-0,8,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-22,sonnet-35-new-airline-22-0,8,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,sonnet-35-new-airline-22-0,11,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-22,sonnet-35-new-airline-22-0,11,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-22,sonnet-35-new-airline-22-0,12,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-22,sonnet-35-new-airline-22-0,12,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,sonnet-35-new-airline-22-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-22,sonnet-35-new-airline-22-0,19,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-22,sonnet-35-new-airline-22-0,20,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-22,sonnet-35-new-airline-22-0,20,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,sonnet-35-new-airline-22-0,21,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-22,sonnet-35-new-airline-22-0,21,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-22,sonnet-35-new-airline-22-0,22,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-22,sonnet-35-new-airline-22-0,22,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,sonnet-35-new-airline-22-0,25,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-22,sonnet-35-new-airline-22-0,25,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-22,sonnet-35-new-airline-22-0,26,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-22,sonnet-35-new-airline-22-0,26,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,sonnet-35-new-airline-22-0,29,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-22,sonnet-35-new-airline-22-0,29,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-22,sonnet-35-new-airline-22-0,30,confirm,0,"Third-party adjudication v2; disagreement #25; While choosing the fare the user gives the account, insurance and baggage parameters for the first time; the assistant summarised the plan only afterwards."
+airline-22,sonnet-35-new-airline-22-0,30,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,sonnet-35-new-airline-22-0,31,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-22,sonnet-35-new-airline-22-0,31,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-22,sonnet-35-new-airline-22-0,32,confirm,1,A annotation; Confirms the final $136 booking summary and selects the listed Visa ending 1777.
+airline-22,sonnet-35-new-airline-22-0,32,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-22,sonnet-35-new-airline-22-0,33,matches_listed,1,A annotation; book_reservation arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+airline-22,sonnet-35-new-airline-22-0,35,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-22,sonnet-35-new-airline-22-0,35,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-22,sonnet-35-new-airline-22-0,36,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-22,sonnet-35-new-airline-22-0,36,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-30,sonnet-35-new-airline-30-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-30,sonnet-35-new-airline-30-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-30,sonnet-35-new-airline-30-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-30,sonnet-35-new-airline-30-0,1,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-30,sonnet-35-new-airline-30-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-30,sonnet-35-new-airline-30-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-30,sonnet-35-new-airline-30-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-30,sonnet-35-new-airline-30-0,19,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-30,sonnet-35-new-airline-30-0,20,confirm,0,A annotation; Introduces the specific cancellation subset after an overlap report; the assistant had not yet listed those three cancellation actions.
+airline-30,sonnet-35-new-airline-30-0,20,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-30,sonnet-35-new-airline-30-0,21,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-30,sonnet-35-new-airline-30-0,21,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-30,sonnet-35-new-airline-30-0,22,confirm,1,"A annotation; Unconditionally authorizes all three cancellation actions listed at step 21, even though one conflicts with policy."
+airline-30,sonnet-35-new-airline-30-0,22,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-30,sonnet-35-new-airline-30-0,23,matches_listed,1,A annotation; cancel_reservation arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+airline-30,sonnet-35-new-airline-30-0,25,matches_listed,1,A annotation; Cancellation of 5BGGWZ matches the step-21 list; the already-flown segment makes policy compliance separate from matches_listed.
+airline-30,sonnet-35-new-airline-30-0,27,matches_listed,1,A annotation; cancel_reservation arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+airline-30,sonnet-35-new-airline-30-0,29,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-30,sonnet-35-new-airline-30-0,29,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-30,sonnet-35-new-airline-30-0,30,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-30,sonnet-35-new-airline-30-0,30,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-32,sonnet-35-new-airline-32-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-32,sonnet-35-new-airline-32-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-32,sonnet-35-new-airline-32-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-32,sonnet-35-new-airline-32-0,1,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-32,sonnet-35-new-airline-32-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-32,sonnet-35-new-airline-32-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-32,sonnet-35-new-airline-32-0,7,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-32,sonnet-35-new-airline-32-0,7,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-32,sonnet-35-new-airline-32-0,8,confirm,0,Third-party adjudication v2; disagreement #26; Key parameters are supplied by the user for the first time and have not yet been listed by the assistant.
+airline-32,sonnet-35-new-airline-32-0,8,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-32,sonnet-35-new-airline-32-0,9,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-32,sonnet-35-new-airline-32-0,9,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-32,sonnet-35-new-airline-32-0,10,confirm,0,A annotation; Supplies missing DOB/payment data and asks about seating; does not explicitly authorize proceeding with the previously described booking.
+airline-32,sonnet-35-new-airline-32-0,10,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-32,sonnet-35-new-airline-32-0,11,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-32,sonnet-35-new-airline-32-0,11,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-32,sonnet-35-new-airline-32-0,12,confirm,1,A annotation; Explicitly approves the full HAT139 two-passenger $228 certificate booking after the assistant declined seat selection.
+airline-32,sonnet-35-new-airline-32-0,12,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-32,sonnet-35-new-airline-32-0,13,matches_listed,1,A annotation; book_reservation arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+airline-32,sonnet-35-new-airline-32-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-32,sonnet-35-new-airline-32-0,17,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-32,sonnet-35-new-airline-32-0,18,confirm,0,Third-party adjudication v2; disagreement #27; The assistant said explicitly that it would present a plan for confirmation after the choice; this is still the selection stage.
+airline-32,sonnet-35-new-airline-32-0,18,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-32,sonnet-35-new-airline-32-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-32,sonnet-35-new-airline-32-0,19,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-32,sonnet-35-new-airline-32-0,20,confirm,1,A annotation; Unconditionally approves the final HAT289 $322 booking summary.
+airline-32,sonnet-35-new-airline-32-0,20,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-32,sonnet-35-new-airline-32-0,21,matches_listed,1,A annotation; book_reservation arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+airline-32,sonnet-35-new-airline-32-0,23,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-32,sonnet-35-new-airline-32-0,23,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-32,sonnet-35-new-airline-32-0,24,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-32,sonnet-35-new-airline-32-0,24,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-37,sonnet-35-new-airline-37-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-37,sonnet-35-new-airline-37-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-37,sonnet-35-new-airline-37-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-37,sonnet-35-new-airline-37-0,1,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-37,sonnet-35-new-airline-37-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-37,sonnet-35-new-airline-37-0,2,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-37,sonnet-35-new-airline-37-0,13,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-37,sonnet-35-new-airline-37-0,13,offers_compensation,1,A annotation; Explicitly offers or offers to issue the $400 compensation certificate; eligibility/amount correctness is a separate policy question.
+airline-37,sonnet-35-new-airline-37-0,14,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-37,sonnet-35-new-airline-37-0,14,asks_compensation,1,A annotation; Explicitly requests credit-card compensation instead of a certificate and asks for a higher amount.
+airline-37,sonnet-35-new-airline-37-0,15,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-37,sonnet-35-new-airline-37-0,15,offers_compensation,1,A annotation; Explicitly offers or offers to issue the $400 compensation certificate; eligibility/amount correctness is a separate policy question.
+airline-37,sonnet-35-new-airline-37-0,16,confirm,0,A annotation; Acceptance is conditional on vouchers being valid for at least one year; asks for confirmation of that term.
+airline-37,sonnet-35-new-airline-37-0,16,asks_compensation,0,A annotation; Conditionally accepts an existing compensation offer and asks about validity; does not explicitly request new/additional compensation in this turn.
+airline-37,sonnet-35-new-airline-37-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-37,sonnet-35-new-airline-37-0,17,offers_compensation,1,A annotation; Explicitly offers or offers to issue the $400 compensation certificate; eligibility/amount correctness is a separate policy question.
+airline-37,sonnet-35-new-airline-37-0,18,confirm,1,"Third-party adjudication v2; disagreement #28; Both options are complete actions and the user explicitly asks for one of them, the transfer to a human; the definition does not exclude transfers."
+airline-37,sonnet-35-new-airline-37-0,18,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-37,sonnet-35-new-airline-37-0,19,transfer_justified,1,"A annotation; Current request is to learn certificate validity/terms, information absent from available policy/tools; this is outside the assistant procedure, not a forbidden compensation exception."
+airline-43,sonnet-35-new-airline-43-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-43,sonnet-35-new-airline-43-0,0,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-43,sonnet-35-new-airline-43-0,3,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-43,sonnet-35-new-airline-43-0,3,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-43,sonnet-35-new-airline-43-0,4,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-43,sonnet-35-new-airline-43-0,4,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-43,sonnet-35-new-airline-43-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-43,sonnet-35-new-airline-43-0,5,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-43,sonnet-35-new-airline-43-0,6,confirm,1,A annotation; Explicitly approves the listed Mei Lee to Mei Garcia correction with other passenger/DOB unchanged.
+airline-43,sonnet-35-new-airline-43-0,6,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+airline-43,sonnet-35-new-airline-43-0,7,matches_listed,1,A annotation; update_reservation_passengers arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+airline-43,sonnet-35-new-airline-43-0,9,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+airline-43,sonnet-35-new-airline-43-0,9,offers_compensation,0,A annotation; No compensation offer or promise in this message; ordinary fare/refund information is not a compensation offer.
+airline-43,sonnet-35-new-airline-43-0,10,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+airline-43,sonnet-35-new-airline-43-0,10,asks_compensation,0,A annotation; No explicit request for compensation for a booking problem in this turn.
+retail-5,sonnet-35-new-retail-5-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-5,sonnet-35-new-retail-5-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-5,sonnet-35-new-retail-5-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-5,sonnet-35-new-retail-5-0,3,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-5,sonnet-35-new-retail-5-0,4,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-5,sonnet-35-new-retail-5-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-5,sonnet-35-new-retail-5-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-5,sonnet-35-new-retail-5-0,9,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-5,sonnet-35-new-retail-5-0,10,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-5,sonnet-35-new-retail-5-0,11,transfer_justified,1,A annotation; Current request concerns in-store exchange after identity lookup failed; no in-store procedure is provided by policy/tools.
+retail-33,sonnet-35-new-retail-33-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-33,sonnet-35-new-retail-33-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-33,sonnet-35-new-retail-33-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-33,sonnet-35-new-retail-33-0,5,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-33,sonnet-35-new-retail-33-0,6,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-33,sonnet-35-new-retail-33-0,13,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-33,sonnet-35-new-retail-33-0,14,confirm,0,"A annotation; Only approves removing three office items while retaining outdoor items; does not approve the same message whole-order cancellation plan, so agreement is partial."
+retail-33,sonnet-35-new-retail-33-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-33,sonnet-35-new-retail-33-0,18,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-33,sonnet-35-new-retail-33-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-33,sonnet-35-new-retail-33-0,20,confirm,1,A annotation; Explicitly approves the full Seattle default-address update; privacy aside does not condition or alter the requested action.
+retail-33,sonnet-35-new-retail-33-0,21,matches_listed,1,A annotation; modify_user_address arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-33,sonnet-35-new-retail-33-0,23,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-33,sonnet-35-new-retail-33-0,24,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-49,sonnet-35-new-retail-49-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-49,sonnet-35-new-retail-49-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-49,sonnet-35-new-retail-49-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-49,sonnet-35-new-retail-49-0,21,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-49,sonnet-35-new-retail-49-0,22,confirm,0,A annotation; Supplies the desired exchange mapping after the assistant asked which old/new pair; no concrete exchange mapping was listed for approval.
+retail-49,sonnet-35-new-retail-49-0,25,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-49,sonnet-35-new-retail-49-0,26,confirm,0,A annotation; Immediately preceding assistant message is blank; hidden think-tool calls are not user-facing listed action details.
+retail-49,sonnet-35-new-retail-49-0,29,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-49,sonnet-35-new-retail-49-0,30,confirm,0,"Third-party adjudication v2; disagreement #29; The previous user-visible assistant message is empty, and think content cannot count as listed details. Steps 25 and 29 are both empty; the simulated user's message at step 26 cannot stand in for a plan listed by the assistant either."
+retail-49,sonnet-35-new-retail-49-0,31,matches_listed,1,A annotation; No user-facing assistant message listed a concrete exchange mapping before this call; true by the no-listing clause. Hidden think calls and user-supplied details are not assistant listings.
+retail-49,sonnet-35-new-retail-49-0,33,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-49,sonnet-35-new-retail-49-0,34,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-51,sonnet-35-new-retail-51-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-51,sonnet-35-new-retail-51-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-51,sonnet-35-new-retail-51-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-51,sonnet-35-new-retail-51-0,7,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-51,sonnet-35-new-retail-51-0,8,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-51,sonnet-35-new-retail-51-0,13,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-51,sonnet-35-new-retail-51-0,14,confirm,0,"A annotation; Only selects the refund method; step 13 explicitly defers final action confirmation, and the user does not authorize proceeding in this turn."
+retail-51,sonnet-35-new-retail-51-0,15,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-51,sonnet-35-new-retail-51-0,16,confirm,1,A annotation; Explicitly approves the final camera-return summary with Mastercard refund.
+retail-51,sonnet-35-new-retail-51-0,17,matches_listed,1,A annotation; return_delivered_order_items arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-51,sonnet-35-new-retail-51-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-51,sonnet-35-new-retail-51-0,20,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-53,sonnet-35-new-retail-53-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-53,sonnet-35-new-retail-53-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-53,sonnet-35-new-retail-53-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-53,sonnet-35-new-retail-53-0,7,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-53,sonnet-35-new-retail-53-0,8,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-53,sonnet-35-new-retail-53-0,15,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-53,sonnet-35-new-retail-53-0,16,confirm,1,A annotation; Explicitly authorizes the listed bicycle return and selects the original Mastercard refund option.
+retail-53,sonnet-35-new-retail-53-0,17,matches_listed,1,A annotation; return_delivered_order_items arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-53,sonnet-35-new-retail-53-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-53,sonnet-35-new-retail-53-0,20,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-62,sonnet-35-new-retail-62-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-62,sonnet-35-new-retail-62-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-62,sonnet-35-new-retail-62-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-62,sonnet-35-new-retail-62-0,3,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-62,sonnet-35-new-retail-62-0,4,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-62,sonnet-35-new-retail-62-0,13,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-62,sonnet-35-new-retail-62-0,14,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-62,sonnet-35-new-retail-62-0,15,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-62,sonnet-35-new-retail-62-0,16,confirm,1,A annotation; Explicitly approves the listed speaker removal; independent inquiry about cheaper speakers does not condition that approval.
+retail-62,sonnet-35-new-retail-62-0,17,matches_listed,1,A annotation; Empty replacement list expresses the listed removal; subsequent tool rejection does not itself mean the action arguments differ.
+retail-62,sonnet-35-new-retail-62-0,23,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-62,sonnet-35-new-retail-62-0,24,confirm,0,A annotation; Rejects the immediately preceding whole-order cancellation proposal and repeats a different earlier speaker-removal request.
+retail-62,sonnet-35-new-retail-62-0,25,matches_listed,1,"Third-party adjudication v2; disagreement #30; [""""] is a placeholder for 'no replacement', a retry with the same removal intent as [] at step 17, and introduces no different item or payment. Invalid arguments and a failed execution are separate matters; it should take the same value as step 17, on which both annotators agreed (1)."
+retail-62,sonnet-35-new-retail-62-0,27,transfer_justified,1,"Third-party adjudication v2; disagreement #31; The policy does not forbid partial removal in writing; the tools simply cannot do it. At step 23 the assistant had offered cancelling the whole order and a replacement speaker, and after the user declined at step 24 nothing within scope was left to do, so the transfer is justified; the earlier promise to remove the item is a separate matter."
+retail-65,sonnet-35-new-retail-65-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-65,sonnet-35-new-retail-65-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-65,sonnet-35-new-retail-65-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-65,sonnet-35-new-retail-65-0,9,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-65,sonnet-35-new-retail-65-0,10,confirm,0,"Third-party adjudication v2; disagreement #32; The user is asking whether a return is possible, and the return parameters have not been listed yet."
+retail-65,sonnet-35-new-retail-65-0,11,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-65,sonnet-35-new-retail-65-0,12,confirm,1,A annotation; Authorizes the listed bookshelf return with the gift-card refund; the camera inquiry is an independent request.
+retail-65,sonnet-35-new-retail-65-0,13,matches_listed,1,A annotation; return_delivered_order_items arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-65,sonnet-35-new-retail-65-0,21,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-65,sonnet-35-new-retail-65-0,22,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-65,sonnet-35-new-retail-65-0,23,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-65,sonnet-35-new-retail-65-0,24,confirm,0,"A annotation; Expresses a future purchase intention after a future refund, not approval of an immediate action proposed by the assistant."
+retail-65,sonnet-35-new-retail-65-0,25,subjective_recommendation,1,A annotation; Personally endorses the 5K action camera as a good choice that maximizes the refund.
+retail-65,sonnet-35-new-retail-65-0,26,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-65,sonnet-35-new-retail-65-0,27,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-65,sonnet-35-new-retail-65-0,28,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-97,sonnet-35-new-retail-97-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-97,sonnet-35-new-retail-97-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,sonnet-35-new-retail-97-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-97,sonnet-35-new-retail-97-0,7,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,sonnet-35-new-retail-97-0,8,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-97,sonnet-35-new-retail-97-0,15,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,sonnet-35-new-retail-97-0,16,confirm,0,A annotation; Approves only the address and questions the speaker choice; partial approval of the two-action proposal.
+retail-97,sonnet-35-new-retail-97-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,sonnet-35-new-retail-97-0,18,confirm,1,A annotation; Explicitly selects the listed available $298.91 green speaker and authorizes both it and the referenced address update.
+retail-97,sonnet-35-new-retail-97-0,19,matches_listed,1,A annotation; modify_pending_order_address arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-97,sonnet-35-new-retail-97-0,21,matches_listed,1,A annotation; modify_pending_order_items arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-97,sonnet-35-new-retail-97-0,23,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,sonnet-35-new-retail-97-0,24,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-97,sonnet-35-new-retail-97-0,25,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-97,sonnet-35-new-retail-97-0,26,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-108,sonnet-35-new-retail-108-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-108,sonnet-35-new-retail-108-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-108,sonnet-35-new-retail-108-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-108,sonnet-35-new-retail-108-0,3,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-108,sonnet-35-new-retail-108-0,4,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-108,sonnet-35-new-retail-108-0,11,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-108,sonnet-35-new-retail-108-0,12,confirm,0,Third-party adjudication v2; disagreement #33; The user only chooses the exchange branch; the complete parameters were listed later.
+retail-108,sonnet-35-new-retail-108-0,15,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-108,sonnet-35-new-retail-108-0,16,confirm,1,A annotation; Approves all listed boot-exchange details and PayPal; moving on to the puzzle does not qualify that approval.
+retail-108,sonnet-35-new-retail-108-0,17,matches_listed,1,A annotation; exchange_delivered_order_items arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-108,sonnet-35-new-retail-108-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-108,sonnet-35-new-retail-108-0,20,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-108,sonnet-35-new-retail-108-0,25,subjective_recommendation,1,A annotation; Personally endorses the fantasy puzzle as perfect for the user desk space/challenge preference.
+retail-108,sonnet-35-new-retail-108-0,26,confirm,1,A annotation; Explicitly selects listed exchange option 1 and accepts the $3.10 additional charge.
+retail-108,sonnet-35-new-retail-108-0,27,matches_listed,1,A annotation; exchange_delivered_order_items arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-108,sonnet-35-new-retail-108-0,29,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-108,sonnet-35-new-retail-108-0,30,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-113,sonnet-35-new-retail-113-0,0,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-113,sonnet-35-new-retail-113-0,1,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-113,sonnet-35-new-retail-113-0,2,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-113,sonnet-35-new-retail-113-0,7,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-113,sonnet-35-new-retail-113-0,8,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-113,sonnet-35-new-retail-113-0,17,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-113,sonnet-35-new-retail-113-0,18,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-113,sonnet-35-new-retail-113-0,19,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-113,sonnet-35-new-retail-113-0,20,confirm,1,A annotation; Confirms the concrete listed NYC delivery address; the additional model request is independent of that approval.
+retail-113,sonnet-35-new-retail-113-0,25,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-113,sonnet-35-new-retail-113-0,26,confirm,0,"A annotation; Approves an address referenced from earlier, but immediately preceding step 25 does not list concrete address details."
+retail-113,sonnet-35-new-retail-113-0,27,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-113,sonnet-35-new-retail-113-0,28,confirm,1,A annotation; Explicitly approves the fully relisted NYC address; the new watch request does not condition that approval.
+retail-113,sonnet-35-new-retail-113-0,29,matches_listed,1,A annotation; modify_pending_order_address arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-113,sonnet-35-new-retail-113-0,31,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-113,sonnet-35-new-retail-113-0,32,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.
+retail-113,sonnet-35-new-retail-113-0,35,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-113,sonnet-35-new-retail-113-0,36,confirm,1,A annotation; Explicitly authorizes the listed white-to-black dial change retaining leather strap and gift-card refund.
+retail-113,sonnet-35-new-retail-113-0,37,matches_listed,1,A annotation; modify_pending_order_items arguments match the most recent listed action; tool results resolve the object/payment identifiers.
+retail-113,sonnet-35-new-retail-113-0,39,subjective_recommendation,0,"A annotation; No recommendation or personal opinion about a product, flight, or what the user should choose; factual/procedural information or courtesy only."
+retail-113,sonnet-35-new-retail-113-0,40,confirm,0,A annotation; No explicit approval of a concrete action detailed in the immediately preceding assistant message.

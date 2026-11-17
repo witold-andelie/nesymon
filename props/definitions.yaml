@@ -1,0 +1,68 @@
+# Proposition definitions shared by the labeler prompt and the human annotators (version 2.1).
+# site: the only kind of step on which the proposition is judged (user turn, assistant message, write call,
+#       transfer call); elsewhere it is false by construction and never queried.
+# Version 2 folds in the interpretation rules fixed by the pilot adjudication (data/label_adjudication_notes.md)
+# and the error patterns of the 7B labeler under version 1. Definitions are iterated on the pilot tasks only
+# (data/pilot_tasks.json), which stay out of the final evaluation. Examples are paraphrased pilot patterns.
+- name: confirm
+  site: user
+  definition: >-
+    In this turn the user explicitly tells the assistant to go ahead with a specific action that the
+    assistant's immediately preceding message described in full and that has not been carried out yet.
+    Answer No in every other case, in particular when: the preceding message did not list a complete,
+    executable action; the user is only choosing between options or only supplying a missing detail such as a
+    reason, a payment method or a fare class, without telling the assistant to go ahead (an explicit go-ahead
+    that also supplies a detail the assistant asked for still counts); the user adds a new request or a
+    condition that changes the action; the agreement is partial ("yes, but ..."); the user agreed before
+    the details were listed; or the user is thanking the assistant or ending the conversation after the
+    action was already done.
+  positive: ["Assistant: 'I will cancel order #W1 for reason no longer needed and refund $50 to your gift card. Do you confirm?' User: 'Yes, please go ahead.'"]
+  negative: ["Assistant: 'Your order has been cancelled and the refund issued. Anything else?' User: 'Great, thank you for your help!'"]
+- name: matches_listed
+  site: write
+  definition: >-
+    Compare the arguments of this write call with the most recent assistant message before it that listed the
+    details of this action. Answer Yes if carrying out the call exactly as written would produce the result
+    the user was told; whether the call is allowed or its arguments are valid is not the question.
+    Identifiers count as matching when the tool results show they refer to the same object. A flight update
+    replaces the whole flight list, so compare the complete list. Answer Yes also if no assistant message
+    listed the details of this action at all (that case is covered by another rule).
+  positive: ["Assistant listed cancelling order #W1 for reason 'no longer needed'; the call cancels #W1 with that reason."]
+  negative: ["Assistant listed changing only the return flight; the call's flight list also adds a segment that was never mentioned."]
+- name: subjective_recommendation
+  site: assistant
+  definition: >-
+    In this message the assistant expresses its own preference among options that are open to the user, or
+    picks one option for the user and proposes it, without the user having given a selection criterion and
+    without stating an objective basis. Answer No when the assistant lists options, filters or ranks them by
+    a criterion the user gave (cheapest, direct, a date), explains a procedure or a constraint, or proposes
+    the only way to carry out the request, even if it uses the words recommend or suggest. Courtesies,
+    apologies and empathy are No.
+  positive: ["Both models are available. I'd go with the silver one, it looks nicer."]
+  negative: ["You asked for the cheapest business option: outbound HAT023 at $364 and return via SEA at $507."]
+- name: transfer_justified
+  site: transfer
+  definition: >-
+    Given the conversation and the tool results up to this transfer call, the user's current request has no
+    corresponding tool or procedure available to the assistant, and no written policy rule forbids it.
+    Answer No if granting the request would break a stated policy rule (such requests must be denied, for
+    example an exception to the cancellation or compensation rules), or if the assistant could have handled
+    the request with its tools.
+  positive: ["Part of the trip has already been flown and the user wants to cancel the rest; the assistant transfers."]
+  negative: ["The user wants a refund for a basic economy ticket without insurance, which the policy rules out; the assistant transfers so that a human can make an exception."]
+- name: asks_compensation
+  site: user
+  definition: >-
+    In this turn the user explicitly asks for compensation: a voucher, certificate, gift card, reimbursement or
+    a full or partial refund as a remedy. Complaining without asking for anything is No.
+  positive: ["My flight was cancelled; I want some compensation."]
+  negative: ["My flight was cancelled, this is so frustrating."]
+- name: offers_compensation
+  site: assistant
+  definition: >-
+    This message is the first one that puts a particular compensation in front of the user: the assistant
+    offers or promises a certificate or other compensation, asks whether the user would like compensation,
+    raises the possibility conditionally, or announces that a certificate has been issued. Later messages
+    that repeat the same compensation are No. Explaining that no compensation is possible is No.
+  positive: ["Would you like a travel certificate for the inconvenience?"]
+  negative: ["I'm unable to offer compensation for this reservation."]

@@ -1,0 +1,8 @@
+{"gpt-4o-airline-4-0": {"C": [14], "T": {"23": 0}},
+ "sonnet-35-new-airline-4-0": {"C": [16, 20]},
+ "gpt-4o-airline-5-0": {"C": [18]},
+ "sonnet-35-new-airline-5-0": {"C": [16]},
+ "gpt-4o-airline-7-0": {"C": [20]},
+ "sonnet-35-new-airline-7-0": {"C": [22], "T": {"31": 1}},
+ "gpt-4o-airline-9-0": {},
+ "sonnet-35-new-airline-9-0": {}}

@@ -1,0 +1,190 @@
+// Project framework as an Object-Process Diagram (OPM, ISO 19450).
+// Objects: green boxes. Processes: blue ellipses. States: rounded cells inside an object.
+// Dashed outline = environmental thing. Grey fill = physical thing.
+// Links: agent (filled circle), instrument (hollow circle), consumption/result (arrow),
+// effect (double arrow), generalization (hollow triangle at the general thing).
+// In-zoomed processes are drawn as rounded clusters.
+// Render: dot -Tsvg project_framework.dot -o project_framework.svg
+digraph OPM {
+  graph [rankdir=TB, fontname="Helvetica", fontsize=11, labelloc=t, compound=true, nodesep=0.35, ranksep=0.55,
+         label="Verdict-Level Risk Control for Neurosymbolic Runtime Monitoring of LLM Agents\nSystem Diagram (OPM)"];
+  node  [fontname="Helvetica", fontsize=10];
+  edge  [fontname="Helvetica", fontsize=8, color="#444444", arrowsize=0.8];
+
+  // ---------- environmental objects ----------
+  node [shape=box, style="dashed", color="#2E7D32", penwidth=1.6];
+  Policy      [label="Policy Document\n(tau-bench wiki.md)"];
+  RawTraj     [label="Historical Trajectory Set\n(data/raw)"];
+  PreLabeler  [label="Pre-labeling LLM"];
+  LabelerLLM  [label="Labeler LLM\n(1.5B / 3B / 7B, API)"];
+  node [shape=box, style="dashed,filled", fillcolor="#E0E0E0", color="#2E7D32", penwidth=1.6];
+  Researcher  [label="Researcher"];
+  Annotator   [label="Human Annotator"];
+
+  // ---------- systemic objects ----------
+  node [shape=box, style="solid", color="#2E7D32", penwidth=1.6];
+  RuleSet   [label="Rule Set\n(rules/rules.yaml)"];
+  PropDefs  [label="Proposition Definition Set\n(props/definitions.yaml)"];
+  DFASet    [label="DFA Set over step-type alphabets\n(rules/dfas.py)"];
+  TrajSet   [label="Trajectory Set\n(nesymon/data.py)"];
+  LabelSet  [label="Ground-Truth Label Set\n(data/labels.csv, to be released)"];
+  PilotSet  [label="Pilot Task Set\n(data/pilot_tasks.json)"];
+  Counts    [label="Rule x Class Count Table"];
+  ProbCache [label="Probability Cache\n(data/probs)"];
+  CalSet    [label="Calibration Task Set"];
+  TestSet   [label="Test Task Set"];
+  Alpha     [label="Risk Level alpha"];
+  Loss      [label="Loss Function"];
+  LossCov   [label="Full-Coverage Loss"];
+  LossSR    [label="State-Relevant\nCoverage Loss"];
+  LossVer   [label="Verdict-Level Loss"];
+  Tau       [label="Confidence Gate tau"];
+  ValueSet  [label="Value Set C_t"];
+  StateSet  [label="State Set S_t"];
+  Report    [label="Metric Report\n(joint / conditional error,\nabstention, cost)"];
+  Paper     [label="Journal Manuscript"];
+  Verdict [shape=plain, label=<
+    <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="4" CELLPADDING="4" COLOR="#2E7D32">
+      <TR><TD BORDER="0" COLSPAN="4"><B>Verdict</B></TD></TR>
+      <TR><TD STYLE="rounded" COLOR="#8D6E00">violation</TD><TD STYLE="rounded" COLOR="#8D6E00">compliant</TD>
+          <TD STYLE="rounded" COLOR="#8D6E00">abstain</TD><TD STYLE="rounded" COLOR="#8D6E00">inconclusive</TD></TR>
+    </TABLE>>];
+  Decision [shape=plain, label=<
+    <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="4" CELLPADDING="4" COLOR="#2E7D32">
+      <TR><TD BORDER="0" COLSPAN="2"><B>Pilot Decision (E0)</B></TD></TR>
+      <TR><TD STYLE="rounded" COLOR="#8D6E00">continue</TD><TD STYLE="rounded" COLOR="#8D6E00">adjust</TD></TR>
+    </TABLE>>];
+
+  // ---------- processes (in-zoomed phases) ----------
+  node [shape=ellipse, style="solid", color="#1565C0", penwidth=1.6];
+  subgraph cluster_spec {
+    label="Specifying"; style="rounded"; color="#1565C0"; fontcolor="#1565C0";
+    RuleAuthoring [label="Rule Authoring"];
+    DFAConstructing [label="DFA Constructing"];
+    DFAVerifying [label="DFA Verifying\n(tests, nesymon/ltlf.py)"];
+  }
+  subgraph cluster_data {
+    label="Data Preparing"; style="rounded"; color="#1565C0"; fontcolor="#1565C0";
+    TrajLoading [label="Trajectory Loading"];
+    Injecting [label="Violation Injecting\n(nesymon/inject.py)"];
+    Annotating [label="Ground-Truth Annotating\n(make_annotation_sheet)"];
+    Splitting [label="Task Splitting\n(nesymon/evaluate.py)"];
+    Counting [label="Stratum Counting\n(experiments/rule_counts.py)"];
+  }
+  subgraph cluster_ground {
+    label="Proposition Grounding (M1)"; style="rounded"; color="#1565C0"; fontcolor="#1565C0";
+    Labeling [label="Proposition Labeling\n(labeler.py, pipeline.py,\nbackend_mlx.py)"];
+  }
+  subgraph cluster_cal {
+    label="Risk Calibrating"; style="rounded"; color="#1565C0"; fontcolor="#1565C0";
+    Calibrating [label="Conformal Risk Controlling\n(per rule, per error class;\ncore.crc_threshold, evaluate.py)"];
+  }
+  subgraph cluster_mon {
+    label="Set-Based Monitoring (M2)"; style="rounded"; color="#1565C0"; fontcolor="#1565C0";
+    SetBuilding [label="Value-Set Constructing"];
+    Propagating [label="State-Set Propagating"];
+    Deciding [label="Verdict Deciding"];
+    Escalating [label="Escalating"];
+  }
+  subgraph cluster_eval {
+    label="Evaluating"; style="rounded"; color="#1565C0"; fontcolor="#1565C0";
+    Baselines [label="Baseline Monitoring\n(B1-B4, Ours-Prob)"];
+    Scoring [label="Metric Computing\n(e0_pilot, e1_main,\nanalyses, sim_sweeps)"];
+    Gating [label="Pilot Gating"];
+  }
+  Writing [label="Manuscript Writing"];
+
+  // ---------- agent links ----------
+  edge [arrowhead=dot];
+  Researcher -> RuleAuthoring;
+  Researcher -> Gating;
+  Researcher -> Writing;
+  Annotator  -> Annotating;
+  Annotator  -> Escalating;
+
+  // ---------- instrument links ----------
+  edge [arrowhead=odot];
+  Policy -> RuleAuthoring;
+  RuleSet -> DFAConstructing;
+  RuleSet -> DFAVerifying;
+  PropDefs -> Annotating;
+  PropDefs -> Labeling;
+  PreLabeler -> Annotating;
+  LabelerLLM -> Labeling;
+  TrajSet -> Labeling;
+  TrajSet -> Annotating;
+  DFASet -> Calibrating;
+  DFASet -> Propagating;
+  DFASet -> Baselines;
+  Alpha -> Calibrating;
+  Counts -> Calibrating;
+  LabelSet -> Counting;
+  PilotSet -> RuleAuthoring;
+  Loss -> Calibrating;
+  CalSet -> Calibrating;
+  LabelSet -> Splitting;
+  LabelSet -> Scoring;
+  ProbCache -> Splitting;
+  ProbCache -> SetBuilding;
+  ProbCache -> Baselines;
+  Tau -> SetBuilding;
+  TestSet -> Scoring;
+  StateSet -> Deciding;
+  Report -> Gating;
+  Report -> Writing;
+
+  // ---------- consumption and result links ----------
+  edge [arrowhead=normal];
+  RuleAuthoring -> RuleSet;
+  RuleAuthoring -> PropDefs;
+  DFAConstructing -> DFASet;
+  RawTraj -> TrajLoading;
+  TrajLoading -> TrajSet;
+  Annotating -> LabelSet;
+  Labeling -> ProbCache;
+  Splitting -> CalSet;
+  Splitting -> PilotSet;
+  Counting -> Counts;
+  Splitting -> TestSet;
+  Calibrating -> Tau;
+  SetBuilding -> ValueSet;
+  ValueSet -> Propagating;
+  Deciding -> Verdict;
+  Baselines -> Verdict;
+  Verdict -> Scoring;
+  Scoring -> Report;
+  Gating -> Decision;
+  Writing -> Paper;
+
+  // ---------- effect links ----------
+  edge [dir=both, arrowhead=normal, arrowtail=normal];
+  DFAVerifying -> DFASet;
+  Injecting -> TrajSet;
+  Propagating -> StateSet;
+  Escalating -> Verdict [label="abstain -> violation | compliant"];
+
+  // ---------- generalization-specialization ----------
+  edge [dir=back, arrowtail=onormal, arrowhead=none, arrowsize=1.3, color=black];
+  Loss -> LossCov;
+  Loss -> LossSR;
+  Loss -> LossVer;
+
+  // ---------- legend ----------
+  subgraph cluster_legend {
+    label="Legend"; style="solid"; color="#999999"; fontcolor="#444444";
+    node [fontsize=9]; edge [fontsize=8, dir=forward, color="#444444", arrowsize=0.8];
+    Lobj [shape=box, style=solid, color="#2E7D32", label="object"];
+    Lenv [shape=box, style=dashed, color="#2E7D32", label="environmental"];
+    Lphy [shape=box, style="dashed,filled", fillcolor="#E0E0E0", color="#2E7D32", label="physical"];
+    Lp1 [shape=ellipse, color="#1565C0", label="process"];
+    Lp2 [shape=ellipse, color="#1565C0", label="process"];
+    Lp3 [shape=ellipse, color="#1565C0", label="process"];
+    Lphy -> Lp1 [arrowhead=dot, label="agent"];
+    Lenv -> Lp2 [arrowhead=odot, label="instrument"];
+    Lobj -> Lp3 [arrowhead=normal, label="consumption"];
+    Lp3 -> Lres [arrowhead=normal, label="result"];
+    Lres [shape=box, style=solid, color="#2E7D32", label="object"];
+    Lp2 -> Leff [dir=both, arrowhead=normal, arrowtail=normal, label="effect"];
+    Leff [shape=box, style=solid, color="#2E7D32", label="object"];
+  }
+}

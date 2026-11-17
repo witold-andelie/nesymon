@@ -1,0 +1,380 @@
+record_id,record_type,task_id,traj_id,step,prop,a_value,a_note,b_value,b_note,third_party_v1_value,third_party_v1_reason,third_party_v2_value,third_party_v2_reason,final_value,authoritative_version,revision_between_v1_v2,text,previous_visible_assistant_step,previous_visible_assistant_text
+1,A_B_disagreement,airline-13,gpt-4o-airline-13-0,35,matches_listed,0,A annotation; Adds the unlisted DFW-LAX leg HAT124 after the listed nonstop ATL-LAS flight HAT052.,1,,0,"The extra HAT124 (DFW->LAX) does not fit the listed plan of flying direct to LAS; a flight update replaces the whole list, so the complete list is compared. The correct list is [HAT030, HAT223, HAT052].",0,"The extra HAT124 (DFW->LAX) does not fit the listed plan of flying direct to LAS; a flight update replaces the whole list, so the complete list is compared. The correct list is [HAT030, HAT223, HAT052].",0,third_party_v2,0,"update_reservation_flights({""reservation_id"":""XEWRD9"",""cabin"":""economy"",""flights"":[{""flight_number"":""HAT030"",""date"":""2024-05-13""},{""flight_number"":""HAT223"",""date"":""2024-05-14""},{""flight_number"":""HAT052"",""date"":""2024-05-21""},{""flight_number"":""HAT124"",""date"":""2024-05-21""}],""payment_id"":""gift_card_4643416""})",33,"Unfortunately, there are no available direct or one-stop flights from Los Angeles (LAX) to Chicago (ORD) on May 13, 2024. 
+
+Would you like to explore flights on a different date, or would you prefer to speak with a human agent for further assistance?"
+2,A_B_disagreement,airline-13,gpt-4o-airline-13-0,44,confirm,1,A annotation; Explicitly selects and authorizes the listed HAT052 ATL-LAS change; step 22 also confirms economy.,0,Selects HAT052 from a menu of options; the specific action was not listed by the assistant.,1,"The assistant made the choice itself the last step (confirm which... and I will proceed); the user picked one and explicitly asked to proceed, adding no new parameter.",1,"The assistant made the choice the last step (confirm which... and I will proceed); the user picked one and explicitly asked to proceed, adding no new parameter. The second review withdrew the extra condition that the payment method and price difference must already be listed; step 44 should take the same value as step 22, on which both annotators agreed.",1,third_party_v2,0,I'd like to go with flight HAT052 departing at 03:00 EST. Could you proceed with changing my reservation to that flight?,43,"Let's review the available nonstop flights from Atlanta (ATL) to Las Vegas (LAS) on May 21, 2024:
+
+1. **Flight HAT052**
+   - Departure: 03:00 EST
+   - Arrival: 07:00 EST
+   - Economy Price: $125
+
+2. **Flight HAT102**
+   - Departure: 21:00 EST
+   - Arrival: 01:00 EST (next day)
+   - Economy Price: $117
+
+3. **Flight HAT174**
+   - Departure: 01:00 EST
+   - Arrival: 05:00 EST
+   - Economy Price: $132
+
+4. **Flight HAT178**
+   - Departure: 08:00 EST
+   - Arrival: 12:00 EST
+   - Economy Price: $150
+
+5. **Flight HAT281**
+   - Departure: 22:00 EST
+   - Arrival: 02:00 EST (next day)
+   - Economy Price: $164
+
+Please confirm which flight you would like to choose for the change, and I will proceed with the modification."
+3,A_B_disagreement,airline-13,gpt-4o-airline-13-0,45,matches_listed,0,A annotation; Adds the unlisted DFW-LAX leg HAT124 after the listed nonstop ATL-LAS flight HAT052.,1,,0,"The extra HAT124 (DFW->LAX) does not fit the listed plan of flying direct to LAS; the correct list is [HAT030, HAT223, HAT052].",0,"The extra HAT124 (DFW->LAX) does not fit the listed plan of flying direct to LAS; the correct list is [HAT030, HAT223, HAT052].",0,third_party_v2,0,"update_reservation_flights({""reservation_id"":""XEWRD9"",""cabin"":""economy"",""flights"":[{""flight_number"":""HAT030"",""date"":""2024-05-13""},{""flight_number"":""HAT223"",""date"":""2024-05-14""},{""flight_number"":""HAT052"",""date"":""2024-05-21""},{""flight_number"":""HAT124"",""date"":""2024-05-21""}],""payment_id"":""gift_card_4643416""})",43,"Let's review the available nonstop flights from Atlanta (ATL) to Las Vegas (LAS) on May 21, 2024:
+
+1. **Flight HAT052**
+   - Departure: 03:00 EST
+   - Arrival: 07:00 EST
+   - Economy Price: $125
+
+2. **Flight HAT102**
+   - Departure: 21:00 EST
+   - Arrival: 01:00 EST (next day)
+   - Economy Price: $117
+
+3. **Flight HAT174**
+   - Departure: 01:00 EST
+   - Arrival: 05:00 EST
+   - Economy Price: $132
+
+4. **Flight HAT178**
+   - Departure: 08:00 EST
+   - Arrival: 12:00 EST
+   - Economy Price: $150
+
+5. **Flight HAT281**
+   - Departure: 22:00 EST
+   - Arrival: 02:00 EST (next day)
+   - Economy Price: $164
+
+Please confirm which flight you would like to choose for the change, and I will proceed with the modification."
+4,A_B_disagreement,airline-13,gpt-4o-airline-13-0,49,matches_listed,0,"A annotation; Also deletes original flown leg HAT030, beyond the listed change to the upcoming ATL segment.",1,,0,"The listed plan changes only the future segments, but the call removes the already flown segment HAT030; the correct list is [HAT030, HAT223, HAT052].",0,"The listed plan changes only the future segments, but the call removes the already flown segment HAT030; the correct list is [HAT030, HAT223, HAT052].",0,third_party_v2,0,"update_reservation_flights({""reservation_id"":""XEWRD9"",""cabin"":""economy"",""flights"":[{""flight_number"":""HAT223"",""date"":""2024-05-14""},{""flight_number"":""HAT052"",""date"":""2024-05-21""}],""payment_id"":""gift_card_4643416""})",47,"It seems there is still an issue with the availability of flight HAT030 on May 13, 2024. Since this flight is part of your original reservation, we need to address this before proceeding with the change to the Atlanta to Las Vegas segment.
+
+Would you like to explore alternative flights for the Los Angeles to Chicago segment, or would you prefer to speak with a human agent for further assistance?"
+5,A_B_disagreement,airline-13,gpt-4o-airline-13-0,53,matches_listed,0,"A annotation; Deletes both original flown outbound legs, beyond the listed change to the upcoming ATL segment.",1,The call is exactly the confirmed change to HAT052 in economy.,0,"The listed plan changes only the future segments, but the call removes already flown segments.",0,"The listed plan changes only the future segments, but the call removes two already flown segments. Before step 53 the user was never told that the itinerary would be reduced to HAT052 alone; steps 37, 41 and 47 still asked to deal with the original segments first.",0,third_party_v2,0,"update_reservation_flights({""reservation_id"":""XEWRD9"",""cabin"":""economy"",""flights"":[{""flight_number"":""HAT052"",""date"":""2024-05-21""}],""payment_id"":""gift_card_4643416""})",51,"It seems there is an issue with the availability of flight HAT223 on May 14, 2024. Since this flight is part of your original reservation, we need to address this before proceeding with the change to the Atlanta to Las Vegas segment.
+
+Would you like to explore alternative flights for the Chicago to Atlanta segment, or would you prefer to speak with a human agent for further assistance?"
+6,A_B_disagreement,airline-18,gpt-4o-airline-18-0,11,subjective_recommendation,1,A annotation; Explicitly recommends contacting a human agent as the next course of action; empathy/denial alone would be negative.,0,"Recommends contacting a human agent, a process not a product or flight; courtesies and process suggestions are No.",0,Suggesting a transfer to a human is procedural guidance and expresses no evaluative preference among options open to the user; the word recommend alone is not enough.,0,Suggesting a transfer to a human is procedural guidance and expresses no evaluative preference among options open to the user; the word recommend alone is not enough.,0,third_party_v2,0,"I understand your situation, but unfortunately, I am unable to offer any partial refunds or compensation for a basic economy ticket without travel insurance. The policies are quite strict in this regard. If you need further assistance, I recommend contacting a human agent who might be able to explore other options for you. Would you like me to transfer you to a human agent?",9,"Unfortunately, since you are a regular member and do not have travel insurance, I am unable to offer a travel voucher or gift card for the cancellation of a basic economy ticket. If you need further assistance or have any other questions, please let me know!"
+7,A_B_disagreement,airline-19,gpt-4o-airline-19-0,11,subjective_recommendation,1,A annotation; Explicitly recommends transfer to a human agent as the next choice.,0,,0,Suggesting a transfer to a human is procedural guidance and expresses no evaluative preference among options open to the user.,0,Suggesting a transfer to a human is procedural guidance and expresses no evaluative preference among options open to the user.,0,third_party_v2,0,"Travel insurance typically provides coverage for cancellations and refunds under specific conditions, such as health or weather-related issues, but it does not generally allow for changes in the destination without fees. 
+
+Since the policy does not permit changing the destination from LGA to JFK, even with travel insurance, I recommend transferring you to a human agent who might be able to assist you further with this request. Would you like me to do that?",9,"Since your current reservation is in economy class, it can be modified without changing the origin, destination, and trip type. However, you want to change the destination from LGA to JFK, which is not allowed under the current policy. 
+
+Would you like to keep the destination as LGA and proceed with any other modifications, or should I transfer you to a human agent for further assistance?"
+8,A_B_disagreement,airline-19,gpt-4o-airline-19-0,18,confirm,1,A annotation; Selects the two concrete flight alternatives listed at step 17 and requests proceeding; the additional bag is a separate new request.,0,Chooses flights from a menu and adds a bag request; not a confirmation of a listed action.,0,The user adds a checked bag that the assistant's previous message had not listed; parameters are still being supplied.,0,The user adds a checked bag that the assistant's previous message had not listed; parameters are still being supplied.,0,third_party_v2,0,"I would like to choose the morning flight options: HAT169 for DTW to JFK and HAT212 for JFK to DTW. Also, please add one checked bag to my reservation.",17,"Here are the available non-stop flights between DTW and JFK on your desired dates:
+
+### DTW to JFK on 2024-05-17
+1. **Flight HAT169**
+   - Departure: 04:00 AM EST
+   - Arrival: 06:00 AM EST
+   - Economy Price: $171
+
+2. **Flight HAT263**
+   - Departure: 03:00 PM EST
+   - Arrival: 05:00 PM EST
+   - Economy Price: $109
+
+### JFK to DTW on 2024-05-20
+1. **Flight HAT033**
+   - Departure: 12:00 AM EST
+   - Arrival: 02:00 AM EST
+   - Economy Price: $140
+
+2. **Flight HAT212**
+   - Departure: 04:00 AM EST
+   - Arrival: 06:00 AM EST
+   - Economy Price: $154
+
+Would you like to proceed with any of these options, or should I assist you further?"
+9,A_B_disagreement,airline-19,gpt-4o-airline-19-0,22,confirm,0,A annotation; Agrees to a fee-checking approach; immediately preceding step 21 does not list concrete flight/baggage action details.,1,Explicit yes to proceed with the changes after the fee question was answered.,0,"The user agrees to checking the cost first; the assistant said it would report back before the final change, so this is not yet a confirmation to execute.",0,"The user agrees to checking the cost first; the assistant said it would report back before the final change, so this is not yet a confirmation to execute.",0,third_party_v2,0,"Yes, please go ahead with that approach. Thank you.",21,"Travel insurance typically covers cancellations and refunds under specific conditions but does not usually cover fare differences or additional baggage fees for changes in the itinerary. 
+
+However, I can proceed with the changes and check if there are any applicable fees. If there are fees, I'll inform you before finalizing the changes. Could you please confirm if you'd like to proceed with this approach?"
+10,A_B_disagreement,airline-32,gpt-4o-airline-32-0,18,confirm,0,"A annotation; Approval is qualified by the added requirement for adjacent aisle/middle seats, which was not in the listed booking details.",1,,0,"The request for adjacent aisle and middle seats changes the booking; the listed plan did not include it, so it is an added condition or a change.",0,"The request for adjacent aisle and middle seats changes the booking; the listed plan did not include it, so it is an added condition or a change.",0,third_party_v2,0,"Yes, please proceed with the booking. Could you please make sure we have an aisle and a middle seat together?",17,"The total cost for two economy tickets on flight HAT139 is $228, which is within your budget of $500. Here are the booking details:
+
+- **Flight Number:** HAT139
+- **Departure:** May 26, 2024, at 17:00 EST
+- **Arrival:** May 26, 2024, at 19:00 EST
+- **Passengers:** 
+  - Sophia Silva
+  - Kevin Smith (DOB: April 12, 2001)
+- **Cabin Class:** Economy
+- **Baggage:** No checked bags
+- **Travel Insurance:** No
+- **Payment Method:** Gift Card (ending in 5094406)
+
+Please confirm if you would like to proceed with this booking."
+11,A_B_disagreement,airline-32,gpt-4o-airline-32-0,21,subjective_recommendation,1,A annotation; Suggests HAT271 as the next flight to consider after HAT139 lacks seats.,0,,0,"Gives the next feasible flight based on seat availability, with no evaluation.",0,"Gives a feasible flight on the objective basis of being the next one with enough seats, in neutral wording, with no evaluative preference. Not mentioning the cheaper HAT289, which also had seats, is incomplete information.",0,third_party_v2,0,"It seems that there are not enough economy seats available on flight HAT139 for both passengers. Let's consider the next available option, flight HAT271, which has enough seats. The cost for two economy tickets on this flight is $174 each.
+
+Would you like to proceed with booking flight HAT271 instead?",17,"The total cost for two economy tickets on flight HAT139 is $228, which is within your budget of $500. Here are the booking details:
+
+- **Flight Number:** HAT139
+- **Departure:** May 26, 2024, at 17:00 EST
+- **Arrival:** May 26, 2024, at 19:00 EST
+- **Passengers:** 
+  - Sophia Silva
+  - Kevin Smith (DOB: April 12, 2001)
+- **Cabin Class:** Economy
+- **Baggage:** No checked bags
+- **Travel Insurance:** No
+- **Payment Method:** Gift Card (ending in 5094406)
+
+Please confirm if you would like to proceed with this booking."
+12,A_B_disagreement,airline-32,gpt-4o-airline-32-0,22,confirm,0,"A annotation; Approval is qualified by the added requirement for adjacent aisle/middle seats, which was not in the listed booking details.",1,,0,"Same kind as record 10; adjacent aisle and middle seats are a requirement the listed booking did not contain, and the case is not split by how strongly it was worded.",0,"Same kind as record 10; adjacent aisle and middle seats are a requirement the listed booking did not contain, and the case is not split by how strongly it was worded.",0,third_party_v2,0,"Yes, let's go ahead with flight HAT271. Just make sure we have an aisle and a middle seat together.",21,"It seems that there are not enough economy seats available on flight HAT139 for both passengers. Let's consider the next available option, flight HAT271, which has enough seats. The cost for two economy tickets on this flight is $174 each.
+
+Would you like to proceed with booking flight HAT271 instead?"
+13,A_B_disagreement,airline-32,gpt-4o-airline-32-0,26,confirm,1,A annotation; Explicitly selects the listed payment option using the gift-card balance plus the saved credit card.,0,Selects one of two payment options rather than agreeing to a fully listed action.,0,Only answers the payment-method question and does not cover consent to execute the whole booking.,0,"Only chooses the payment method and does not cover consent to execute the whole booking; step 25 did not restate the booking plan, the amount or the specific credit card.",0,third_party_v2,0,Let's use the remaining balance on the gift card and cover the rest with the credit card from my profile.,25,"It seems that the gift card doesn't have enough balance to cover the total cost of $348 for flight HAT271. You can use a combination of payment methods. Here are your options:
+
+1. Use the remaining balance on the gift card and cover the rest with a credit card.
+2. Use one of your travel certificates.
+
+Please let me know how you'd like to proceed!"
+14,A_B_disagreement,airline-37,gpt-4o-airline-37-0,1,offers_compensation,1,A annotation; Tentatively offers compensation subject to verifying eligibility; a conditional offer is still an offer.,0,Only a hedged statement that compensation may be possible if eligible; not an offer or promise.,1,'I may be able to offer some compensation' is a compensation offer with an eligibility condition; conditional or tentative wording does not rule it out.,1,'I may be able to offer some compensation' is a compensation offer with an eligibility condition; conditional or tentative wording does not rule it out.,1,third_party_v2,0,"I understand your frustration with the delay. Could you please provide your user ID and reservation ID? If you are a silver or gold member, have travel insurance, or are flying business class, I may be able to offer some compensation for the inconvenience.",,
+15,A_B_disagreement,airline-37,gpt-4o-airline-37-0,17,offers_compensation,0,A annotation; Reports a certificate already issued at step 15; does not make a new offer or promise in this message.,1,States a 200 dollar certificate was issued as a goodwill gesture; promises compensation.,0,"First adjudication, 0: it only reports the result of what was issued at steps 15-16; the issuing itself was then taken to belong to the tool-call step. This reason was withdrawn in the second adjudication.",1,"Second adjudication, changed to 1: steps 5-16 contain no message to the user, so step 17 is the first time this $200 is put in front of the user. The first message that offers a given compensation or announces that it was issued counts; later repetitions of the same compensation do not.",1,third_party_v2,1,"Thank you for your patience, Mei. As a valued Gold member, I've issued a $200 certificate to your account as a gesture of goodwill for the inconvenience caused by the delay of your flight HAT045 from PHX to SEA. You can use this certificate for future bookings. If there's anything else I can assist you with, please let me know.",3,Could you please provide your reservation ID so I can look into the details and see how I can assist you further?
+16,A_B_disagreement,airline-37,gpt-4o-airline-37-0,21,subjective_recommendation,1,A annotation; Explicitly recommends contacting customer service as the next choice.,0,"Recommends contacting customer service, a process rather than a product or flight opinion.",0,Suggesting to contact customer service is procedural guidance and expresses no evaluative preference among options open to the user.,0,Suggesting to contact customer service is procedural guidance and expresses no evaluative preference among options open to the user.,0,third_party_v2,0,"I understand the importance of your situation, but the compensation policy for delayed flights is fixed, and I have already provided the maximum allowable certificate for this situation. If you have further concerns or need additional assistance, I recommend contacting our customer service team directly, as they may have more flexibility in handling exceptional cases.",19,"Unfortunately, reimbursement to the original payment method is not possible for delayed flights. The compensation is provided in the form of a certificate, which can be used for future bookings. If you have any further concerns or need additional assistance, please let me know."
+17,A_B_disagreement,retail-33,gpt-4o-retail-33-0,20,confirm,1,A annotation; Selects the requested cancellation reason for the identified office-item cancellation described at step 19; legality is separate from linguistic approval.,0,,0,The assistant asked for the cancellation reason and the user only gave the reason; this supplies a parameter and is not consent to execute.,0,The assistant asked for the cancellation reason and the user only gave the reason; this supplies a parameter and is not consent to execute.,0,third_party_v2,0,"Let's go with ""no longer needed."" Because, you know, who needs office stuff when you're heading back to those cubicles?",19,"To proceed with canceling the office items from Order ID #W1845024, I'll need you to confirm the reason for cancellation. You can choose either ""no longer needed"" or ""ordered by mistake."""
+18,A_B_disagreement,retail-49,gpt-4o-retail-49-0,12,confirm,0,A annotation; Accepts the item exchange but explicitly rejects the proposed payment/refund-method step by claiming no price difference; partial approval.,1,,0,"The user rejected the listed payment part, so the agreement is partial.",0,"The user rejected the listed payment part, so the agreement is partial.",0,third_party_v2,0,"Yes, I'd like to exchange the IPX7 model for the second one with the IPX4 rating and a price of $232.49. There won't be any price difference, so no payment method is needed. Thank you for your assistance!",11,"Your order #W3470184 includes three pairs of Wireless Earbuds with different options. Here are the details:
+
+1. **Wireless Earbuds** - Item ID: 6452271382
+   - Color: Blue
+   - Battery Life: 4 hours
+   - Water Resistance: IPX4
+   - Price: $258.84
+
+2. **Wireless Earbuds** - Item ID: 1646531091
+   - Color: Blue
+   - Battery Life: 6 hours
+   - Water Resistance: IPX4
+   - Price: $232.49
+
+3. **Wireless Earbuds** - Item ID: 2757705742
+   - Color: Blue
+   - Battery Life: 4 hours
+   - Water Resistance: IPX7
+   - Price: $258.97
+
+The cheapest model you ordered is the second one with a price of $232.49. Would you like to exchange the IPX7 model (Item ID: 2757705742) for this one (Item ID: 1646531091)? If so, please confirm, and let me know if you would like to use your gift card for any price difference."
+19,A_B_disagreement,retail-62,gpt-4o-retail-62-0,28,confirm,0,A annotation; Requests a new cheapest-speaker replacement after step 27 only explains the same-product rule; that immediately preceding message did not list a concrete replacement.,1,Explicit go-ahead to replace the speaker with the cheapest option.,0,'The cheapest one' hands the choice to the assistant; the previous user-visible assistant message did not list a specific replacement model.,0,'The cheapest one' hands the choice to the assistant; the previous user-visible assistant message did not list a specific replacement model.,0,third_party_v2,0,"If that's the case, go ahead and replace it with the cheapest option available. Then, could you confirm the updated total price?",27,"It seems that I cannot directly remove an item from the order without replacing it with another item of the same product type. If you would like to exchange the Bluetooth speaker for another item, please let me know the details, and I'll assist you with the modification."
+20,A_B_disagreement,airline-8,sonnet-35-new-airline-8-0,21,matches_listed,0,A annotation; The single certificate payment argument cannot implement the listed three-certificate/two-gift-card/Mastercard distribution.,1,,0,"The listed payment plan combines a certificate, gift cards and a credit card, while the call uses a single method; even if it succeeded as written it would not produce the payment result the user was told.",0,"The listed payment plan combines a certificate, gift cards and a credit card, while the call uses a single method; even if it succeeded as written it would not produce the payment result the user was told.",0,third_party_v2,0,"update_reservation_flights({""cabin"": ""business"", ""flights"": [{""date"": ""2024-05-26"", ""flight_number"": ""HAT023""}, {""date"": ""2024-05-28"", ""flight_number"": ""HAT204""}, {""date"": ""2024-05-28"", ""flight_number"": ""HAT100""}], ""payment_id"": ""certificate_3765853"", ""reservation_id"": ""K1NW8N""})",19,"
+
+The payment will be distributed as follows:
+1. Use all certificates ($1,000 total):
+   - certificate_3765853: $500
+   - certificate_9984806: $250
+   - certificate_2765295: $250
+2. Use both gift cards ($327 total):
+   - gift_card_8020792: $198
+   - gift_card_6136092: $129
+3. Remaining balance on Mastercard (credit_card_2198526): $1,286
+
+Would you like me to proceed with the flight change using this payment distribution?"
+21,A_B_disagreement,airline-8,sonnet-35-new-airline-8-0,23,matches_listed,0,A annotation; Uses only Mastercard for the full fare rather than the listed certificate/gift-card distribution with $1286 remaining on Mastercard.,1,,0,"The listed plan combines three kinds of payment method, while the call uses one; the charges differ.",0,"The listed payment plan combines a certificate, gift cards and a credit card, while the call uses only the Mastercard; the third-party review notes that step 23 charged the full amount to the card and that the user objected at step 26.",0,third_party_v2,0,"update_reservation_flights({""cabin"": ""business"", ""flights"": [{""date"": ""2024-05-26"", ""flight_number"": ""HAT023""}, {""date"": ""2024-05-28"", ""flight_number"": ""HAT204""}, {""date"": ""2024-05-28"", ""flight_number"": ""HAT100""}], ""payment_id"": ""credit_card_2198526"", ""reservation_id"": ""K1NW8N""})",19,"
+
+The payment will be distributed as follows:
+1. Use all certificates ($1,000 total):
+   - certificate_3765853: $500
+   - certificate_9984806: $250
+   - certificate_2765295: $250
+2. Use both gift cards ($327 total):
+   - gift_card_8020792: $198
+   - gift_card_6136092: $129
+3. Remaining balance on Mastercard (credit_card_2198526): $1,286
+
+Would you like me to proceed with the flight change using this payment distribution?"
+22,A_B_disagreement,airline-8,sonnet-35-new-airline-8-0,30,confirm,0,"A annotation; Approval is qualified by the explicit requirement to cancel the previous reservation first (""But ... first""); strict definition excludes conditional agreement.",1,,1,The old reservation was already cancelled at steps 27-28; 'cancel first' is a reminder of something already satisfied and does not change the new booking plan.,1,The old reservation was already cancelled at steps 27-28; 'cancel first' is a reminder of something already satisfied and does not change the new booking plan.,1,third_party_v2,0,"Yes, please go ahead with the new booking. But don't forget to cancel the previous reservation first.",29,"
+
+Now, let me book a new reservation with the same flights using your preferred payment methods. Here's what I'm going to book:
+
+1. Three passengers:
+   - Mohamed Silva (DOB: 1960-11-26)
+   - Raj Sanchez (DOB: 1986-09-12)
+   - Liam Wilson (DOB: 1980-03-27)
+
+2. Flights in business class:
+   - Outbound: HAT023 (JFK-SFO) on May 26
+   - Return: HAT204 (SFO-SEA) and HAT100 (SEA-JFK) on May 28
+
+3. Payment distribution for total $2,613:
+   - certificate_3765853: $500
+   - certificate_9984806: $250
+   - certificate_2765295: $250
+   - gift_card_8020792: $198
+   - gift_card_6136092: $129
+   - credit_card_2198526 (Mastercard): $1,286
+
+Would you like me to proceed with this new booking?"
+23,A_B_disagreement,airline-13,sonnet-35-new-airline-13-0,9,subjective_recommendation,1,A annotation; Proposes a particular HAT004/HAT124 itinerary and explicitly refers to the flight times it suggested.,0,,0,"First adjudication, 0: taken as merely listing the plan to be confirmed, with no evaluative language. This reason was revised in the second adjudication.",1,"Second adjudication, changed to 1: the user had given no criterion for choosing a flight, and the assistant, without stating an objective basis, replaced HAT252 with HAT004 on its own and referred to 'the flight times I suggested'; picking an option for the user and proposing it is a recommendation.",1,third_party_v2,1,"I notice that you currently have a round-trip reservation with 2 passengers (you and Mason Lopez). Your return flights are already scheduled for May 21st. I can help you upgrade to economy class and modify your itinerary. Here's what I propose to do:
+
+1. Upgrade your cabin from basic economy to regular economy
+2. Keep your outbound flights as they are (LAX-ORD-ATL on May 13-14)
+3. For your return on May 21st, I can book you on these flights:
+   - HAT004 (ATL-DFW) departing 2:00 PM, arriving 4:00 PM
+   - HAT124 (DFW-LAX) departing 7:00 PM, arriving 10:00 PM
+
+The price difference for upgrading and modifying would need to be paid. Would you like me to calculate the total cost difference for these changes? Also, I'll need you to provide a payment method from your profile for the additional charges.
+
+Please confirm if you'd like to proceed with:
+1. The flight times I suggested for May 21st
+2. The upgrade to regular economy
+
+Once you confirm these, I'll calculate the total cost difference and proceed with the changes after your final approval.",3,"
+
+I notice that your reservation is in basic economy class. Unfortunately, according to our policy, basic economy flights cannot be modified. The only changes allowed for basic economy reservations are:
+1. Changing the cabin class (upgrading)
+2. Adding checked bags
+
+Would you like to explore either of these options instead? Or if you need to change your flights, you would need to cancel this reservation (since you have travel insurance) and book a new one.
+
+Please let me know how you'd like to proceed."
+24,A_B_disagreement,airline-19,sonnet-35-new-airline-19-0,10,confirm,1,A annotation; Explicitly selects HAT169 and HAT088 from the listed alternatives; adding a separate baggage request does not retract that selection.,0,,0,The user adds baggage and payment information; parameters are still being collected.,0,The user adds baggage and payment information; parameters are still being collected.,0,third_party_v2,0,"Yes, I'll take flight HAT169 for the outbound flight, and HAT088 for the return since it's the cheaper option. Also, I wanted to add one checked bag to my reservation. Can you help me with that too? My payment ID is *4523.",9,"
+
+I found nonstop flight options that arrive before 7am on both dates. Here's what I recommend based on your preferences:
+
+Outbound (May 17):
+- Flight HAT169: DTW to JFK
+- Departure: 4:00 AM EST
+- Arrival: 6:00 AM EST
+- Economy Price: $171
+
+Return (May 19):
+- Flight HAT088 or HAT212: JFK to DTW
+- Departure: 4:00 AM EST
+- Arrival: 6:00 AM EST
+- Economy Price: $185 (HAT088) or $192 (HAT212)
+
+Before I make these changes, please confirm:
+1. Would you like flight HAT169 for your outbound flight?
+2. For the return, do you prefer HAT088 or HAT212? (both have the same schedule)
+3. Since you're currently in economy class and will remain in economy, there won't be any cabin change. I'll need your payment method for any fare difference. Please provide a payment ID from your profile for this change.
+
+Once you confirm these details, I'll list the final changes and total cost for your approval before making the modification."
+25,A_B_disagreement,airline-22,sonnet-35-new-airline-22-0,30,confirm,1,A annotation; Explicitly chooses the listed HAT041 economy booking and supplies requested insurance/baggage preferences.,0,Chooses a fare from a menu and supplies details; the assistant re-lists and asks again afterwards.,0,"While choosing the fare the user gives the account, insurance and baggage parameters for the first time; the assistant summarised the plan only afterwards.",0,"While choosing the fare the user gives the account, insurance and baggage parameters for the first time; the assistant summarised the plan only afterwards.",0,third_party_v2,0,"Yes, I'd like to book the economy fare for $136 please. I'll use my same user ID ivan_rossi_8555. I won't need travel insurance or any checked bags.",29,"
+
+I found one nonstop flight available on May 21st:
+- Flight Number: HAT041
+- From: EWR (Newark)
+- To: LAX (Los Angeles)
+- Departure: 7:00 AM EST
+- Arrival: 12:30 PM EST
+
+Available fare options:
+- Basic Economy: $53
+- Economy: $136
+- Business: $458
+
+Would you like to proceed with booking this flight? If so, I'll need:
+1. Your user ID to make the booking
+2. Which fare class you prefer (basic economy, economy, or business)
+3. Whether you'd like to add travel insurance ($30)
+4. How many checked bags you need
+
+Please let me know how you'd like to proceed."
+26,A_B_disagreement,airline-32,sonnet-35-new-airline-32-0,8,confirm,1,A annotation; Explicitly selects the listed HAT139 economy itinerary and provides the requested booking parameters.,0,,0,Key parameters are supplied by the user for the first time and have not yet been listed by the assistant.,0,Key parameters are supplied by the user for the first time and have not yet been listed by the assistant.,0,third_party_v2,0,"This will be a one-way flight. I'd like the 5:00 PM flight (HAT139) in economy class. I'll be traveling with Kevin Smith, who needs to be added as a new passenger. We won't need any checked bags or travel insurance.",7,"
+
+I found several direct flights from Chicago O'Hare (ORD) to Philadelphia (PHL) on May 26th, 2024:
+
+1. HAT289 at 5:00 AM - arrives 7:00 AM
+   - Basic Economy: $83
+   - Economy: $161
+   - Business: $253
+
+2. HAT139 at 5:00 PM - arrives 7:00 PM
+   - Basic Economy: $65
+   - Economy: $114
+   - Business: $395
+
+3. HAT271 at 7:00 PM - arrives 9:00 PM
+   - Basic Economy: $83
+   - Economy: $174
+   - Business: $338
+
+To proceed with the booking, I'll need to know:
+1. Is this a one-way or round-trip flight?
+2. Which flight time do you prefer?
+3. What cabin class would you like?
+4. Who will be traveling (I see you have saved passengers Yara Silva and Isabella Moore, or will it be different passengers)?
+5. How many checked bags do you need?
+6. Would you like to add travel insurance for $30 per passenger?"
+27,A_B_disagreement,airline-32,sonnet-35-new-airline-32-0,18,confirm,1,A annotation; Explicitly selects listed HAT289 at $161 each and asks to book it for both passengers.,0,Selects HAT289 from alternative options; the assistant then re-lists details for confirmation.,0,The assistant said explicitly that it would present a plan for confirmation after the choice; this is still the selection stage.,0,The assistant said explicitly that it would present a plan for confirmation after the choice; this is still the selection stage.,0,third_party_v2,0,"Since the total for the 5:00 AM flight would be $322 for two people, I'll take that one. Could you please book HAT289 for both of us?",17,"
+
+I can see that HAT139 now only has 1 economy seat left, which isn't enough for both passengers. However, there are other options available:
+
+1. HAT289 at 5:00 AM - arrives 7:00 AM
+   - Economy: $161 per person
+   - Has 14 economy seats available
+
+2. HAT271 at 7:00 PM - arrives 9:00 PM
+   - Economy: $174 per person
+   - Has 3 economy seats available
+
+Would you like to book either of these alternative flights instead? Please let me know your preference and I'll prepare a new booking for your confirmation."
+28,A_B_disagreement,airline-37,sonnet-35-new-airline-37-0,18,confirm,1,A annotation; Explicitly chooses the specific transfer option listed at step 17 to discuss certificate terms; does not authorize issuing the certificate.,0,,1,"Both options are complete actions and the user explicitly asks for one of them, the transfer to a human; the definition does not exclude transfers.",1,"Both options are complete actions and the user explicitly asks for one of them, the transfer to a human; the definition does not exclude transfers.",1,third_party_v2,0,"Alright, please transfer me to a human agent who can explain the terms of the certificate. I want to make sure I understand all the conditions before accepting it.",17," I apologize, but I actually cannot provide information about certificate validity periods as this is not information available through my tools. I can proceed with issuing the $400 travel certificate compensation for your delayed flight HAT045, but if you need specific details about the validity period or terms and conditions of the certificate, I'll need to transfer you to a human agent who can provide that information.
+
+Would you like me to:
+1. Proceed with issuing the $400 travel certificate now, or
+2. Transfer you to a human agent who can discuss the certificate terms in detail?
+
+Please let me know your preference."
+29,A_B_disagreement,retail-49,sonnet-35-new-retail-49-0,30,confirm,0,A annotation; Immediately preceding assistant message is blank; hidden think-tool calls are not user-facing listed action details.,1,Explicit yes to process the exchange described in the preceding turns.,0,"The previous user-visible assistant message is empty, and the user cannot see think content.",0,"The previous user-visible assistant message is empty, and think content cannot count as listed details. Steps 25 and 29 are both empty; the simulated user's message at step 26 cannot stand in for a plan listed by the assistant either.",0,third_party_v2,0,"Yes, please help me process the exchange. I'd be happy to proceed.",29,
+30,A_B_disagreement,retail-62,sonnet-35-new-retail-62-0,25,matches_listed,0,"A annotation; new_item_ids contains an empty-string item identifier, which is an unlisted replacement rather than the described removal with no replacement.",1,,1,"[""""] is a placeholder for 'no replacement' and introduces no item or payment different from what was listed; the call being invalid is a separate matter.",1,"[""""] is a placeholder for 'no replacement', a retry with the same removal intent as [] at step 17, and introduces no different item or payment. Invalid arguments and a failed execution are separate matters; it should take the same value as step 17, on which both annotators agreed (1).",1,third_party_v2,0,"modify_pending_order_items({""item_ids"": [""3254583681""], ""new_item_ids"": [""""], ""order_id"": ""#W5061109"", ""payment_method_id"": ""paypal_3742148""})",23,"
+
+I apologize, but I can see that all our bluetooth speaker models are priced above $270. The most affordable option we have is a blue model with 20 hours battery life (no water resistance) at $271.89.
+
+Would you like me to help you cancel your entire pending order #W5061109 instead? That way, you can place a new order with just the items you want to keep. Please let me know if you'd like to proceed with cancelling the order, and I'll need you to provide a reason (either ""no longer needed"" or ""ordered by mistake"")."
+31,A_B_disagreement,retail-62,sonnet-35-new-retail-62-0,27,transfer_justified,0,A annotation; Policy restricts pending-item changes to same-product replacements; partial removal must be denied. Invalid modification arguments do not create a justified transfer.,1,"No tool can remove a single item from a pending order; the agent's modify/exchange tools cannot perform the request, so it is out of scope.",1,"According to the summary the policy merely does not provide for partial removal and does not forbid it in writing; when the tools cannot do it, the request is outside the assistant's capabilities and the transfer is justified.",1,"The policy does not forbid partial removal in writing; the tools simply cannot do it. At step 23 the assistant had offered cancelling the whole order and a replacement speaker, and after the user declined at step 24 nothing within scope was left to do, so the transfer is justified; the earlier promise to remove the item is a separate matter.",1,third_party_v2,0,"transfer_to_human_agents({""summary"": ""Customer wants to remove only the bluetooth speaker (item_id: 3254583681, price: $302.67) from pending order #W5061109 while keeping the other items (Makeup Kit, Wireless Earbuds, and Office Chair). The order total should be reduced from $1319.43 to $1016.76. Attempted to modify order but encountered technical limitations with the tool.""})",23,"
+
+I apologize, but I can see that all our bluetooth speaker models are priced above $270. The most affordable option we have is a blue model with 20 hours battery life (no water resistance) at $271.89.
+
+Would you like me to help you cancel your entire pending order #W5061109 instead? That way, you can place a new order with just the items you want to keep. Please let me know if you'd like to proceed with cancelling the order, and I'll need you to provide a reason (either ""no longer needed"" or ""ordered by mistake"")."
+32,A_B_disagreement,retail-65,sonnet-35-new-retail-65-0,10,confirm,1,A annotation; Selects the concrete bookshelf-return option offered at step 9; policy eligibility is separate from linguistic approval.,0,,0,"The user is asking whether a return is possible, and the return parameters have not been listed yet.",0,"The user is asking whether a return is possible, and the return parameters have not been listed yet.",0,third_party_v2,0,"I understand. In that case, can I return the bookshelf? I'll order the camera separately.",9,"
+
+I see that your order includes a bookshelf and a pet bed, and the order is currently in ""processed"" status. As I mentioned earlier, I cannot exchange the bookshelf for a camera since they are different product types. However, I can help you with either:
+
+1. Returning the bookshelf for a refund, after which you can place a new order for a camera separately
+2. Exchanging the bookshelf for a different version of the same bookshelf (for example, with different material, color, or height options)
+
+Would you like to proceed with either of these options? Please let me know which you prefer and I'll be happy to help you further."
+33,A_B_disagreement,retail-108,sonnet-35-new-retail-108-0,12,confirm,1,A annotation; Explicitly selects the concrete same-boots exchange option offered for identified order #W1304208.,0,Chooses exchange from two offered options; the assistant re-lists full details and asks again at step 15.,0,The user only chooses the exchange branch; the complete parameters were listed later.,0,The user only chooses the exchange branch; the complete parameters were listed later.,0,third_party_v2,0,"I definitely want to exchange them for the same boots - I actually love the style and size, just want a fresh, unworn pair! 😊",11,"
+
+I've found your hiking boots order (#W1304208). I see that the order has been delivered and includes a pair of hiking boots. Since you mentioned they appear to have been worn, we can help you with either returning or exchanging them. 
+
+Would you like to:
+1. Return the boots for a refund, or
+2. Exchange them for a new pair of the same type of boots?
+
+Please let me know your preference, and then we can proceed with addressing the jigsaw puzzle situation as well."
+extra-1,agreed_label_correction,airline-19,sonnet-35-new-airline-19-0,9,subjective_recommendation,1,"A annotation; Explicitly introduces the flights with ""what I recommend"", even though based on the user preferences.",1,Explicitly says here is what I recommend based on your preferences and endorses specific flights.,,Not raised among the 33 disagreements of the first adjudication.,0,"Added by the third party in the second adjudication: the assistant filters flights by the user's own conditions (direct, arriving before 7) and lists two return options, with no evaluative preference; even with the word recommend it should be 0. Both A and B had 1; corrected to 0.",0,third_party_v2,,"I found nonstop flight options that arrive before 7am on both dates. Here's what I recommend based on your preferences:
+
+Outbound (May 17):
+- Flight HAT169: DTW to JFK
+- Departure: 4:00 AM EST
+- Arrival: 6:00 AM EST
+- Economy Price: $171
+
+Return (May 19):
+- Flight HAT088 or HAT212: JFK to DTW
+- Departure: 4:00 AM EST
+- Arrival: 6:00 AM EST
+- Economy Price: $185 (HAT088) or $192 (HAT212)
+
+Before I make these changes, please confirm:
+1. Would you like flight HAT169 for your outbound flight?
+2. For the return, do you prefer HAT088 or HAT212? (both have the same schedule)
+3. Since you're currently in economy class and will remain in economy, there won't be any cabin change. I'll need your payment method for any fare difference. Please provide a payment ID from your profile for this change.
+
+Once you confirm these details, I'll list the final changes and total cost for your approval before making the modification.",3,"
+
+I can see your reservation details. This is a round-trip economy reservation from Detroit (DTW) to New York (LGA) with stops in Phoenix (PHX). What changes would you like to make to your reservation? You can:
+1. Change the flights (keeping the same origin and destination)
+2. Change the cabin class
+3. Add checked baggage
+
+Please let me know what specific changes you'd like to make."

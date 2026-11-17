@@ -1,0 +1,17 @@
+[project]
+name = "nesymon"
+version = "0.1.0"
+description = "Verdict-level risk control for neurosymbolic runtime monitoring of LLM agents"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+dependencies = ["numpy", "pandas", "matplotlib", "pyyaml"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["nesymon", "rules", "experiments"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

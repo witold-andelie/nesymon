@@ -1,0 +1,228 @@
+{
+"gpt-4o-airline-13-0": {
+"C": [
+22,
+44
+],
+"M0": [
+23,
+27,
+35,
+39,
+45,
+49
+]
+},
+"gpt-4o-airline-18-0": {
+"A": [
+8,
+10
+],
+"T": {
+"13": 0
+}
+},
+"gpt-4o-airline-19-0": {
+"C": [
+20
+]
+},
+"gpt-4o-airline-22-0": {
+"C": [
+18
+]
+},
+"gpt-4o-airline-30-0": {
+"C": [
+22
+],
+"T": {
+"23": 0
+}
+},
+"gpt-4o-airline-32-0": {},
+"gpt-4o-airline-37-0": {
+"A": [
+18,
+20
+],
+"O": [
+1
+],
+"T": {
+"23": 0
+}
+},
+"gpt-4o-airline-43-0": {
+"C": [
+8
+]
+},
+"gpt-4o-airline-6-0": {
+"C": [
+18
+]
+},
+"gpt-4o-airline-8-0": {},
+"gpt-4o-retail-108-0": {
+"C": [
+12,
+26
+]
+},
+"gpt-4o-retail-113-0": {
+"C": [
+20,
+22
+]
+},
+"gpt-4o-retail-33-0": {},
+"gpt-4o-retail-49-0": {},
+"gpt-4o-retail-5-0": {
+"T": {
+"11": 1
+}
+},
+"gpt-4o-retail-51-0": {
+"C": [
+20
+]
+},
+"gpt-4o-retail-53-0": {
+"C": [
+14
+]
+},
+"gpt-4o-retail-62-0": {
+"C": [
+18,
+24
+]
+},
+"gpt-4o-retail-65-0": {},
+"gpt-4o-retail-97-0": {
+"C": [
+22,
+30
+]
+},
+"sonnet-35-new-airline-13-0": {
+"S": [
+9
+]
+},
+"sonnet-35-new-airline-18-0": {
+"A": [
+4,
+8
+],
+"T": {
+"11": 0
+}
+},
+"sonnet-35-new-airline-19-0": {},
+"sonnet-35-new-airline-22-0": {
+"C": [
+30
+]
+},
+"sonnet-35-new-airline-30-0": {
+"C": [
+22
+]
+},
+"sonnet-35-new-airline-32-0": {
+"C": [
+12,
+20
+]
+},
+"sonnet-35-new-airline-37-0": {
+"A": [
+14
+],
+"O": [
+13
+],
+"T": {
+"19": 1
+}
+},
+"sonnet-35-new-airline-43-0": {
+"C": [
+6
+]
+},
+"sonnet-35-new-airline-6-0": {
+"C": [
+14
+]
+},
+"sonnet-35-new-airline-8-0": {
+"C": [
+16,
+20,
+30
+],
+"M0": [
+21,
+23
+]
+},
+"sonnet-35-new-retail-108-0": {
+"C": [
+16,
+26
+]
+},
+"sonnet-35-new-retail-113-0": {
+"C": [
+26,
+28,
+36
+]
+},
+"sonnet-35-new-retail-33-0": {
+"C": [
+20
+]
+},
+"sonnet-35-new-retail-49-0": {},
+"sonnet-35-new-retail-5-0": {
+"T": {
+"11": 1
+}
+},
+"sonnet-35-new-retail-51-0": {
+"C": [
+16
+]
+},
+"sonnet-35-new-retail-53-0": {
+"C": [
+16
+]
+},
+"sonnet-35-new-retail-62-0": {
+"C": [
+16
+],
+"M0": [
+25
+],
+"T": {
+"27": 1
+}
+},
+"sonnet-35-new-retail-65-0": {
+"C": [
+12
+]
+},
+"sonnet-35-new-retail-97-0": {
+"C": [
+16,
+18
+]
+}
+}

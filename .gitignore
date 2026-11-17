@@ -1,0 +1,23 @@
+# Top-level Markdown other than the README is local planning material and stays out of git.
+/*.md
+!/README.md
+
+.DS_Store
+__pycache__/
+*.pyc
+.pytest_cache/
+.codegraph/
+
+# Third-party data and model outputs
+data/raw/
+data/probs/
+.venv/
+data/preannotation/batches/
+data/preannotation/pilot_batches/
+
+# Generated annotation sheets (contain tau-bench conversation text; regenerate with make_annotation_sheet)
+data/annotation_sheet_*.csv
+
+# Personal application material and superseded intermediate results
+docs/fellowship/
+results/full_preannotation_partial.csv

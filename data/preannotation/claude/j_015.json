@@ -1,0 +1,8 @@
+{"gpt-4o-retail-21-0": {"C": [20]},
+ "sonnet-35-new-retail-21-0": {},
+ "gpt-4o-retail-22-0": {"C": [20, 26]},
+ "sonnet-35-new-retail-22-0": {"C": [8, 28]},
+ "gpt-4o-retail-23-0": {"C": [24, 36]},
+ "sonnet-35-new-retail-23-0": {"C": [22, 30, 36]},
+ "gpt-4o-retail-24-0": {},
+ "sonnet-35-new-retail-24-0": {}}

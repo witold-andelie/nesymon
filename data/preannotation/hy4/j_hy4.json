@@ -1,0 +1,480 @@
+{
+"gpt-4o-retail-100-0": {
+"C": [
+24
+]
+},
+"gpt-4o-retail-101-0": {
+"C": [
+30
+]
+},
+"gpt-4o-retail-102-0": {
+"C": [
+18,
+26,
+28,
+36,
+38
+]
+},
+"gpt-4o-retail-103-0": {
+"C": [
+20,
+28,
+34
+]
+},
+"gpt-4o-retail-104-0": {
+"C": [
+16,
+32
+]
+},
+"gpt-4o-retail-105-0": {
+"C": [
+16,
+30,
+42,
+48
+]
+},
+"gpt-4o-retail-106-0": {
+"C": [
+20
+]
+},
+"gpt-4o-retail-107-0": {
+"C": [
+26
+]
+},
+"gpt-4o-retail-109-0": {
+"C": [
+24
+]
+},
+"gpt-4o-retail-110-0": {
+"C": [
+18,
+30
+]
+},
+"gpt-4o-retail-111-0": {
+"C": [
+24,
+26
+]
+},
+"gpt-4o-retail-112-0": {
+"C": [
+26,
+34
+]
+},
+"gpt-4o-retail-114-0": {
+"C": [
+18
+]
+},
+"gpt-4o-retail-57-0": {},
+"gpt-4o-retail-58-0": {
+"C": [
+16,
+20
+]
+},
+"gpt-4o-retail-59-0": {
+"C": [
+16,
+22
+]
+},
+"gpt-4o-retail-60-0": {
+"C": [
+16
+]
+},
+"gpt-4o-retail-61-0": {
+"C": [
+22
+]
+},
+"gpt-4o-retail-63-0": {
+"C": [
+24
+]
+},
+"gpt-4o-retail-64-0": {
+"C": [
+18
+]
+},
+"gpt-4o-retail-66-0": {
+"C": [
+20
+]
+},
+"gpt-4o-retail-67-0": {},
+"gpt-4o-retail-68-0": {},
+"gpt-4o-retail-69-0": {
+"C": [
+14
+]
+},
+"gpt-4o-retail-70-0": {
+"C": [
+28
+]
+},
+"gpt-4o-retail-71-0": {
+"C": [
+14
+],
+"M0": [
+27
+]
+},
+"gpt-4o-retail-72-0": {
+"C": [
+22
+]
+},
+"gpt-4o-retail-73-0": {
+"C": [
+12
+]
+},
+"gpt-4o-retail-74-0": {
+"C": [
+18,
+20,
+30
+]
+},
+"gpt-4o-retail-75-0": {
+"C": [
+18
+]
+},
+"gpt-4o-retail-76-0": {
+"C": [
+12,
+14
+],
+"M0": [
+17
+]
+},
+"gpt-4o-retail-77-0": {
+"C": [
+12,
+14
+]
+},
+"gpt-4o-retail-78-0": {
+"C": [
+12,
+22,
+34
+]
+},
+"gpt-4o-retail-79-0": {
+"C": [
+16
+]
+},
+"gpt-4o-retail-80-0": {
+"C": [
+22
+]
+},
+"gpt-4o-retail-81-0": {},
+"gpt-4o-retail-82-0": {
+"C": [
+22
+]
+},
+"gpt-4o-retail-83-0": {
+"C": [
+12
+]
+},
+"gpt-4o-retail-84-0": {
+"C": [
+20
+]
+},
+"gpt-4o-retail-85-0": {
+"C": [
+26,
+28
+]
+},
+"gpt-4o-retail-86-0": {
+"C": [
+26
+]
+},
+"gpt-4o-retail-87-0": {
+"C": [
+22,
+32
+]
+},
+"gpt-4o-retail-88-0": {
+"C": [
+16
+]
+},
+"gpt-4o-retail-89-0": {
+"C": [
+20
+]
+},
+"gpt-4o-retail-90-0": {
+"C": [
+18
+]
+},
+"gpt-4o-retail-91-0": {
+"C": [
+28
+]
+},
+"gpt-4o-retail-92-0": {
+"C": [
+18
+]
+},
+"gpt-4o-retail-93-0": {},
+"gpt-4o-retail-94-0": {
+"C": [
+20
+]
+},
+"gpt-4o-retail-95-0": {
+"C": [
+20,
+22
+]
+},
+"gpt-4o-retail-96-0": {},
+"gpt-4o-retail-98-0": {
+"C": [
+16,
+22
+]
+},
+"gpt-4o-retail-99-0": {},
+"sonnet-35-new-retail-100-0": {
+"C": [
+32,
+38
+]
+},
+"sonnet-35-new-retail-101-0": {
+"C": [
+24
+]
+},
+"sonnet-35-new-retail-102-0": {
+"C": [
+24,
+30
+]
+},
+"sonnet-35-new-retail-103-0": {
+"C": [
+16,
+20,
+32
+]
+},
+"sonnet-35-new-retail-104-0": {
+"C": [
+20,
+28,
+34
+]
+},
+"sonnet-35-new-retail-105-0": {
+"C": [
+46,
+56
+],
+"T": {
+"59": 1
+}
+},
+"sonnet-35-new-retail-106-0": {
+"C": [
+14
+]
+},
+"sonnet-35-new-retail-107-0": {
+"C": [
+24
+]
+},
+"sonnet-35-new-retail-109-0": {
+"C": [
+18
+]
+},
+"sonnet-35-new-retail-110-0": {
+"C": [
+18,
+26
+]
+},
+"sonnet-35-new-retail-111-0": {
+"C": [
+14,
+18,
+26
+]
+},
+"sonnet-35-new-retail-112-0": {
+"C": [
+20,
+28
+]
+},
+"sonnet-35-new-retail-114-0": {
+"C": [
+22,
+26
+]
+},
+"sonnet-35-new-retail-57-0": {},
+"sonnet-35-new-retail-58-0": {
+"C": [
+26
+]
+},
+"sonnet-35-new-retail-59-0": {
+"C": [
+14
+]
+},
+"sonnet-35-new-retail-60-0": {
+"C": [
+10
+]
+},
+"sonnet-35-new-retail-61-0": {
+"C": [
+12
+]
+},
+"sonnet-35-new-retail-63-0": {
+"C": [
+30
+]
+},
+"sonnet-35-new-retail-64-0": {
+"C": [
+20
+]
+},
+"sonnet-35-new-retail-66-0": {
+"C": [
+12
+]
+},
+"sonnet-35-new-retail-67-0": {},
+"sonnet-35-new-retail-68-0": {},
+"sonnet-35-new-retail-69-0": {
+"C": [
+20
+]
+},
+"sonnet-35-new-retail-70-0": {
+"C": [
+16
+]
+},
+"sonnet-35-new-retail-71-0": {
+"C": [
+18
+]
+},
+"sonnet-35-new-retail-72-0": {
+"C": [
+32
+]
+},
+"sonnet-35-new-retail-73-0": {
+"C": [
+10
+]
+},
+"sonnet-35-new-retail-74-0": {
+"C": [
+20,
+26
+]
+},
+"sonnet-35-new-retail-75-0": {
+"C": [
+18
+]
+},
+"sonnet-35-new-retail-76-0": {
+"C": [
+28,
+36
+]
+},
+"sonnet-35-new-retail-77-0": {
+"C": [
+14
+]
+},
+"sonnet-35-new-retail-78-0": {
+"C": [
+14,
+22,
+28
+]
+},
+"sonnet-35-new-retail-79-0": {
+"C": [
+18
+]
+},
+"sonnet-35-new-retail-80-0": {
+"C": [
+14,
+16
+]
+},
+"sonnet-35-new-retail-81-0": {
+"C": [
+12
+]
+},
+"sonnet-35-new-retail-83-0": {
+"C": [
+16,
+20
+]
+},
+"sonnet-35-new-retail-84-0": {
+"C": [
+18
+]
+},
+"sonnet-35-new-retail-85-0": {
+"C": [
+24
+]
+},
+"sonnet-35-new-retail-88-0": {
+"C": [
+16
+]
+},
+"sonnet-35-new-retail-89-0": {}
+}
