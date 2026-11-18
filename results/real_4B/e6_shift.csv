@@ -1,0 +1,9 @@
+rule,calibrate_on,test_on,tau,target_joint_error,target_abstain,abstain_shift,confidence_shift
+R1_write_in_confirmation_window,retail,airline,0.708,0.05,0.1125,-0.0351,0.0274
+R1_write_in_confirmation_window,airline,retail,0.5,0.181,0.0143,0.0018,-0.0274
+R2_write_matches_listed,retail,airline,0.0,0.0875,0.0,0.0,-0.0136
+R2_write_matches_listed,airline,retail,0.5,0.0857,0.0095,-0.0155,0.0136
+R3_no_subjective_recommendation,retail,airline,0.0,0.05,0.0,0.0,0.0024
+R3_no_subjective_recommendation,airline,retail,0.0,0.0524,0.0,0.0,-0.0024
+R4_transfer_justified,retail,airline,0.0,0.025,0.0,0.0,0.0627
+R4_transfer_justified,airline,retail,0.0,0.019,0.0,0.0,-0.0627

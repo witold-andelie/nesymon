@@ -440,6 +440,49 @@ Provisional evaluation (pre-labels as ground truth, alpha = 0.10, 100 repetition
 - Verdict-level calibration abstains less than coverage-style calibration in every row where both meet alpha,
   but with 2B on R1 the gap is small (0.629 vs 0.680).
 
+### 2.15 Final results on the human-checked evaluation labels
+
+The evaluation pre-labels were checked by one reviewer (`results/check.csv`, 18 November 2026): all 5,431 rows
+reviewed, the 36 rows on which two agents disagreed adjudicated with written reasons, and 24 labels changed (22 confirm
+0 to 1, one confirm 1 to 0, one matches_listed 1 to 0), all among those 36. The final label file is
+`data/labels_eval.csv`. `experiments/run_all.py` was rerun for both labelers with 200 repetitions; outputs are in
+`results/real_4B/` and `results/real_2B/`. Because so few labels changed, every number in sections 2.13 and 2.14 moved by
+at most about one point; those sections are kept as the provisional record.
+
+Main table at alpha = 0.10, wrong verdicts / abstention:
+
+| Rule | Labeler | Hard labels | Per-step conformal | Coverage-style | Verdict-level (ours) | Two-sided |
+| --- | --- | --- | --- | --- | --- | --- |
+| R1 | 4B | 0.158 / 0 | 0.073 / 0.150 | 0.002 / 0.399 | 0.080 / 0.143 | 0.038 / 0.253 |
+| R1 | 2B | 0.346 / 0 | 0.301 / 0.093 | 0.039 / 0.693 | 0.066 / 0.635 | 0.030 / 0.712 |
+| R2 | 4B | 0.088 / 0 | 0.069 / 0.044 | 0.061 / 0.070 | 0.072 / 0.038 | 0.038 / 0.185 |
+| R2 | 2B | 0.173 / 0 | 0.070 / 0.345 | 0.039 / 0.455 | 0.066 / 0.361 | 0.027 / 0.504 |
+| R9 | 4B | 0.013 / 0 | 0.013 / 0 | 0 / 0.942 | 0.013 / 0 | - |
+| R9 | 2B | 0.291 / 0 | 0.205 / 0.149 | 0.006 / 0.908 | 0.058 / 0.691 | - |
+
+R3 and R4 have hard-label error below alpha with both labelers (at most 0.052), so every calibrated method returns
+tau near 0 and adds nothing there.
+
+- Guarantee: in all 58 rule, labeler and alpha settings of E2 the mean joint error over 200 splits is at or below
+  alpha. Per split it varies (standard deviation up to 0.06 on R9 with 2B), as expected for a guarantee in expectation.
+- With 4B the verdict-level loss and per-step conformal are practically tied on R1 (0.143 vs 0.150 abstention, joint
+  error 0.080 vs 0.073); the difference is not meaningful. The case for the method rests on the 2B rows, where
+  per-step conformal breaks alpha (R1 0.301, R9 0.205) and the verdict-level loss does not.
+- Against coverage-style calibration the verdict-level loss abstains less in every row where both meet alpha; the
+  gap is large with 4B on R1 (0.143 vs 0.399) and small with 2B on R1 (0.635 vs 0.693).
+- Shift (E6): calibrating R1 on airline and testing on retail breaks alpha with both labelers (4B 0.181, 2B 0.176).
+  The label-free abstention shift is 0.002 with 4B, so it would not have warned, but 0.114 with 2B, so it would.
+  Retail to airline stays within alpha for both.
+- Error autocorrelation (E7) is 0.27 on R2 and 0.27 (4B) to 0.38 (2B) on R9, so labeling errors within a trajectory
+  are correlated, against the independence assumption of the probabilistic comparator.
+- Probabilistic comparator, trajectory Brier raw / Platt (4B): R1 0.106 / 0.193, R2 0.092 / 0.055, R3 0.620 / 0.007,
+  R4 0.021 / 0.022, R9 0.049 / 0.014. On R1, Platt scaling halves the per-turn Brier score of confirm (0.136 to 0.067)
+  and nearly doubles the trajectory Brier score.
+
+Still open: the independent double annotation of 20 percent of the evaluation tasks (29 tasks, 1,240 judgements,
+`experiments/make_double_sheet.py`), a significance test for the 4B comparison with per-step conformal, and the
+LLM-judge baseline B1, which needs API access.
+
 ## 3. Theory: what holds and what to state carefully
 
 Verified (no counterexample over 300 random traces per rule, 8 rules, 22 thresholds; see
