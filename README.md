@@ -46,7 +46,8 @@ This project makes the monitor say how often its verdicts are wrong, and abstain
    and an adjudication record (6,266 judgements, all double-annotated: 835 pilot and 5,431 evaluation judgements).
 5. **Negative and limiting results reported as such**: the method helps only when the hard-label error exceeds
    alpha and confident labeling errors are rare; calibrating propositions does not calibrate verdicts; and the
-   verdict-level calibration applied to a frontier LLM judge beats the automaton with a small labeler on one rule.
+   verdict-level calibration applied to a frontier LLM judge matches the automaton with a 4B labeler and beats it
+   with a 2B labeler.
 
 ## Key results
 
@@ -66,7 +67,7 @@ This project makes the monitor say how often its verdicts are wrong, and abstain
 | Does calibrating propositions calibrate verdicts? | No. On R1, Platt scaling halves the per-turn Brier score of confirm (0.136 to 0.067) but nearly doubles the trajectory Brier score of the probabilistic monitor (0.106 to 0.193). | evaluation | `experiments/e1_main.py` |
 | Does the guarantee survive a domain shift? | No. Calibrating R1 on airline and testing on retail gives 18.1 % wrong verdicts with 4B at alpha = 0.10 (12.9 % with the second annotator's labels), while the label-free shift statistics barely move (abstention shift 0.002); with 2B the same shift is visible (abstention shift 0.114). | evaluation | `results/real_*/e6_shift.csv` |
 | Do the results depend on who labelled? | No. With the second annotator's labels as ground truth every conclusion holds: the guarantee in all 58 settings, the 4B tie with per-step conformal, its failure with 2B (R1 29.7 %, R9 22.0 %), and the shift result (R1 airline to retail 12.9 % with 4B). Wrong-verdict rates move by at most 1.6 points. | evaluation | `results/real_*_annotator2/` |
-| Is the automaton needed, or would an LLM judge do? | A frontier judge (GLM-5.3) reading the whole conversation breaks alpha on R1 when used alone (11.9 % wrong verdicts). With the same verdict-level calibration applied to its confidence it meets alpha on every rule and on R1 abstains less than the automaton with the 4B labeler (7.0 % vs 14.3 %). The automaton is better or equal on R2, R3, R4 and R9 and runs on a laptop. | evaluation | `results/real_judge/e1_judge.csv` |
+| Is the automaton needed, or would an LLM judge do? | A frontier judge (GLM-5.3) reading the whole conversation breaks alpha on R1 when used alone (11.9 % wrong verdicts). With the same verdict-level calibration applied to its confidence it meets alpha on every rule. Against the automaton with the 4B labeler, no difference is significant in a paired test (R1 abstention 7.0 % vs 14.3 %, 95 % interval of the difference -3.5 to +16.7 points); the automaton tends to be better on R4 and runs on a laptop. Against the 2B labeler, the calibrated judge abstains significantly less. | evaluation | `results/real_judge/` |
 | Where does the method add nothing? | R3, R4 and R9 (4B) already have hard-label error below alpha = 0.10, so calibration returns tau near 0; coverage-style calibration still abstains on 94 % of R9 trajectories. | evaluation | `results/real_4B/e1_main.csv` |
 
 <p align="center">

@@ -582,7 +582,29 @@ alpha = 0.10, wrong verdicts / abstention:
   any scorer that yields a confidence per verdict; the automaton with a small labeler is one instance with specific
   advantages (runs locally on a laptop, judges each turn once for all rules, gives the violating step, works online),
   not uniformly the most accurate one. A hybrid (judge for R1-type rules, automaton for structured rules) is a
-  natural extension. No paired significance test between the judge and the monitor has been run yet.
+  natural extension.
+
+Paired test, monitor minus calibrated judge (`experiments/significance_judge.py`, 400 repetitions, same calibration
+and resampled test tasks for both; `results/real_judge/significance_vs_4B.csv`, `..._vs_2B.csv`):
+
+| Labeler, rule | Abstention difference (95 % interval) | Joint-error difference (95 % interval) | Repetitions where the judge abstains less |
+| --- | --- | --- | --- |
+| 4B, R1 | +0.067 (-0.035, +0.167) | +0.003 (-0.069, +0.075) | 89 % |
+| 4B, R1, second annotator's labels | +0.040 (-0.086, +0.167) | +0.007 (-0.069, +0.081) | 75 % |
+| 4B, R2 | -0.027 (-0.299, +0.092) | +0.004 (-0.069, +0.081) | 30 % |
+| 4B, R4 | -0.025 (-0.121, 0.000) | -0.054 (-0.121, 0.000) | 0 % |
+| 4B, R9 | -0.004 (-0.042, 0.000) | -0.014 (-0.063, 0.000) | 0 % |
+| 2B, R1 | +0.566 (+0.408, +0.730) | -0.014 (-0.121, +0.086) | 100 % |
+| 2B, R2 | +0.319 (+0.012, +0.529) | -0.007 (-0.086, +0.086) | 99 % |
+| 2B, R9 | +0.705 (+0.375, +0.938) | +0.020 (-0.083, +0.167) | 100 % |
+
+- With the 4B labeler no difference is significant at the 95 percent level. On R1 the calibrated judge tends to
+  abstain less (in 89 percent of repetitions, 75 percent with the second annotator's labels); on R4 the monitor
+  tends to make fewer wrong verdicts, with an interval that just reaches zero. The fair summary: the calibrated
+  frontier judge and the calibrated automaton with a 4B labeler perform alike; neither dominates.
+- With the 2B labeler the calibrated judge abstains significantly less on R1, R2 and R9, at similar error.
+- Per-repetition risk: the calibrated judge exceeds alpha in 32 percent of repetitions on R1 and 19 percent on R4,
+  the monitor in 25 and 0 percent; both guarantees hold only in expectation.
 
 ## 3. Theory: what holds and what to state carefully
 
