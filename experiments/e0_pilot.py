@@ -55,7 +55,7 @@ def main():
     ap.add_argument("--alpha", type=float, default=0.1)
     args = ap.parse_args()
     if not (os.path.exists(args.labels) and os.path.exists(args.probs)):
-        raise SystemExit("E0 needs human labels and a labeler cache; neither step has been run yet.")
+        raise SystemExit("E0 needs a label file and a labeler cache; see Reproducing in README.md.")
     cache, labels = ProbCache(args.probs), load_labels(args.labels)
     print("rule,tasks,trajs,violation_rate,hard_error,hard_error_ci95,confident_error,decision")
     for rule_id, (dfa, _) in RULES.items():

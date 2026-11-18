@@ -193,7 +193,8 @@ claimed as a contribution.
 3. **Intermediate flags.** The bound covers early violation, early permanent compliance and the
    end-of-trace verdict. It does not cover the running "possible violation" status, and a threshold
    chosen with the verdict loss does not keep $q^*_t$ inside $S_t$.
-4. **Truth.** $\sigma^*$ is the adjudicated human label. The guarantee is relative to it.
+4. **Truth.** $\sigma^*$ is the human label (pilot: adjudicated; evaluation: reviewer-checked, with an independent
+   second annotation as a sensitivity check). The guarantee is relative to it.
 5. **Injected violations.** Natural and injected violations are not exchangeable. A bound calibrated
    on one does not transfer to the other.
 6. **Escalation.** If abstentions are resolved by a human who returns the true verdict, the error of

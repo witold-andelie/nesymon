@@ -5,7 +5,7 @@ E7 error autocorrelation, E8 regime under injected confident errors. Pilot tasks
 --include-pilot is given (useful only for a dry run, since the definitions were tuned on them).
 
 Run from the repository root:
-  python -m experiments.run_all --probs data/probs/<model>.jsonl --labels data/labels.csv --out results/real
+  python -m experiments.run_all --probs data/probs/<model>.jsonl --labels data/labels_eval.csv --out results/real_4B
 """
 import argparse
 import csv

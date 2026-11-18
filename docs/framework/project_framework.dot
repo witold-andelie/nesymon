@@ -27,7 +27,8 @@ digraph OPM {
   PropDefs  [label="Proposition Definition Set\n(props/definitions.yaml)"];
   DFASet    [label="DFA Set over step-type alphabets\n(rules/dfas.py)"];
   TrajSet   [label="Trajectory Set\n(nesymon/data.py)"];
-  LabelSet  [label="Ground-Truth Label Set\n(pilot: data/labels.csv;\nevaluation: pending human check)"];
+  LabelSet  [label="Ground-Truth Label Set\n(pilot: data/labels.csv;\nevaluation: data/labels_eval.csv,\ndouble-annotated)"];
+  JudgeLLM  [label="LLM Judge\n(GLM-5.3, API)", shape=box, style="dashed", color="#2E7D32", penwidth=1.6];
   PreLabelSet [label="Pre-label Set\n(results/full_preannotation.csv)"];
   PilotSet  [label="Pilot Task Set\n(data/pilot_tasks.json)"];
   Counts    [label="Rule x Class Count Table"];
@@ -92,7 +93,7 @@ digraph OPM {
   subgraph cluster_eval {
     label="Evaluating"; style="rounded"; color="#1565C0"; fontcolor="#1565C0";
     Baselines [label="Baseline Monitoring\n(B1-B4, Ours-Prob raw / Platt)"];
-    Scoring [label="Metric Computing\n(e0_pilot, e1_main,\nanalyses, sim_sweeps)"];
+    Scoring [label="Metric Computing\n(e0_pilot, run_all, e1_judge,\nsignificance, sim_sweeps)"];
     Gating [label="Pilot Gating"];
   }
   Writing [label="Manuscript Writing"];
@@ -120,6 +121,7 @@ digraph OPM {
   PreLabelSet -> AgreementChecking;
   LabelSet -> AgreementChecking;
   LabelerLLM -> Labeling;
+  JudgeLLM -> Baselines;
   TrajSet -> Labeling;
   TrajSet -> Annotating;
   DFASet -> Calibrating;

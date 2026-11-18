@@ -1,6 +1,6 @@
 """E1 main table: every method on every rule with a linguistic proposition, over repeated task splits.
 
-Needs data/labels.csv and a probability cache.
+Needs a label file (data/labels_eval.csv for the evaluation) and a probability cache.
 Run from the repository root:  python -m experiments.e1_main --probs data/probs/<model>.jsonl
 """
 import argparse

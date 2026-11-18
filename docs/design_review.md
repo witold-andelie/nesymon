@@ -1,6 +1,6 @@
 # Design review and decision log
 
-Last updated 2026-11-16. "Checked" means verified by code or data in this repository; "search" means
+Last updated 2026-11-18. "Checked" means verified by code or data in this repository; "search" means
 a web search (titles and abstracts only); "author" means a decision or verification supplied by the
 project author and not re-verified here.
 
@@ -13,14 +13,18 @@ project author and not re-verified here.
 | Alphabet | Mutually exclusive step types per rule instead of free bit-vectors; impossible letters are never explored | Implemented (`DFA.alphabet`) |
 | Threshold | tau is a confidence gate: a judgement is widened exactly when the labeler's top probability is at most tau. Grid on [0.5, 1] in log-odds | Implemented (`confidence_grid`) |
 | Relevance filtering (VRG, former M3) | Dropped from the paper; one sentence plus the CAV 2005 citation. Experiment E5 dropped | Done; the code keeps relevance only for the state-relevant loss |
-| Risk budgets | One threshold per rule; class-conditional budgets (miss, false alarm) where counts allow; sparse rules pooled by type | Implemented (`class_conditional_threshold`, `stratum`), counts pending labels |
-| Rule set | Only rules with a basis in the policy text and natural violations; one verbatim quote per domain | Eight rules in the registry (one selected, four candidates, three structured controls); one response rule kept as a case study |
+| Risk budgets | One threshold per rule; class-conditional budgets (miss, false alarm) where counts allow; sparse rules pooled by type | Implemented (`class_conditional_threshold`, `stratum`); per-rule thresholds and the two-sided variant are reported (2.15) |
+| Rule set | Only rules with a basis in the policy text and natural violations; one verbatim quote per domain | Eight rules in the registry (five selected and evaluated, three structured controls); one response rule kept as a case study |
 | Formula form | "G over a past formula" rules also stated in pure-past form (H, read at the last position) | Implemented and tested equivalent (`PAST_FORM`). LTLf2DFA accepts LTLf or pure-past formulas but not a mix (its README, checked 2026-11-16), so the pure-past form is the one to cross-check with it |
 | Annotator aids | Reference solution actions are given to human annotators, never to the labeler | Written next to each annotation sheet |
 | Shift detection (E6) | Label-free indicators only (labeler confidence, abstention rate); stated to detect input shift only | Implemented in `analyses.cross_domain` |
-| Uncertainty reporting | Task-level bootstrap intervals | Implemented (`bootstrap_ci`), used in the pilot script |
+| Uncertainty reporting | Task-level bootstrap intervals; paired resampling tests for method comparisons | Implemented (`bootstrap_ci`, `experiments/significance*.py`), reported in 2.17 and 2.18 |
 | Pilot hygiene | Proposition definitions are iterated on pilot tasks only; pilot tasks are excluded from the final evaluation | Implemented (`data/pilot_tasks.json`) |
-| Label release | Publish the human-checked proposition labels as a dataset | Planned contribution |
+| Label release | Publish the human-checked proposition labels as a dataset | Released in the repository: 835 pilot and 5,431 evaluation judgements, both double-annotated (evaluation kappa 0.936) |
+| Labeler | Qwen3.5-4B (main) and Qwen3.5-2B (size ladder), 4-bit MLX, local | Done for all 6,266 judgements (2.12, 2.14) |
+| Evaluation labels | Reviewer-checked agent pre-labels as ground truth; independent second annotation; disagreements not adjudicated, sensitivity analysis instead | Done (2.15, 2.16) |
+| LLM-judge baseline | GLM-5.3 through an OpenAI-compatible API, alone and with verdict-level calibration | Done (2.18) |
+| Framing | The verdict-level loss and its calibration are the core contribution; the automaton with a small local labeler is one instance of it (2.18) | Recommended; to be confirmed by the author |
 
 ## 2. Evidence gathered so far
 
@@ -630,8 +634,9 @@ Points to state explicitly in the paper:
 5. **What "runtime" covers.** The guarantee applies to early VIOLATION, early permanent COMPLIANT and
    the end-of-trace verdict, not to the intermediate "possible violation" flag. Report detection delay.
 6. **Truth is the human label.** Report agreement next to every guarantee claim. Pre-annotation must
-   use a different model from every evaluated system, including the LLM-judge baseline; measure
-   anchoring by annotating part of the doubly annotated subset blind.
+   use a different model from every evaluated system, including the LLM-judge baseline (it does: the
+   pre-annotators were Claude, Codex and hy4; the judge is GLM-5.3). Anchoring on the pre-labels is
+   measured by the independent second annotation of the whole evaluation set (2.16).
 7. **Selection before splitting.** Trajectory selection is a fixed rule (trial 0 of each agent),
    applied before any split.
 8. **Uncertainty.** Splits of one pool are dependent; report task-level bootstrap intervals and use
@@ -662,7 +667,13 @@ What remains specific to this work:
   monotonicity and the loss hierarchy;
 - guarantees for ordering and response properties, which per-call methods do not cover;
 - the regime characterisation (when the approach helps, when it collapses);
-- the released label set (about 6,300 human-checked proposition judgements on tau-bench).
+- the released label set (6,266 double-annotated proposition judgements on tau-bench).
+
+Positioning after the judge baseline (2.18): verdict-level calibration applied to an end-to-end LLM judge meets
+alpha as well, and with the 4B labeler neither the judge nor the automaton dominates. Calibrating a judge over
+whole trajectories is close to ToolChain-CRC's ground, so the paper must argue the automaton's specific value:
+ordering rules compiled once and checked online, one labeler call per turn shared by all rules, the violating step
+reported, and a small model that runs locally.
 
 Prior work to cite: d'Amorim and Rosu, "Efficient Monitoring of omega-Languages" (CAV 2005), for
 evaluating predicates by need; Stoller et al., "Runtime Verification with State Estimation" (RV 2011,
@@ -677,14 +688,14 @@ An early preprint, as soon as the main table exists, is the right call.
 | Id | Policy basis | Type | Linguistic proposition | Status and open question |
 | --- | --- | --- | --- | --- |
 | R1 | list details and obtain explicit confirmation | ordering | confirm (user turns) | selected |
-| R2 | same clause | safety | matches_listed (write calls) | candidate; agreement on a harder judgement |
-| R3 | no subjective recommendations or comments | safety | subjective_recommendation (assistant messages) | candidate; narrowed to recommendations and opinions, to be stated in the paper |
-| R4 | transfer if and only if the request cannot be handled | safety | transfer_justified (transfer calls) | candidate; ample triggers, agreement to be tested |
+| R2 | same clause | safety | matches_listed (write calls) | selected; evaluation kappa 0.847 |
+| R3 | no subjective recommendations or comments | safety | subjective_recommendation (assistant messages) | selected; narrowed to recommendations and opinions, to be stated in the paper; only 2 positives in the evaluation set |
+| R4 | transfer if and only if the request cannot be handled | safety | transfer_justified (transfer calls) | selected; 32 transfer calls in the evaluation set, kappa 0.636 |
 | R5 | same clause, other direction | response | none in the registry | case study only: too few tasks call for a transfer |
 | R6 | basic economy flights cannot be modified | safety | none | structured control |
 | R7 | authenticate first | ordering | none | structured control |
 | R8 | exchange or modify only once | safety | none | structured control; "per order" follows the tau3-bench wording |
-| R9 | no proactive compensation (airline) | ordering | asks / offers compensation, plus `send_certificate` | candidate; airline only, 50 tasks |
+| R9 | no proactive compensation (airline) | ordering | asks / offers compensation, plus `send_certificate` | selected; airline only, 40 evaluation tasks |
 
 Changes from the previous list: `out_of_scope_request` on user turns was replaced by
 `transfer_justified` at the transfer call, because scope is often unknown until tool results arrive
@@ -700,7 +711,8 @@ state that tau-bench offers no response-type rule with enough samples.
   trajectories with full tool-call logs. Both agents date from 2024; a reviewer may ask for a newer
   one. The tau-bench README points to tau3-bench (a banking domain, fixed tasks); whether it ships
   trajectories is unknown.
-- Statistics: 66 calibration tasks overall minus the pilot. Class-conditional budgets are the binding
+- Statistics: 145 evaluation tasks (pilot excluded); a 40 percent calibration split gives 58 calibration tasks
+  (alpha floor 0.017), and 16 for the airline-only R9 (floor 0.059). Class-conditional budgets are the binding
   constraint (section 3, point 3).
 - Injection: `drop_confirmation` and `interrupt_before_write` each apply to 1,542 trajectories; the
   second yields a violation of R1 by construction.
@@ -715,8 +727,13 @@ Check quartile and warning-list status before choosing.
 
 ## 8. Next steps
 
-1. Replace the placeholder examples in `props/definitions.yaml` with real excerpts (pilot tasks only).
-2. Annotate the pilot sheet, then run `rule_counts` and `e0_pilot` to fix the rule set and the
-   granularity of the budgets.
-3. Label the pilot with the 7B model and compare with the 1.5B model.
-4. Annotate the remaining tasks, run the main table, post the preprint.
+Done: pilot and evaluation labels (double-annotated), both labelers, all experiments E1-E8, sensitivity to the
+annotator, significance tests, and the LLM-judge baseline.
+
+1. Confirm the framing (section 1, last row): verdict-level calibration as the core contribution.
+2. Optional variant: a high-probability guarantee (an upper confidence bound on the calibration risk, as in
+   Learn-then-Test), because single calibrations exceed alpha in 15 to 25 percent of repetitions (2.17).
+3. Write the paper: method and theory from `docs/theory.md`, results from sections 2.15 to 2.18.
+4. Post a preprint; then submit (venue in section 7, to be checked against the current JCR tables).
+5. If a reviewer asks: adjudicate the 83 evaluation disagreements (`results/adjudication_eval.csv`), add a newer
+   agent's trajectories, or test a hybrid of judge and automaton.

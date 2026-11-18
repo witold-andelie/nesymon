@@ -8,7 +8,9 @@
 Code, labels and result files for the paper **"Verdict-Level Risk Control for Neurosymbolic Runtime Monitoring of
 LLM Agents"** (Wentao Ma, Czech University of Life Sciences Prague; manuscript in preparation). Every number below is
 produced by a script in this repository. Real-data results use the human-checked evaluation labels
-(`data/labels_eval.csv`); their tables and figures are in `results/real_4B/` and `results/real_2B/`.
+(`data/labels_eval.csv`); their tables and figures are in `results/real_4B/` and `results/real_2B/` (one folder per
+labeler), `results/real_judge/` (LLM-judge baseline) and `results/real_*_annotator2/` (the same with the second
+annotator's labels).
 
 ## Overview
 
@@ -34,7 +36,8 @@ This project makes the monitor say how often its verdicts are wrong, and abstain
 ## Main contributions
 
 1. **A verdict-level loss for set-based monitors**, with a proof that it is monotone in the confidence gate, so
-   conformal risk control bounds the rate of confident wrong verdicts at a level alpha chosen by the user. The loss
+   conformal risk control bounds the rate of confident wrong verdicts at a level alpha chosen by the user. The same
+   loss calibrates any scorer that gives a confidence per verdict, including an end-to-end LLM judge. The loss
    hierarchy verdict <= state-relevant <= full coverage shows the usual coverage-style calibration as a more
    conservative special case.
 2. **Per-rule and per-error-class budgets** (missed violations vs false alarms), with tasks as the exchangeable unit
@@ -43,7 +46,8 @@ This project makes the monitor say how often its verdicts are wrong, and abstain
    mutually exclusive step types, and a confirmation-window semantics G(write -> Y(not user S confirm)) under which a
    write does not consume the confirmation.
 4. **A labelled benchmark**: proposition-level human labels on public agent trajectories with versioned definitions
-   and an adjudication record (6,266 judgements, all double-annotated: 835 pilot and 5,431 evaluation judgements).
+   (6,266 judgements, all double-annotated: 835 pilot judgements with an adjudication record, and 5,431 evaluation
+   judgements with two independent annotations, kappa 0.936).
 5. **Negative and limiting results reported as such**: the method helps only when the hard-label error exceeds
    alpha and confident labeling errors are rare; calibrating propositions does not calibrate verdicts; and the
    verdict-level calibration applied to a frontier LLM judge matches the automaton with a 4B labeler and beats it
@@ -81,12 +85,22 @@ This project makes the monitor say how often its verdicts are wrong, and abstain
 git clone https://github.com/witold-andelie/nesymon.git
 cd nesymon
 python3 -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]" mlx-lm        # numpy, pandas, matplotlib, pyyaml; pytest; MLX for the local labeler
+pip install -e ".[dev]" mlx-lm        # numpy, pandas, matplotlib, pyyaml, certifi; pytest; MLX for the labeler
 python -m pytest -q
 ```
 
 Python 3.11 was used throughout. The local labeler runs with MLX (mlx-lm 0.32.2) and needs Apple silicon; all other
 steps run on any CPU. All numbers here were produced on an Apple M1 with 16 GB of memory.
+
+The LLM-judge baseline calls an OpenAI-compatible API. Its key is read from the environment variable
+`NESYMON_API_KEY` or from `~/.config/nesymon/api_key` (outside the repository, permissions 600):
+
+```bash
+mkdir -p ~/.config/nesymon
+read -rs k                                    # paste the key, then Enter; nothing is shown
+printf '%s' "$k" > ~/.config/nesymon/api_key
+chmod 600 ~/.config/nesymon/api_key; unset k
+```
 
 ## Data
 
@@ -100,6 +114,7 @@ The raw trajectories are not in the repository.
 | Evaluation labels: 5,431 judgements on 145 tasks (290 trajectories), human-checked | this repository, `data/labels_eval.csv` (review record `results/check.csv`) | Apache 2.0 | all real-data results |
 | Second annotator's evaluation labels (independent) | this repository, `data/labels_eval_annotator2.csv`; the 83 disagreements are listed in `results/adjudication_eval.csv` | Apache 2.0 | agreement |
 | Agent pre-labels of the evaluation set | this repository, `results/full_preannotation.csv` | Apache 2.0 | `compare_annotations` |
+| LLM-judge answers (GLM-5.3), 1,240 trajectory-rule pairs | this repository, `data/judge/glm-5.3.jsonl` | Apache 2.0 | `e1_judge`, `significance_judge` |
 
 Pilot tasks are used only to tune the proposition definitions and are excluded from every evaluation. Annotation
 sheets and labeler probability caches are generated locally (`data/README.md`) and are not stored here, because the
@@ -117,8 +132,9 @@ Run every command from the repository root.
 | Annotation sheets (pilot, then evaluation) | `make_annotation_sheet` | `python -m experiments.make_annotation_sheet --tasks 10`, then without `--tasks` | CPU |
 | Labeler probabilities | `run_labeler` | `python -m experiments.run_labeler --model mlx-community/Qwen3.5-4B-4bit` | M1, 16 GB (all 6,266 judgements: 4B 2.7 s each, about 4.7 h; 2B 1.46 s each, about 2.5 h) |
 | Pilot gate and label quality | `e0_pilot`, `label_quality` | `python -m experiments.e0_pilot --probs <cache>`, `python -m experiments.label_quality --probs <cache>` | CPU (seconds) |
-| LLM-judge baseline B1 (API) and its evaluation | `run_judge_api`, `e1_judge` | `python -m experiments.run_judge_api --url <OpenAI-compatible endpoint> --model glm-5.3`, then `python -m experiments.e1_judge --judge data/judge/glm-5.3.jsonl` | network (1,240 calls, about 1.5 h with 8 parallel requests) |
-| All real-data experiments (E1, E2, E4, E6, E7, E8) | `run_all` | `python -m experiments.run_all --probs <cache> --labels data/labels_eval.csv --out results/real_4B` | CPU (about 15 min per labeler with the default 200 repetitions) |
+| LLM-judge baseline B1 (API) and its evaluation | `run_judge_api`, `e1_judge` | `python -m experiments.run_judge_api --url <OpenAI-compatible endpoint> --model glm-5.3`, then `python -m experiments.e1_judge --judge data/judge/glm-5.3.jsonl --out results/real_judge` | network (1,240 calls, about 1.5 h with 8 parallel requests) |
+| All real-data experiments (E1, E2, E4, E6, E7, E8) | `run_all` | `python -m experiments.run_all --probs <cache> --labels data/labels_eval.csv --out results/real_4B`; with `--labels data/labels_eval_annotator2.csv --out results/real_4B_annotator2` for the sensitivity analysis | CPU (about 15 min per labeler with the default 200 repetitions) |
+| Paired significance tests | `significance`, `significance_judge` | `python -m experiments.significance --probs <cache> --out results/real_4B/significance.csv`, `python -m experiments.significance_judge --probs <cache> --judge data/judge/glm-5.3.jsonl --out results/real_judge/significance_vs_4B.csv` | CPU (a few minutes each, 400 repetitions) |
 | Blind double-annotation sample (20 % of evaluation tasks) and its agreement | `make_double_sheet`, `compare_annotations` | `python -m experiments.make_double_sheet`, then `python -m experiments.compare_annotations --pre <filled sheet> --labels data/labels_eval.csv --history /dev/null` | CPU |
 
 `<cache>` is `data/probs/<model>.jsonl`, written by `run_labeler`. The labeler cache is append-only and keyed by
@@ -137,7 +153,9 @@ trajectory, step and proposition, so an interrupted run resumes where it stopped
   the held-out pilot before use, and one agent's share was cross-checked by another (`results/review_hy4_vs_codex.csv`).
   Every evaluation pre-label was then checked by a human reviewer (`results/check.csv`), and a second annotator labelled
   the whole evaluation set independently (`data/labels_eval_annotator2.csv`).
-- **Statistics.** Results are averaged over repeated random task splits; intervals are task-level bootstrap intervals.
+- **Statistics.** Results are averaged over 200 random task splits. Method comparisons use paired resampling: both
+  methods are calibrated on the same calibration tasks and scored on the same resampled test tasks (400
+  repetitions), and 95 % intervals of the paired differences are reported.
 
 ## Limitations
 
@@ -149,8 +167,10 @@ cross-domain result shows that label-free statistics do not always detect such a
 tasks (R9: 40 evaluation tasks, alpha floor 0.059 with a 40 % calibration split), and three of the five rules with
 linguistic propositions have a hard-label error already below alpha = 0.10, where the method adds nothing. The
 proposition definitions were tuned on the pilot tasks. The evaluation labels were checked by one reviewer starting
-from agent pre-labels (24 of 5,431 changed) and labelled independently by a second annotator (kappa 0.936). The 83 disagreements were not adjudicated; instead
-every experiment was rerun with the second annotator's labels as ground truth (`results/real_*_annotator2/`).
+from agent pre-labels (24 of 5,431 changed) and labelled independently by a second annotator (kappa 0.936). The 83
+disagreements were not adjudicated; instead every experiment was rerun with the second annotator's labels as ground
+truth (`results/real_*_annotator2/`). The LLM-judge baseline uses one judge model (GLM-5.3); six of its 1,240
+answers gave no verdict and count as uninformative (P = 0.5).
 
 ## Repository structure
 
@@ -163,17 +183,18 @@ nesymon/            the method
   monitor_prob.py   probabilistic comparator (forward algorithm, temperature and Platt scaling)
   labeler.py        labeler prompt, yes/no probability, probability cache
   backend_mlx.py    MLX backend that reuses the shared conversation prefix
+  backend_api.py    OpenAI-compatible chat backend for the LLM-judge baseline
   data.py           tau-bench loader, structured propositions, label sites
   pipeline.py       labeling driver and assembly of monitor inputs
   inject.py         programmatic violation injection
 rules/              rule registry with policy quotes (rules.yaml) and automaton templates (dfas.py)
 props/              proposition definitions shared by the labeler prompt and the annotators
 experiments/        simulations, data statistics, annotation, labeling, pilot gate, real-data experiments
-data/               pilot and evaluation labels, adjudication record, agent pre-annotations (no raw data)
+data/               pilot and evaluation labels, adjudication record, agent pre-annotations, judge answers (no raw data)
 results/
   real_4B, real_2B  final tables (CSV) and figures for each labeler
   real_*_annotator2 the same with the second annotator's labels as ground truth
-  real_judge        LLM-judge baseline with and without verdict-level calibration
+  real_judge        LLM-judge baseline with and without verdict-level calibration, paired tests
                     plus pre-annotation files, review record (check.csv), simulation output
 docs/
   theory.md         definitions, lemmas and proofs
