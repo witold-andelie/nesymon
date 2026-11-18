@@ -59,6 +59,7 @@ This project makes the monitor say how often its verdicts are wrong, and abstain
 | Is a small local labeler good enough? | Qwen3.5-4B answers confirm correctly in 80 % of user turns at a 0.5 cut-off, but only 0.2 % of its confirm judgements are wrong with confidence above 0.95. | evaluation | `experiments/label_quality.py` |
 | Does the guarantee hold on real data? | Yes in all 58 rule, labeler and alpha settings (alpha 0.05 to 0.30; from 0.075 for R9, whose floor is 0.059): the mean rate of confident wrong verdicts over 200 task splits is at most alpha. | evaluation | `results/real_*/e2_alpha.csv` |
 | Main comparison, R1 confirmation window (4B) | Hard labels are wrong on 15.8 % of trajectories. At alpha = 0.10: verdict-level calibration 8.0 % wrong, 14.3 % abstention; per-step conformal 7.3 % / 15.0 %; coverage-style 0.2 % / 39.9 %. | evaluation | `results/real_4B/e1_main.csv` |
+| Is the difference from per-step conformal significant? | Not with 4B: abstention difference -0.6 points, 95 % interval (-10.9, +8.1). With 2B, yes: per-step conformal exceeds alpha = 0.10 in 100 % (R1) and 93 % (R9) of 400 paired repetitions, ours in 15 % and 18 %. | evaluation | `results/real_*/significance.csv` |
 | Labeler size (2B vs 4B) | Qwen3.5-2B ranks worse on every proposition (pilot AUC 0.60-0.99 vs 0.80-1.00) but is rarely confidently wrong. On R1 at alpha = 0.10, verdict-level calibration keeps wrong verdicts at 6.6 % with 2B, at the cost of 63.5 % abstention. A weaker labeler costs abstention, not errors. | pilot, evaluation | `results/real_2B/e1_main.csv` |
 | Is per-step calibration enough? | No: it calibrates judgements, not verdicts. With the 2B labeler at alpha = 0.10, per-step conformal is wrong on 30.1 % of R1 and 20.5 % of R9 trajectories; verdict-level calibration stays at 6.6 % and 5.8 %. | evaluation | `results/real_2B/e1_main.csv` |
 | Does calibrating propositions calibrate verdicts? | No. On R1, Platt scaling halves the per-turn Brier score of confirm (0.136 to 0.067) but nearly doubles the trajectory Brier score of the probabilistic monitor (0.106 to 0.193). | evaluation | `experiments/e1_main.py` |
@@ -137,7 +138,9 @@ trajectory, step and proposition, so an interrupted run resumes where it stopped
 ## Limitations
 
 All trajectories come from one benchmark with simulated users and two agents, in two customer-service domains. The
-guarantee is marginal over exchangeable tasks: it does not hold under a shift between calibration and use, and the
+guarantee holds in expectation over calibration draws, so a single calibration can exceed alpha (15 to 25 % of
+repetitions here); a high-probability variant would need an upper confidence bound on the calibration risk. It is
+also marginal over exchangeable tasks: it does not hold under a shift between calibration and use, and the
 cross-domain result shows that label-free statistics do not always detect such a shift. Some rules have few
 tasks (R9: 40 evaluation tasks, alpha floor 0.059 with a 40 % calibration split), and three of the five rules with
 linguistic propositions have a hard-label error already below alpha = 0.10, where the method adds nothing. The

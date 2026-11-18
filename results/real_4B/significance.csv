@@ -1,0 +1,4 @@
+rule,a,b,alpha,reps,abstain_diff,joint_error_diff,Ours_Ver_joint_error,Ours_Ver_abstain,Ours_Ver_share_above_alpha,B4_per_step_conformal_joint_error,B4_per_step_conformal_abstain,B4_per_step_conformal_share_above_alpha
+R1_write_in_confirmation_window,Ours_Ver,B4_per_step_conformal,0.1,400,"(-0.0058, -0.1092, 0.0805)","(0.0049, -0.0345, 0.0632)",0.0805,0.1393,0.253,0.0756,0.1451,0.177
+R2_write_matches_listed,Ours_Ver,B4_per_step_conformal,0.1,400,"(-0.0043, -0.092, 0.0747)","(0.0029, -0.0402, 0.0575)",0.0754,0.0321,0.253,0.0725,0.0364,0.21
+R9_compensation_only_on_request,Ours_Ver,B4_per_step_conformal,0.1,400,"(0.0, 0.0, 0.0)","(0.0, 0.0, 0.0)",0.0133,0.0,0.0,0.0133,0.0,0.0

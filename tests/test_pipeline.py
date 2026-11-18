@@ -94,3 +94,23 @@ def test_judge_baseline_and_extra_analyses():
     rows = difficulty_buckets(tasks, dfa, 0.7)
     assert sum(r["n"] for r in rows) == 80 and all(r["error"] <= r["hard_error"] for r in rows)
     assert abs(error_autocorrelation(tasks, dfa)) < 0.3
+
+
+def test_judge_crc_loss_is_monotone_and_calibrates():
+    import random
+    from experiments.e1_judge import GRID, loss, metrics
+    from nesymon.core import crc_threshold
+    rng = random.Random(3)
+    tasks = []
+    for _ in range(60):
+        task = []
+        for _ in range(2):
+            violated = rng.random() < 0.3
+            p = min(0.99, max(0.01, (0.7 if violated else 0.3) + rng.gauss(0, 0.25)))
+            task.append((p, violated))
+        tasks.append(task)
+    for item in (x for t in tasks for x in t):
+        assert all(loss(item, a) >= loss(item, b) for a, b in zip(GRID, GRID[1:]))
+    tau = crc_threshold(tasks, loss, 0.1, GRID)
+    assert metrics(tasks, tau)["joint_error"] <= 0.1
+    assert metrics(tasks, 0.0)["abstain"] == 0.0

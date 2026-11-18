@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Verdict-level risk control for neurosymbolic runtime monitoring of LLM agents"
 requires-python = ">=3.11"
 license = {text = "Apache-2.0"}
-dependencies = ["numpy", "pandas", "matplotlib", "pyyaml"]
+dependencies = ["numpy", "pandas", "matplotlib", "pyyaml", "certifi"]
 
 [project.optional-dependencies]
 dev = ["pytest"]

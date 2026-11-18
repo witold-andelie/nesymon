@@ -529,6 +529,28 @@ Sensitivity analysis: alpha = 0.10, wrong verdicts / abstention, reviewer labels
   handful of trajectories.
 - Shift (E6, R1, airline -> retail) still breaks alpha but less: 4B 0.181 -> 0.129, 2B 0.176 -> 0.152.
 
+### 2.17 Paired significance test against per-step conformal
+
+`experiments/significance.py`, 400 repetitions, alpha = 0.10, human-checked labels. Each repetition draws a 40/60
+task split, calibrates both methods on the same calibration tasks and scores both on the same resampled test tasks.
+Output: `results/real_4B/significance.csv`, `results/real_2B/significance.csv`.
+
+| Labeler, rule | Abstention, ours minus per-step (95 % interval) | Joint error, ours minus per-step (95 % interval) | Share of repetitions above alpha: ours / per-step |
+| --- | --- | --- | --- |
+| 4B, R1 | -0.006 (-0.109, 0.081) | 0.005 (-0.035, 0.063) | 0.25 / 0.18 |
+| 4B, R2 | -0.004 (-0.092, 0.075) | 0.003 (-0.040, 0.058) | 0.25 / 0.21 |
+| 2B, R1 | 0.543 (0.397, 0.713) | -0.234 (-0.356, -0.126) | 0.15 / 1.00 |
+| 2B, R2 | 0.019 (-0.126, 0.190) | -0.004 (-0.063, 0.063) | 0.14 / 0.13 |
+| 2B, R9 | 0.572 (0.146, 0.896) | -0.163 (-0.354, 0.000) | 0.18 / 0.93 |
+
+- With 4B there is no significant difference from per-step conformal; the paper must not claim one.
+- With 2B on R1 and R9, per-step conformal exceeds alpha in 100 and 93 percent of repetitions; the verdict-level
+  method pays in abstention and keeps the mean below alpha.
+- The guarantee is in expectation over calibration draws: on a single split our method exceeds alpha in 15 to 25
+  percent of repetitions, because it spends the error budget up to alpha. A high-probability version (an upper
+  confidence bound on the calibration risk, as in Learn-then-Test) is the standard remedy; it should be stated as a
+  limitation and, if time allows, added as a variant.
+
 ## 3. Theory: what holds and what to state carefully
 
 Verified (no counterexample over 300 random traces per rule, 8 rules, 22 thresholds; see
