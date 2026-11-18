@@ -551,6 +551,39 @@ Output: `results/real_4B/significance.csv`, `results/real_2B/significance.csv`.
   confidence bound on the calibration risk, as in Learn-then-Test) is the standard remedy; it should be stated as a
   limitation and, if time allows, added as a variant.
 
+### 2.18 LLM-judge baseline B1 (GLM-5.3) with and without verdict-level risk control
+
+`experiments/run_judge_api.py` through the opencode Go endpoint (model `glm-5.3`, temperature 0): one call per
+evaluation trajectory and rule with linguistic propositions (1,240 calls; 2.36 M prompt and 2.60 M completion tokens
+in the main pass). The judge sees the conversation with tool calls, the domain's verbatim policy quote and the rule
+statement the monitor checks, and answers with a verdict and a confidence (50-100), converted to P(violation). Six
+answers (0.5 percent) gave no verdict after three attempts because the reasoning ran past 12,000 tokens; they are
+set to P = 0.5. Raw answers: `data/judge/glm-5.3.jsonl`. Evaluation: `experiments/e1_judge.py`, same tasks, truth and
+200 task splits as the main table; `results/real_judge/` (reviewer labels) and `results/real_judge_annotator2/`.
+
+alpha = 0.10, wrong verdicts / abstention:
+
+| Rule | Judge alone | Judge + verdict-level CRC | Ours, 4B labeler | Ours, 2B labeler |
+| --- | --- | --- | --- | --- |
+| R1 | 0.119 / 0 | 0.080 / 0.070 | 0.080 / 0.143 | 0.066 / 0.635 |
+| R2 | 0.080 / 0 | 0.073 / 0.054 | 0.072 / 0.038 | 0.066 / 0.361 |
+| R3 | 0.052 / 0 | 0.051 / 0.000 | 0.052 / 0.000 | 0.007 / 0 |
+| R4 | 0.088 / 0 | 0.076 / 0.021 | 0.021 / 0 | 0.019 / 0 |
+| R9 | 0.025 / 0 | 0.025 / 0.005 | 0.013 / 0 | 0.058 / 0.691 |
+
+- The uncalibrated judge breaks alpha on R1 (0.119; 0.142 with the second annotator's labels), mostly by missing
+  violations (miss 0.097, false alarm 0.021).
+- Verdict-level risk control is not tied to the automaton. Applied to the judge's confidence it meets alpha on every
+  rule, and on R1 it abstains on half as many trajectories as the automaton with the 4B labeler (0.070 vs 0.143;
+  0.111 vs 0.155 with the second annotator's labels). On R1 the calibrated frontier judge is the better monitor.
+- The automaton with the local 4B labeler is better or equal on R2 (abstention 0.038 vs 0.054), R4 (wrong verdicts
+  0.021 vs 0.076) and R9 (0.013 vs 0.025), and equal on R3.
+- Consequence for the paper: the central contribution is the verdict-level loss and its calibration, which works for
+  any scorer that yields a confidence per verdict; the automaton with a small labeler is one instance with specific
+  advantages (runs locally on a laptop, judges each turn once for all rules, gives the violating step, works online),
+  not uniformly the most accurate one. A hybrid (judge for R1-type rules, automaton for structured rules) is a
+  natural extension. No paired significance test between the judge and the monitor has been run yet.
+
 ## 3. Theory: what holds and what to state carefully
 
 Verified (no counterexample over 300 random traces per rule, 8 rules, 22 thresholds; see

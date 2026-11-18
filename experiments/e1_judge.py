@@ -77,10 +77,12 @@ def main():
     ap.add_argument("--reps", type=int, default=200)
     ap.add_argument("--out", default="results/real_judge")
     args = ap.parse_args()
-    judge = {}
+    judge, no_verdict = {}, 0
     for r in map(json.loads, open(args.judge)):
-        if r["p_violation"] is not None:
-            judge[(r["traj_id"], r["rule"])] = r["p_violation"]
+        # an answer without a verdict carries no information: P = 0.5 (the calibrated judge abstains on it)
+        no_verdict += r["p_violation"] is None
+        judge[(r["traj_id"], r["rule"])] = 0.5 if r["p_violation"] is None else r["p_violation"]
+    print(f"{len(judge)} judge answers, {no_verdict} without a verdict (set to 0.5)")
     cache, labels = ProbCache(args.probs), load_labels(args.labels)
     os.makedirs(args.out, exist_ok=True)
     rows = []

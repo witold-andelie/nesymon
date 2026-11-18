@@ -45,7 +45,8 @@ This project makes the monitor say how often its verdicts are wrong, and abstain
 4. **A labelled benchmark**: proposition-level human labels on public agent trajectories with versioned definitions
    and an adjudication record (6,266 judgements, all double-annotated: 835 pilot and 5,431 evaluation judgements).
 5. **Negative and limiting results reported as such**: the method helps only when the hard-label error exceeds
-   alpha and confident labeling errors are rare, and calibrating propositions does not calibrate verdicts.
+   alpha and confident labeling errors are rare; calibrating propositions does not calibrate verdicts; and the
+   verdict-level calibration applied to a frontier LLM judge beats the automaton with a small labeler on one rule.
 
 ## Key results
 
@@ -65,6 +66,7 @@ This project makes the monitor say how often its verdicts are wrong, and abstain
 | Does calibrating propositions calibrate verdicts? | No. On R1, Platt scaling halves the per-turn Brier score of confirm (0.136 to 0.067) but nearly doubles the trajectory Brier score of the probabilistic monitor (0.106 to 0.193). | evaluation | `experiments/e1_main.py` |
 | Does the guarantee survive a domain shift? | No. Calibrating R1 on airline and testing on retail gives 18.1 % wrong verdicts with 4B at alpha = 0.10 (12.9 % with the second annotator's labels), while the label-free shift statistics barely move (abstention shift 0.002); with 2B the same shift is visible (abstention shift 0.114). | evaluation | `results/real_*/e6_shift.csv` |
 | Do the results depend on who labelled? | No. With the second annotator's labels as ground truth every conclusion holds: the guarantee in all 58 settings, the 4B tie with per-step conformal, its failure with 2B (R1 29.7 %, R9 22.0 %), and the shift result (R1 airline to retail 12.9 % with 4B). Wrong-verdict rates move by at most 1.6 points. | evaluation | `results/real_*_annotator2/` |
+| Is the automaton needed, or would an LLM judge do? | A frontier judge (GLM-5.3) reading the whole conversation breaks alpha on R1 when used alone (11.9 % wrong verdicts). With the same verdict-level calibration applied to its confidence it meets alpha on every rule and on R1 abstains less than the automaton with the 4B labeler (7.0 % vs 14.3 %). The automaton is better or equal on R2, R3, R4 and R9 and runs on a laptop. | evaluation | `results/real_judge/e1_judge.csv` |
 | Where does the method add nothing? | R3, R4 and R9 (4B) already have hard-label error below alpha = 0.10, so calibration returns tau near 0; coverage-style calibration still abstains on 94 % of R9 trajectories. | evaluation | `results/real_4B/e1_main.csv` |
 
 <p align="center">
@@ -114,6 +116,7 @@ Run every command from the repository root.
 | Annotation sheets (pilot, then evaluation) | `make_annotation_sheet` | `python -m experiments.make_annotation_sheet --tasks 10`, then without `--tasks` | CPU |
 | Labeler probabilities | `run_labeler` | `python -m experiments.run_labeler --model mlx-community/Qwen3.5-4B-4bit` | M1, 16 GB (all 6,266 judgements: 4B 2.7 s each, about 4.7 h; 2B 1.46 s each, about 2.5 h) |
 | Pilot gate and label quality | `e0_pilot`, `label_quality` | `python -m experiments.e0_pilot --probs <cache>`, `python -m experiments.label_quality --probs <cache>` | CPU (seconds) |
+| LLM-judge baseline B1 (API) and its evaluation | `run_judge_api`, `e1_judge` | `python -m experiments.run_judge_api --url <OpenAI-compatible endpoint> --model glm-5.3`, then `python -m experiments.e1_judge --judge data/judge/glm-5.3.jsonl` | network (1,240 calls, about 1.5 h with 8 parallel requests) |
 | All real-data experiments (E1, E2, E4, E6, E7, E8) | `run_all` | `python -m experiments.run_all --probs <cache> --labels data/labels_eval.csv --out results/real_4B` | CPU (about 15 min per labeler with the default 200 repetitions) |
 | Blind double-annotation sample (20 % of evaluation tasks) and its agreement | `make_double_sheet`, `compare_annotations` | `python -m experiments.make_double_sheet`, then `python -m experiments.compare_annotations --pre <filled sheet> --labels data/labels_eval.csv --history /dev/null` | CPU |
 
@@ -169,6 +172,7 @@ data/               pilot and evaluation labels, adjudication record, agent pre-
 results/
   real_4B, real_2B  final tables (CSV) and figures for each labeler
   real_*_annotator2 the same with the second annotator's labels as ground truth
+  real_judge        LLM-judge baseline with and without verdict-level calibration
                     plus pre-annotation files, review record (check.csv), simulation output
 docs/
   theory.md         definitions, lemmas and proofs

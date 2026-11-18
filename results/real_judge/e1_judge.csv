@@ -1,0 +1,11 @@
+rule,method,alpha,tasks,trajectories,tau_mean,tau_std,joint_error_mean,joint_error_std,miss_mean,miss_std,false_alarm_mean,false_alarm_std,abstain_mean,abstain_std
+R1_write_in_confirmation_window,B1_judge,0.1,145,290,0.0,0.0,0.1186,0.0159,0.0974,0.0144,0.0212,0.0067,0.0,0.0
+R1_write_in_confirmation_window,B1_judge_CRC,0.1,145,290,0.7856,0.1029,0.0796,0.0358,0.0674,0.0271,0.0123,0.0103,0.0696,0.0451
+R2_write_matches_listed,B1_judge,0.1,145,290,0.0,0.0,0.0804,0.0128,0.0216,0.0086,0.0588,0.011,0.0,0.0
+R2_write_matches_listed,B1_judge_CRC,0.1,145,290,0.6021,0.1382,0.0726,0.0199,0.016,0.0092,0.0566,0.0145,0.0541,0.0846
+R3_no_subjective_recommendation,B1_judge,0.1,145,290,0.0,0.0,0.0516,0.0123,0.0036,0.0028,0.048,0.012,0.0,0.0
+R3_no_subjective_recommendation,B1_judge_CRC,0.1,145,290,0.509,0.0415,0.0512,0.0131,0.0036,0.0028,0.0476,0.0128,0.0003,0.002
+R4_transfer_justified,B1_judge,0.1,145,290,0.0,0.0,0.0877,0.0148,0.0285,0.0099,0.0592,0.0124,0.0,0.0
+R4_transfer_justified,B1_judge_CRC,0.1,145,290,0.6016,0.1124,0.076,0.0232,0.0221,0.0108,0.0539,0.0167,0.0214,0.0267
+R9_compensation_only_on_request,B1_judge,0.1,40,80,0.0,0.0,0.0249,0.0151,0.0123,0.0102,0.0126,0.0102,0.0,0.0
+R9_compensation_only_on_request,B1_judge_CRC,0.1,40,80,0.5647,0.1359,0.0249,0.0151,0.0123,0.0102,0.0126,0.0102,0.0045,0.011
