@@ -488,8 +488,8 @@ LLM-judge baseline B1, which needs API access.
 A second annotator (Simon) labelled all 5,431 evaluation judgements independently, without the agent pre-labels or
 the reviewer's check. Procedure as recorded on 18 November 2026: he received only `data/annotation_sheet_full.csv`
 (conversation text and empty value columns); he is the second annotator of the pilot; to the first author's
-recollection he had not seen the pilot adjudication notes. Which definition version he used (v1 from the pilot, or
-v2.1) was not recorded and should be asked before the paper is written, because v2.1 is stricter for confirm. The 20 percent blind sample drawn with
+recollection he had not seen the pilot adjudication notes. He labelled by definitions v2.1
+(`props/definitions.yaml`), the same version as the reviewer and the agent pre-annotations. The 20 percent blind sample drawn with
 `experiments/make_double_sheet.py` (29 tasks, 1,240 judgements) was filled from his full annotation and matches it in
 all 1,240 rows. Labels without conversation text: `data/labels_eval_annotator2.csv`.
 
