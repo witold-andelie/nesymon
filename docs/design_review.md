@@ -508,9 +508,26 @@ Agreement with the reviewed labels (`data/labels_eval.csv`):
 - 83 disagreements in 66 trajectories of 57 tasks; 52 on confirm, 14 on asks_compensation.
 - On the 24 rows where the reviewer had overridden the agent pre-label, the second annotator sided with the
   pre-label on 17. These rows are hard cases (two agents disagreed on all of them) and are part of the adjudication.
-- The 83 disagreements are being adjudicated (`results/adjudication_eval.csv`); the final labels will replace those
-  rows in `data/labels_eval.csv`, and all experiments will be rerun. With 83 of 5,431 rows at stake, results in 2.15
-  can move by about one point.
+- Decision (18 November 2026): the 83 disagreements are not adjudicated. Ground truth stays the reviewed labels
+  (`data/labels_eval.csv`), agreement is reported, and every experiment is rerun with the second annotator's labels
+  as ground truth as a sensitivity analysis (`results/real_4B_annotator2/`, `results/real_2B_annotator2/`). The
+  disagreements stay listed in `results/adjudication_eval.csv` in case a reviewer asks for adjudication.
+
+Sensitivity analysis: alpha = 0.10, wrong verdicts / abstention, reviewer labels -> second annotator's labels.
+
+| Rule | Labeler | Hard labels | Per-step conformal | Coverage-style | Verdict-level (ours) |
+| --- | --- | --- | --- | --- | --- |
+| R1 | 4B | 0.158 -> 0.162 | 0.073 / 0.150 -> 0.070 / 0.168 | 0.002 / 0.399 -> 0.001 / 0.407 | 0.080 / 0.143 -> 0.079 / 0.155 |
+| R1 | 2B | 0.346 -> 0.332 | 0.301 / 0.093 -> 0.297 / 0.077 | 0.039 / 0.693 -> 0.043 / 0.664 | 0.066 / 0.635 -> 0.063 / 0.604 |
+| R2 | 2B | 0.173 -> 0.179 | 0.070 / 0.345 -> 0.073 / 0.350 | 0.039 / 0.455 -> 0.037 / 0.468 | 0.066 / 0.361 -> 0.066 / 0.382 |
+| R9 | 2B | 0.291 -> 0.303 | 0.205 / 0.149 -> 0.220 / 0.140 | 0.006 / 0.908 -> 0.008 / 0.909 | 0.058 / 0.691 -> 0.059 / 0.714 |
+
+- Every conclusion holds under either annotator's labels: the guarantee (all 58 E2 settings at or below alpha
+  again), the tie with per-step conformal for 4B, the failure of per-step conformal with 2B (R1 0.297, R9 0.220),
+  and the method adding nothing on R3, R4 and R9 with 4B. Changes are at most 1.6 points in wrong verdicts and
+  3.4 points in abstention, except coverage-style abstention on R9 with 4B (0.942 -> 0.594), which rests on a
+  handful of trajectories.
+- Shift (E6, R1, airline -> retail) still breaks alpha but less: 4B 0.181 -> 0.129, 2B 0.176 -> 0.152.
 
 ## 3. Theory: what holds and what to state carefully
 

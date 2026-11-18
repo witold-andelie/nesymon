@@ -62,7 +62,8 @@ This project makes the monitor say how often its verdicts are wrong, and abstain
 | Labeler size (2B vs 4B) | Qwen3.5-2B ranks worse on every proposition (pilot AUC 0.60-0.99 vs 0.80-1.00) but is rarely confidently wrong. On R1 at alpha = 0.10, verdict-level calibration keeps wrong verdicts at 6.6 % with 2B, at the cost of 63.5 % abstention. A weaker labeler costs abstention, not errors. | pilot, evaluation | `results/real_2B/e1_main.csv` |
 | Is per-step calibration enough? | No: it calibrates judgements, not verdicts. With the 2B labeler at alpha = 0.10, per-step conformal is wrong on 30.1 % of R1 and 20.5 % of R9 trajectories; verdict-level calibration stays at 6.6 % and 5.8 %. | evaluation | `results/real_2B/e1_main.csv` |
 | Does calibrating propositions calibrate verdicts? | No. On R1, Platt scaling halves the per-turn Brier score of confirm (0.136 to 0.067) but nearly doubles the trajectory Brier score of the probabilistic monitor (0.106 to 0.193). | evaluation | `experiments/e1_main.py` |
-| Does the guarantee survive a domain shift? | No. Calibrating R1 on airline and testing on retail gives 18.1 % wrong verdicts with 4B at alpha = 0.10, while the label-free shift statistics barely move (abstention shift 0.002); with 2B the same shift is visible (abstention shift 0.114). | evaluation | `results/real_*/e6_shift.csv` |
+| Does the guarantee survive a domain shift? | No. Calibrating R1 on airline and testing on retail gives 18.1 % wrong verdicts with 4B at alpha = 0.10 (12.9 % with the second annotator's labels), while the label-free shift statistics barely move (abstention shift 0.002); with 2B the same shift is visible (abstention shift 0.114). | evaluation | `results/real_*/e6_shift.csv` |
+| Do the results depend on who labelled? | No. With the second annotator's labels as ground truth every conclusion holds: the guarantee in all 58 settings, the 4B tie with per-step conformal, its failure with 2B (R1 29.7 %, R9 22.0 %), and the shift result (R1 airline to retail 12.9 % with 4B). Wrong-verdict rates move by at most 1.6 points. | evaluation | `results/real_*_annotator2/` |
 | Where does the method add nothing? | R3, R4 and R9 (4B) already have hard-label error below alpha = 0.10, so calibration returns tau near 0; coverage-style calibration still abstains on 94 % of R9 trajectories. | evaluation | `results/real_4B/e1_main.csv` |
 
 <p align="center">
@@ -93,7 +94,7 @@ The raw trajectories are not in the repository.
 | tau-bench policy documents (rule quotes) | same repository | MIT | `rules/rules.yaml` |
 | Pilot labels: 835 judgements on 20 pilot tasks | this repository, `data/labels.csv` | Apache 2.0 | `e0_pilot`, `label_quality` |
 | Evaluation labels: 5,431 judgements on 145 tasks (290 trajectories), human-checked | this repository, `data/labels_eval.csv` (review record `results/check.csv`) | Apache 2.0 | all real-data results |
-| Second annotator's evaluation labels (independent) | this repository, `data/labels_eval_annotator2.csv`; disagreements in `results/adjudication_eval.csv` | Apache 2.0 | agreement |
+| Second annotator's evaluation labels (independent) | this repository, `data/labels_eval_annotator2.csv`; the 83 disagreements are listed in `results/adjudication_eval.csv` | Apache 2.0 | agreement |
 | Agent pre-labels of the evaluation set | this repository, `results/full_preannotation.csv` | Apache 2.0 | `compare_annotations` |
 
 Pilot tasks are used only to tune the proposition definitions and are excluded from every evaluation. Annotation
@@ -141,8 +142,8 @@ cross-domain result shows that label-free statistics do not always detect such a
 tasks (R9: 40 evaluation tasks, alpha floor 0.059 with a 40 % calibration split), and three of the five rules with
 linguistic propositions have a hard-label error already below alpha = 0.10, where the method adds nothing. The
 proposition definitions were tuned on the pilot tasks. The evaluation labels were checked by one reviewer starting
-from agent pre-labels (24 of 5,431 changed) and labelled independently by a second annotator (kappa 0.936); the 83
-disagreements are being adjudicated, after which the experiments are rerun.
+from agent pre-labels (24 of 5,431 changed) and labelled independently by a second annotator (kappa 0.936). The 83 disagreements were not adjudicated; instead
+every experiment was rerun with the second annotator's labels as ground truth (`results/real_*_annotator2/`).
 
 ## Repository structure
 
@@ -164,6 +165,7 @@ experiments/        simulations, data statistics, annotation, labeling, pilot ga
 data/               pilot and evaluation labels, adjudication record, agent pre-annotations (no raw data)
 results/
   real_4B, real_2B  final tables (CSV) and figures for each labeler
+  real_*_annotator2 the same with the second annotator's labels as ground truth
                     plus pre-annotation files, review record (check.csv), simulation output
 docs/
   theory.md         definitions, lemmas and proofs

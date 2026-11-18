@@ -1,0 +1,6 @@
+rule,error_autocorrelation,judged_trajectories
+R1_write_in_confirmation_window,0.0022,290
+R2_write_matches_listed,0.2951,290
+R3_no_subjective_recommendation,0.0694,290
+R4_transfer_justified,0.0,290
+R9_compensation_only_on_request,0.2287,80
