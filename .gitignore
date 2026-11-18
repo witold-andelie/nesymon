@@ -21,3 +21,7 @@ data/annotation_sheet_*.csv
 # Personal application material and superseded intermediate results
 docs/fellowship/
 results/full_preannotation_partial.csv
+
+# Second annotation with conversation text (tracked without text in data/labels_eval_annotator2.csv)
+data/simon_full.csv
+data/double_annotation_filled.csv

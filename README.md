@@ -43,7 +43,7 @@ This project makes the monitor say how often its verdicts are wrong, and abstain
    mutually exclusive step types, and a confirmation-window semantics G(write -> Y(not user S confirm)) under which a
    write does not consume the confirmation.
 4. **A labelled benchmark**: proposition-level human labels on public agent trajectories with versioned definitions
-   and an adjudication record (6,266 judgements: 835 double-annotated pilot judgements and 5,431 human-checked evaluation judgements).
+   and an adjudication record (6,266 judgements, all double-annotated: 835 pilot and 5,431 evaluation judgements).
 5. **Negative and limiting results reported as such**: the method helps only when the hard-label error exceeds
    alpha and confident labeling errors are rare, and calibrating propositions does not calibrate verdicts.
 
@@ -54,7 +54,7 @@ This project makes the monitor say how often its verdicts are wrong, and abstain
 | Do the automata implement the formulas? | Every automaton agrees with a reference LTLf semantics on all traces of up to five or six steps. | exhaustive | `tests/test_core.py` |
 | Does the guarantee hold in simulation? | The rate of confident wrong verdicts stays below alpha at every level tested (100 fresh calibration/test draws per level). | simulation | `experiments/sim_sweeps.py` |
 | When does the method help? | At alpha = 0.10, coverage-style calibration abstains on 73 % of trajectories once 1 % of judgements are confidently wrong; verdict-level calibration abstains on 7-27 % up to a 5 % rate and collapses at 10 %. | simulation | `experiments/sim_sweeps.py` |
-| Can humans agree on the propositions? | Two annotators on 835 pilot judgements: Cohen's kappa 0.84; disagreements adjudicated with written reasons. | pilot | `data/labels.csv` |
+| Can humans agree on the propositions? | Pilot: two annotators on 835 judgements, Cohen's kappa 0.84. Evaluation: an independent second annotator on all 5,431 judgements, 98.5 % agreement, kappa 0.936 (confirm 0.907, matches_listed 0.847). | pilot, evaluation | `data/labels.csv`, `data/labels_eval_annotator2.csv` |
 | Can AI agents pre-annotate? | Agreement with the adjudicated pilot labels 98.9 % and 98.5 % for two agents. On the evaluation set the human check changed 24 of 5,431 pre-labels, all among the 36 that two agents disagreed on. | pilot, evaluation | `experiments/compare_annotations.py`, `results/check.csv` |
 | Is a small local labeler good enough? | Qwen3.5-4B answers confirm correctly in 80 % of user turns at a 0.5 cut-off, but only 0.2 % of its confirm judgements are wrong with confidence above 0.95. | evaluation | `experiments/label_quality.py` |
 | Does the guarantee hold on real data? | Yes in all 58 rule, labeler and alpha settings (alpha 0.05 to 0.30; from 0.075 for R9, whose floor is 0.059): the mean rate of confident wrong verdicts over 200 task splits is at most alpha. | evaluation | `results/real_*/e2_alpha.csv` |
@@ -93,6 +93,7 @@ The raw trajectories are not in the repository.
 | tau-bench policy documents (rule quotes) | same repository | MIT | `rules/rules.yaml` |
 | Pilot labels: 835 judgements on 20 pilot tasks | this repository, `data/labels.csv` | Apache 2.0 | `e0_pilot`, `label_quality` |
 | Evaluation labels: 5,431 judgements on 145 tasks (290 trajectories), human-checked | this repository, `data/labels_eval.csv` (review record `results/check.csv`) | Apache 2.0 | all real-data results |
+| Second annotator's evaluation labels (independent) | this repository, `data/labels_eval_annotator2.csv`; disagreements in `results/adjudication_eval.csv` | Apache 2.0 | agreement |
 | Agent pre-labels of the evaluation set | this repository, `results/full_preannotation.csv` | Apache 2.0 | `compare_annotations` |
 
 Pilot tasks are used only to tune the proposition definitions and are excluded from every evaluation. Annotation
@@ -128,7 +129,8 @@ trajectory, step and proposition, so an interrupted run resumes where it stopped
   all affected runs were deleted and recomputed.
 - **Labels.** Human pilot labels were double-annotated and adjudicated; AI pre-annotations were scored against them on
   the held-out pilot before use, and one agent's share was cross-checked by another (`results/review_hy4_vs_codex.csv`).
-  Every evaluation pre-label was then checked by a human reviewer (`results/check.csv`).
+  Every evaluation pre-label was then checked by a human reviewer (`results/check.csv`), and a second annotator labelled
+  the whole evaluation set independently (`data/labels_eval_annotator2.csv`).
 - **Statistics.** Results are averaged over repeated random task splits; intervals are task-level bootstrap intervals.
 
 ## Limitations
@@ -139,8 +141,8 @@ cross-domain result shows that label-free statistics do not always detect such a
 tasks (R9: 40 evaluation tasks, alpha floor 0.059 with a 40 % calibration split), and three of the five rules with
 linguistic propositions have a hard-label error already below alpha = 0.10, where the method adds nothing. The
 proposition definitions were tuned on the pilot tasks. The evaluation labels were checked by one reviewer starting
-from agent pre-labels (24 of 5,431 changed); an independent blind double annotation of 20 % of the evaluation tasks
-(29 tasks, 1,240 judgements) is in progress.
+from agent pre-labels (24 of 5,431 changed) and labelled independently by a second annotator (kappa 0.936); the 83
+disagreements are being adjudicated, after which the experiments are rerun.
 
 ## Repository structure
 

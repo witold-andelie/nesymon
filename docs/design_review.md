@@ -483,6 +483,32 @@ Still open: the independent double annotation of 20 percent of the evaluation ta
 `experiments/make_double_sheet.py`), a significance test for the 4B comparison with per-step conformal, and the
 LLM-judge baseline B1, which needs API access.
 
+### 2.16 Independent second annotation of the full evaluation set
+
+A second annotator (Simon) labelled all 5,431 evaluation judgements independently, from the evaluation annotation
+sheet, without the agent pre-labels or the reviewer's check. The 20 percent blind sample drawn with
+`experiments/make_double_sheet.py` (29 tasks, 1,240 judgements) was filled from his full annotation and matches it in
+all 1,240 rows. Labels without conversation text: `data/labels_eval_annotator2.csv`.
+
+Agreement with the reviewed labels (`data/labels_eval.csv`):
+
+| Proposition | n | Agreement | Cohen's kappa |
+| --- | --- | --- | --- |
+| confirm | 2,127 | 0.976 | 0.907 |
+| matches_listed | 387 | 0.982 | 0.847 |
+| offers_compensation | 484 | 0.992 | 0.842 |
+| asks_compensation | 564 | 0.975 | 0.782 |
+| transfer_justified | 32 | 0.875 | 0.636 |
+| subjective_recommendation | 1,837 | 0.999 | 0.000 (2 positives, both by one annotator) |
+| All | 5,431 | 0.985 | 0.936 |
+
+- 83 disagreements in 66 trajectories of 57 tasks; 52 on confirm, 14 on asks_compensation.
+- On the 24 rows where the reviewer had overridden the agent pre-label, the second annotator sided with the
+  pre-label on 17. These rows are hard cases (two agents disagreed on all of them) and are part of the adjudication.
+- The 83 disagreements are being adjudicated (`results/adjudication_eval.csv`); the final labels will replace those
+  rows in `data/labels_eval.csv`, and all experiments will be rerun. With 83 of 5,431 rows at stake, results in 2.15
+  can move by about one point.
+
 ## 3. Theory: what holds and what to state carefully
 
 Verified (no counterexample over 300 random traces per rule, 8 rules, 22 thresholds; see
